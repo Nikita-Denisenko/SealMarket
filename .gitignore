@@ -1,0 +1,38 @@
+# Compiled Object files
+*.com
+*.exe
+*.dll
+*.pdb
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.cache
+*.obj
+*.ilk
+*.log
+*.DotSettings
+
+# Packages for Visual Studio
+packages/
+
+# diagnostics files
+diag/*
+
+# deployment local configuration files
+/publish/*
+/bin/*
+/obj/*
+
+# Rider folders
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+#OS junk files
+[Tt]rash*
+\$RECYCLE.BIN/
+._*
+*.DS_Store
