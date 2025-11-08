@@ -1,0 +1,8 @@
+D:\Projects\SealMarket\SealMarket.API\obj\Debug\net9.0\SealMarket.API.csproj.AssemblyReference.cache
+D:\Projects\SealMarket\SealMarket.API\obj\Debug\net9.0\rpswa.dswa.cache.json
+D:\Projects\SealMarket\SealMarket.API\obj\Debug\net9.0\SealMarket.API.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\SealMarket\SealMarket.API\obj\Debug\net9.0\SealMarket.API.AssemblyInfoInputs.cache
+D:\Projects\SealMarket\SealMarket.API\obj\Debug\net9.0\SealMarket.API.AssemblyInfo.cs
+D:\Projects\SealMarket\SealMarket.API\obj\Debug\net9.0\SealMarket.API.csproj.CoreCompileInputs.cache
+D:\Projects\SealMarket\SealMarket.API\obj\Debug\net9.0\SealMarket.API.MvcApplicationPartsAssemblyInfo.cache
+D:\Projects\SealMarket\SealMarket.API\obj\Debug\net9.0\SealMarket.API.sourcelink.json

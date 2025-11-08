@@ -13,6 +13,8 @@
 *.log
 *.DotSettings
 
+.vs/
+
 # Packages for Visual Studio
 packages/
 

@@ -13,6 +13,5 @@ namespace SealMarket.Core.Entities
         public string DisplayName { get; set; }
         public string LogoUrl { get; set; }
         public string Description { get; set; }
-        public bool IsActive { get; set; }
     }
 }

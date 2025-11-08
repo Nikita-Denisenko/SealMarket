@@ -12,6 +12,7 @@ namespace SealMarket.Core.Entities
     {
         public int Id { get; set; }
         public int UserId { get; set; }
+        public User User { get; set; }
         public decimal Balance { get; set; }
         public string Login { get; set; }
         public string PasswordHash { get; set; }
@@ -22,6 +23,7 @@ namespace SealMarket.Core.Entities
         (
             int id, 
             int userId, 
+            User user,
             decimal balance, 
             string login, 
             string passwordHash,
@@ -31,6 +33,7 @@ namespace SealMarket.Core.Entities
         {
             Id = id;
             UserId = userId;
+            User = user;
             Balance = balance;
             Login = login;
             PasswordHash = passwordHash;

@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\projects\\SealMarket\\SealMarket.Application\\SealMarket.Application.csproj",
+      "projectUniqueName": "D:\\Projects\\SealMarket\\SealMarket.Application\\SealMarket.Application.csproj",
       "projectName": "SealMarket.Application",
-      "projectPath": "D:\\projects\\SealMarket\\SealMarket.Application\\SealMarket.Application.csproj",
+      "projectPath": "D:\\Projects\\SealMarket\\SealMarket.Application\\SealMarket.Application.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "D:\\projects\\SealMarket\\SealMarket.Application\\obj\\",
+      "outputPath": "D:\\Projects\\SealMarket\\SealMarket.Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -73,7 +73,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

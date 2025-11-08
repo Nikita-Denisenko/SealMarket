@@ -14,6 +14,7 @@ namespace SealMarket.Core.Entities
         public string Lastname { get; set; }
         public DateOnly BirthDate { get; set; }
         public string City { get; set; }
+        public  Account Account { get; set; }
 
         public User
         (
@@ -22,7 +23,9 @@ namespace SealMarket.Core.Entities
             string middlename,
             string lastname,
             DateOnly birthDate,
-            string city
+            string city,
+            Account account
+
         )
         {
             Id = id;
@@ -31,6 +34,7 @@ namespace SealMarket.Core.Entities
             Lastname = lastname;
             BirthDate = birthDate;
             City = city;
+            Account = account;
         }
     }
 }

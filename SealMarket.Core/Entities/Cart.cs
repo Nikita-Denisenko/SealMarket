@@ -10,6 +10,8 @@ namespace SealMarket.Core.Entities
     {
         public int Id { get; set; }
         public int AccountId { get; set; }
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public List<Product> Products { get; set; } = [];
+        public decimal TotalPrice { get; set; } = 0;
     }
 }
