@@ -17,6 +17,10 @@ namespace SealMarket.Infrastructure.Repositories
         {
             _context = context;
         }
+        public async Task SaveChangesAsync()
+        {
+            await _context.SaveChangesAsync();
+        }
 
         public async Task<List<User>> GetAllAsync()
             => await _context.Users.ToListAsync();
@@ -27,7 +31,7 @@ namespace SealMarket.Infrastructure.Repositories
         public async Task AddAsync(User user) 
         {
             await _context.Users.AddAsync(user);
-            await _context.SaveChangesAsync();
+            await SaveChangesAsync();
         }
 
         public async Task DeleteByIdAsync(int id)
@@ -38,7 +42,13 @@ namespace SealMarket.Infrastructure.Repositories
                 throw new Exception("User is not found.");
 
             _context.Users.Remove(userToDelete);
-            await _context.SaveChangesAsync();
+            await SaveChangesAsync();
+        }
+
+        public async Task UpdateUser(User user)
+        {
+            _context.Users.Update(user);
+            await SaveChangesAsync();
         }
     }
 }

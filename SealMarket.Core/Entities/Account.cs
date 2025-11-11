@@ -1,5 +1,4 @@
-﻿using SealMarket.Core.Interfaces.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Metadata.Ecma335;
@@ -8,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SealMarket.Core.Entities
 {
-    public class Account : IAccount
+    public class Account
     {
         public int Id { get; set; }
         public int UserId { get; set; }
@@ -18,6 +17,7 @@ namespace SealMarket.Core.Entities
         public string PasswordHash { get; set; }
         public string EmailAddress { get; set; }
         public string PhoneNumber { get; set; }
+        public DateTime CreatedAt { get; set; }
 
         public Account
         (
@@ -28,7 +28,8 @@ namespace SealMarket.Core.Entities
             string login, 
             string passwordHash,
             string emailAddress,
-            string phoneNumber
+            string phoneNumber,
+            DateTime createdAt
         )
         {
             Id = id;
