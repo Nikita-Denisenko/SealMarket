@@ -1,63 +1,46 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Metadata.Ecma335;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SealMarket.Core.Entities
+﻿public class Account
 {
-    public class Account
+    public int Id { get; private set; }
+    public int UserId { get; private set; }
+    public User? User { get; private set; }
+    public decimal Balance { get; private set; }
+    public string Login { get; private set; }
+    public string PasswordHash { get; private set; }
+    public string EmailAddress { get; private set; }
+    public string PhoneNumber { get; private set; }
+    public DateTime CreatedAt { get; private set; }
+    public Cart? Cart { get; private set; }
+
+    private Account() { }
+
+    public Account(string login, string passwordHash, string email, string phone)
     {
-        public int Id { get; set; }
-        public int UserId { get; set; }
-        public User User { get; set; }
-        public decimal Balance { get; set; }
-        public string Login { get; set; }
-        public string PasswordHash { get; set; }
-        public string EmailAddress { get; set; }
-        public string PhoneNumber { get; set; }
-        public DateTime CreatedAt { get; set; }
+        Login = login;
+        PasswordHash = passwordHash;
+        EmailAddress = email;
+        PhoneNumber = phone;
+        CreatedAt = DateTime.UtcNow;
+        Balance = 0;
+    }
 
-        public Account
-        (
-            int id, 
-            int userId, 
-            User user,
-            decimal balance, 
-            string login, 
-            string passwordHash,
-            string emailAddress,
-            string phoneNumber,
-            DateTime createdAt
-        )
-        {
-            Id = id;
-            UserId = userId;
-            User = user;
-            Balance = balance;
-            Login = login;
-            PasswordHash = passwordHash;
-            EmailAddress = emailAddress;
-            PhoneNumber = phoneNumber;
-        }
+    public void Deposit(decimal quantity) => Balance += quantity;
 
-        public void AddMoney(decimal quantity) => Balance += quantity;
-   
-        public void WithdrawMoney(decimal quantity)
-        {
-            if (quantity <= 0) 
-                throw new ArgumentException("Quantity must be positive number.");
+    public void Withdraw(decimal quantity)
+    {
+        if (quantity <= 0)
+            throw new ArgumentException("Quantity must be positive number.");
 
-            if (quantity > Balance) 
-                throw new ArgumentException("Quantity must not be more than balance.");
+        if (quantity > Balance)
+            throw new ArgumentException("Quantity must not be more than balance.");
 
-            Balance -= quantity;
-        }
+        Balance -= quantity;
+    }
 
-        public bool ChangePassword(string passwordHash) 
-        {
-            return true;
-        }
+    public void CreateCart(string name = "Default Cart")
+    {
+        if (Cart != null)
+            throw new InvalidOperationException("Account already has a cart");
+
+        Cart = new Cart(name);
     }
 }

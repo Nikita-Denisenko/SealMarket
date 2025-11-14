@@ -1,40 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SealMarket.Core.Entities;
 
-namespace SealMarket.Core.Entities
+public class User
 {
-    public class User
+    public int Id { get; private set; }
+    public string Name { get; private set; }
+    public DateOnly BirthDate { get; private set; }
+    public string City { get; private set; }
+    public Account? Account { get; private set; }
+
+    private User() { }
+
+    public User(string name, DateOnly birthDate, string city)
     {
-        public int Id { get; set; }
-        public string FirsrtName { get; set; }
-        public string Middlename { get; set; }
-        public string Lastname { get; set; }
-        public DateOnly BirthDate { get; set; }
-        public string City { get; set; }
-        public  Account Account { get; set; }
+        Name = name;
+        BirthDate = birthDate;
+        City = city;
+    }
 
-        public User
-        (
-            int id,
-            string firsrtName,
-            string middlename,
-            string lastname,
-            DateOnly birthDate,
-            string city,
-            Account account
+    public void CreateAccount(decimal balance, string login, string passwordHash, string email, string phone)
+    {
+        if (Account != null)
+            throw new InvalidOperationException("User already has an account");
 
-        )
-        {
-            Id = id;
-            FirsrtName = firsrtName;
-            Middlename = middlename;
-            Lastname = lastname;
-            BirthDate = birthDate;
-            City = city;
-            Account = account;
-        }
+        Account = new Account(login, passwordHash, email, phone);
     }
 }

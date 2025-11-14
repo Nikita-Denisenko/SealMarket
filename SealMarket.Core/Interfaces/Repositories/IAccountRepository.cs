@@ -1,5 +1,5 @@
 ﻿using SealMarket.Core.Entities;
-using SealMarket.Core.Filters;
+using SealMarket.Core.Models.Filters;
 using System;
 using System.Collections.Generic;
 using System.Linq;

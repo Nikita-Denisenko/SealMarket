@@ -1,11 +1,4 @@
-﻿using SealMarket.Core.Constans;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SealMarket.Core.Filters
+﻿namespace SealMarket.Core.Models.Filters
 {
     public record AccountsFilter
     (

@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SealMarket.Core.Constans;
 using SealMarket.Core.Entities;
-using SealMarket.Core.Filters;
+using SealMarket.Core.Models.Filters;
 using SealMarket.Infrastructure.Data;
 
 namespace SealMarket.Infrastructure.Repositories
