@@ -9,13 +9,14 @@
         public DateTime DateTime { get; private set; }
         public bool HasBeenRead { get; private set; }
         
+        private Notification() { }
+
         public Notification
         (
             int accountId,
             string message
         )
         {
-            AccountId = accountId;
             Message = message;
             DateTime = DateTime.UtcNow;
             HasBeenRead = false;

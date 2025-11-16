@@ -1,4 +1,6 @@
-﻿public class Account
+﻿using SealMarket.Core.Entities;
+
+public class Account
 {
     public int Id { get; private set; }
     public int UserId { get; private set; }
@@ -10,6 +12,7 @@
     public string PhoneNumber { get; private set; }
     public DateTime CreatedAt { get; private set; }
     public Cart? Cart { get; private set; }
+    public List<Notification> Notifications { get; private set; }
 
     private Account() { }
 
