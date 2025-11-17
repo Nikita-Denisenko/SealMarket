@@ -10,6 +10,7 @@
         public string ImageUrl { get; private set; }
         public int Quantity { get; private set; }
         public decimal Price { get; private set; }
+        public DateTime CreatedAt { get; private set; }
         public bool IsActive { get; private set; }
 
         public List<Cart> Carts { get; private set; } = [];
@@ -33,6 +34,7 @@
             ImageUrl = imageUrl;
             Quantity = quantity;
             Price = price;
+            CreatedAt = DateTime.UtcNow;
             IsActive = isActive;
         }
 

@@ -1,9 +1,4 @@
-﻿using SealMarket.Core.Constans;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using static SealMarket.Core.Constans.AccountOrderParameters;
 
 namespace SealMarket.Application.DTOs.Requests
 {
@@ -13,7 +8,7 @@ namespace SealMarket.Application.DTOs.Requests
         int Size = 20, 
         decimal MinBalance = 0, 
         decimal MaxBalance = 1000000000,
-        string OrderParam = AccountOrderParameters.Login,
+        string OrderParam = Login,
         bool ByAscending = true
     );
 }

@@ -16,7 +16,13 @@ public class Account
 
     private Account() { }
 
-    public Account(string login, string passwordHash, string email, string phone)
+    public Account
+    (
+        string login, 
+        string passwordHash, 
+        string email, 
+        string phone
+    )
     {
         Login = login;
         PasswordHash = passwordHash;
