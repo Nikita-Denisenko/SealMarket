@@ -7,6 +7,7 @@
         decimal MinPrice,
         decimal MaxPrice,
         string OrderParam,
-        bool ByAscending
+        bool ByAscending,
+        string SearchText
     );
 }

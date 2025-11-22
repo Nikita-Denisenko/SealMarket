@@ -1,18 +1,22 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SealMarket.Core.Entities;
+using SealMarket.Core.Interfaces.Repositories;
 using SealMarket.Core.Models.Filters;
 using SealMarket.Infrastructure.Data;
 using static SealMarket.Core.Constans.ProductOrderParameters;
 
 namespace SealMarket.Infrastructure.Repositories
 {
-    public class ProductRepository : BaseRepository<Product>
+    public class ProductRepository : BaseRepository<Product>, IProductRepository
     {
         public ProductRepository(AppDbContext context) : base(context) { }
 
         public async Task<List<Product>> GetProductsAsync(ProductsFilter filter)
         {
             var query = _context.Products.AsQueryable();
+
+            query = query
+                .Where(p => p.Name.Contains(filter.SearchText));
 
             query = query.
                 Where(p => p.Price >= filter.MinPrice && p.Price <= filter.MaxPrice);

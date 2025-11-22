@@ -6,7 +6,5 @@ using System.Threading.Tasks;
 
 namespace SealMarket.Core.Interfaces.Repositories
 {
-    public interface ICartRepository
-    {
-    }
+    public interface ICartRepository : IBaseRepository<Cart>;
 }

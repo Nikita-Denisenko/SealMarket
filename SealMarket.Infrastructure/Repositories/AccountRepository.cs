@@ -2,10 +2,11 @@
 using static SealMarket.Core.Constans.AccountOrderParameters;
 using SealMarket.Core.Models.Filters;
 using SealMarket.Infrastructure.Data;
+using SealMarket.Core.Interfaces.Repositories;
 
 namespace SealMarket.Infrastructure.Repositories
 {
-    public class AccountRepository : BaseRepository<Account>
+    public class AccountRepository : BaseRepository<Account>, IAccountRepository
     {
         public AccountRepository(AppDbContext context) : base(context) { }
 
@@ -14,8 +15,10 @@ namespace SealMarket.Infrastructure.Repositories
             var query = _context.Accounts.AsQueryable();
 
             query = query
-                .Where(account => account.Balance >= filter.MinBalance && account.Balance <= filter.MaxBalance);
+               .Where(a => a.Login.Contains(filter.SearchText));
 
+            query = query
+                .Where(a => a.Balance >= filter.MinBalance && a.Balance <= filter.MaxBalance);
 
             query = filter.OrderParam switch
             {

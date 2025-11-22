@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SealMarket.Core.Entities;
 
 namespace SealMarket.Core.Interfaces.Repositories
 {
-    public interface IBrandRepository
-    {
-    }
+    public interface IBrandRepository : IBaseRepository<Brand>;
 }

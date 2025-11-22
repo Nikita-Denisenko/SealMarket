@@ -9,6 +9,7 @@ namespace SealMarket.Application.DTOs.Requests
         decimal MinBalance = 0, 
         decimal MaxBalance = 1000000000,
         string OrderParam = Login,
-        bool ByAscending = true
+        bool ByAscending = true,
+        string SearchText = ""
     );
 }

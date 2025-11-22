@@ -1,14 +1,13 @@
 ﻿namespace SealMarket.Core.Models.Filters
 {
-    public record AccountsFilter
+    public record CartsFilter
     (
         int Page,
         int Size,
-        decimal MinBalance,
-        decimal MaxBalance,
+        decimal MinTotalPrice,
+        decimal MaxTotalPrice,
         string OrderParam,
         bool ByAscending,
         string SearchText
     );
 }
- 
