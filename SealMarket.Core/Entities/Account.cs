@@ -21,7 +21,8 @@ public class Account
         string login, 
         string passwordHash, 
         string email, 
-        string phone
+        string phone,
+        int userId
     )
     {
         Login = login;
@@ -30,6 +31,7 @@ public class Account
         PhoneNumber = phone;
         CreatedAt = DateTime.UtcNow;
         Balance = 0;
+        UserId = userId;
     }
 
     public void Deposit(decimal quantity) => Balance += quantity;
@@ -50,6 +52,6 @@ public class Account
         if (Cart != null)
             throw new InvalidOperationException("Account already has a cart");
 
-        Cart = new Cart(name);
+        Cart = new Cart(name, Id);
     }
 }

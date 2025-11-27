@@ -1,11 +1,10 @@
 ﻿using SealMarket.Core.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using SealMarket.Core.Models.Filters;
 
 namespace SealMarket.Core.Interfaces.Repositories
 {
-    public interface IProductRepository : IBaseRepository<Product>;
+    public interface IProductRepository : IBaseRepository<Product>
+    {
+        public Task<List<Product>> GetProductsAsync(ProductsFilter filter);
+    }
 }

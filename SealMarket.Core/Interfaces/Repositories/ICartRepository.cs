@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SealMarket.Core.Models.Filters;
 
 namespace SealMarket.Core.Interfaces.Repositories
 {
-    public interface ICartRepository : IBaseRepository<Cart>;
+    public interface ICartRepository : IBaseRepository<Cart>
+    {
+        public Task<List<Cart>> GetCartsAsync(CartsFilter filter);
+    }
 }

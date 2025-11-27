@@ -1,4 +1,9 @@
-﻿namespace SealMarket.Core.Interfaces.Repositories
+﻿using SealMarket.Core.Models.Filters;
+
+namespace SealMarket.Core.Interfaces.Repositories
 {
-    public interface IAccountRepository : IBaseRepository<Account>;
+    public interface IAccountRepository : IBaseRepository<Account>
+    {
+        public Task<List<Account>> GetAccountsAsync(AccountsFilter filter);
+    }
 }

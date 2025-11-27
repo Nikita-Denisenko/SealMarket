@@ -12,28 +12,33 @@ namespace SealMarket.Infrastructure.Repositories
 
         public async Task<List<Cart>> GetCartsAsync(CartsFilter filter)
         {
-            var query = _context.Carts
-                .Include(c => c.Products)  
+            var cartsWithTotal = _context.Carts
+                .Include(c => c.Products)
+                .Where(c => c.Name.Contains(filter.SearchText))
+                .Select(c => new
+                {
+                    Cart = c,
+                    TotalPrice = c.Products.Sum(p => p.Price)
+                })
                 .AsQueryable();
-         
-            query = query.Where(c => c.Name.Contains(filter.SearchText));
- 
 
-            query = query.Where(c => c.Products.Sum(p => p.Price) >= filter.MinTotalPrice
-                                  && c.Products.Sum(p => p.Price) <= filter.MaxTotalPrice);
+            cartsWithTotal = cartsWithTotal.Where(x =>
+                x.TotalPrice >= filter.MinTotalPrice &&
+                x.TotalPrice <= filter.MaxTotalPrice);
 
-            query = filter.OrderParam switch
+            var orderedQuery = filter.OrderParam switch
             {
                 TotalPrice => filter.ByAscending
-                    ? query.OrderBy(c => c.Products.Sum(p => p.Price))
-                    : query.OrderByDescending(c => c.Products.Sum(p => p.Price)),
+                    ? cartsWithTotal.OrderBy(x => x.TotalPrice)
+                    : cartsWithTotal.OrderByDescending(x => x.TotalPrice),
 
                 _ => filter.ByAscending
-                    ? query.OrderBy(c => c.Name)
-                    : query.OrderByDescending(c => c.Name),
+                    ? cartsWithTotal.OrderBy(x => x.Cart.Name)
+                    : cartsWithTotal.OrderByDescending(x => x.Cart.Name),
             };
 
-            return await query
+            return await orderedQuery
+                .Select(x => x.Cart)
                 .Skip(filter.Size * (filter.Page - 1))
                 .Take(filter.Size)
                 .ToListAsync();

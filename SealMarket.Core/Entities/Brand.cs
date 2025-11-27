@@ -13,7 +13,6 @@
         public Brand
         (
             string name,
-            string displayName,
             string logoUrl,
             string description
         )

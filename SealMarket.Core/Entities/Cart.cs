@@ -10,9 +10,10 @@ public class Cart
 
     private Cart() { }
 
-    public Cart(string name)
+    public Cart(string name, int accountId)
     {
         Name = name;
+        AccountId = accountId;
     }
 
     public void AddProduct(Product product)

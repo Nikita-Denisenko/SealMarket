@@ -13,33 +13,38 @@ namespace SealMarket.Infrastructure.Repositories
 
         public async Task<List<Brand>> GetBrandsAsync(BrandsFilter filter)
         {
-            var query = _context.Brands
-                .Include(b => b.Products) 
+            var brandsWithStats = _context.Brands
+                .Include(b => b.Products)
+                .Where(b => b.Name.Contains(filter.SearchText))
+                .Select(b => new
+                {
+                    Brand = b,
+                    AveragePrice = b.Products.Average(p => p.Price),
+                    ProductsCount = b.Products.Count
+                })
                 .AsQueryable();
 
+            brandsWithStats = brandsWithStats.Where(x =>
+                x.AveragePrice >= filter.MinAverageProductPrice &&
+                x.AveragePrice <= filter.MaxAverageProductPrice);
 
-            query = query
-                .Where(b => b.Name.Contains(filter.SearchText));
-
-            query = query.Where(b => b.Products.Average(p => p.Price) >= filter.MinAverageProductPrice
-                                  && b.Products.Average(p => p.Price) <= filter.MaxAverageProductPrice);
-
-            query = filter.OrderParam switch
+            var orderedQuery = filter.OrderParam switch
             {
                 AverageProductPrice => filter.ByAscending
-                    ? query.OrderBy(b => b.Products.Average(p => p.Price))
-                    : query.OrderByDescending(b => b.Products.Average(p => p.Price)),
+                    ? brandsWithStats.OrderBy(x => x.AveragePrice)
+                    : brandsWithStats.OrderByDescending(x => x.AveragePrice),
 
                 ProductsQuantity => filter.ByAscending
-                    ? query.OrderBy(b => b.Products.Count)
-                    : query.OrderByDescending(b => b.Products.Count),
+                    ? brandsWithStats.OrderBy(x => x.ProductsCount)
+                    : brandsWithStats.OrderByDescending(x => x.ProductsCount),
 
                 _ => filter.ByAscending
-                    ? query.OrderBy(b => b.Name)
-                    : query.OrderByDescending(b => b.Name),
+                    ? brandsWithStats.OrderBy(x => x.Brand.Name)
+                    : brandsWithStats.OrderByDescending(x => x.Brand.Name),
             };
 
-            return await query
+            return await orderedQuery
+                .Select(x => x.Brand)
                 .Skip(filter.Size * (filter.Page - 1))
                 .Take(filter.Size)
                 .ToListAsync();

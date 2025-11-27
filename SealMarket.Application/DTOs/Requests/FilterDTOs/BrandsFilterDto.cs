@@ -1,6 +1,6 @@
 ﻿using static SealMarket.Core.Constans.BrandOrderParameters;
 
-namespace SealMarket.Application.DTOs.Requests
+namespace SealMarket.Application.DTOs.Requests.FilterDTOs
 {
     public record BrandsFilterDto
     (

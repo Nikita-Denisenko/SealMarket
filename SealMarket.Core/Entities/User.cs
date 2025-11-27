@@ -15,11 +15,12 @@
         City = city;
     }
 
-    public void CreateAccount(decimal balance, string login, string passwordHash, string email, string phone)
+    public void CreateAccount(string login, string passwordHash, string email, string phone)
     {
         if (Account != null)
             throw new InvalidOperationException("User already has an account");
 
-        Account = new Account(login, passwordHash, email, phone);
+        Account = new Account(login, passwordHash, email, phone, Id);
+        Console.WriteLine("Account was Created!");
     }
 }

@@ -1,9 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using SealMarket.Core.Interfaces.Repositories;
 using SealMarket.Infrastructure.Data;
 
 namespace SealMarket.Infrastructure.Repositories
 {
-    public abstract class BaseRepository<T> where T : class
+    public abstract class BaseRepository<T> : IBaseRepository<T> where T : class
     {
         protected readonly AppDbContext _context;
 
@@ -41,6 +42,13 @@ namespace SealMarket.Infrastructure.Repositories
         public virtual async Task UpdateAsync(T entity)
         {
             _context.Set<T>().Update(entity);
+            await SaveChangesAsync();
+        }
+
+        public async Task ClearAllAsync()
+        {
+            var entitiesToDelete = await GetAllAsync();
+            _context.Set<T>().RemoveRange(entitiesToDelete);
             await SaveChangesAsync();
         }
     }

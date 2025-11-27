@@ -20,6 +20,7 @@
             Message = message;
             DateTime = DateTime.UtcNow;
             HasBeenRead = false;
+            AccountId = accountId;
         }
 
         public void MarkAsRead()

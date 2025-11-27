@@ -13,5 +13,7 @@
         public Task DeleteByIdAsync(int id);
 
         public Task UpdateAsync(T entity);
+
+        public Task ClearAllAsync();
     }
 }
