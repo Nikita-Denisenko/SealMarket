@@ -13,12 +13,12 @@ namespace SealMarket.Infrastructure.Repositories
         public async Task<List<Cart>> GetCartsAsync(CartsFilter filter)
         {
             var cartsWithTotal = _context.Carts
-                .Include(c => c.Products)
+                .Include(c => c.CartItems)
                 .Where(c => c.Name.Contains(filter.SearchText))
                 .Select(c => new
                 {
                     Cart = c,
-                    TotalPrice = c.Products.Sum(p => p.Price)
+                    TotalPrice = c.CartItems.Sum(item => item.ProductPrice * item.Quantity)
                 })
                 .AsQueryable();
 

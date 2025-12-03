@@ -7,8 +7,8 @@ public class Account
     public User? User { get; private set; }
     public decimal Balance { get; private set; }
     public string Login { get; private set; }
-    public string PasswordHash { get; private set; }
-    public string EmailAddress { get; private set; }
+    public string Password { get; private set; }
+    public string Email { get; private set; }
     public string PhoneNumber { get; private set; }
     public DateTime CreatedAt { get; private set; }
     public Cart? Cart { get; private set; }
@@ -19,15 +19,15 @@ public class Account
     public Account
     (
         string login, 
-        string passwordHash, 
+        string password, 
         string email, 
         string phone,
         int userId
     )
     {
         Login = login;
-        PasswordHash = passwordHash;
-        EmailAddress = email;
+        Password = password;
+        Email = email;
         PhoneNumber = phone;
         CreatedAt = DateTime.UtcNow;
         Balance = 0;

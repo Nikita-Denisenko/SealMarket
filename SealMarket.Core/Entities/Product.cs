@@ -12,9 +12,6 @@
         public decimal Price { get; private set; }
         public DateTime CreatedAt { get; private set; }
         public bool IsActive { get; private set; }
-
-        public List<Cart> Carts { get; private set; } = [];
-
         
         private Product() { }
 

@@ -10,9 +10,10 @@ namespace SealMarket.Infrastructure.Configurations
             builder.HasKey(c => c.Id);
 
             builder
-                .HasMany(c => c.Products)
-                .WithMany(p => p.Carts)
-                .UsingEntity(j => j.ToTable("CartProducts"));
+                .HasMany(c => c.CartItems)
+                .WithOne(i => i.Cart)
+                .HasForeignKey(i => i.CartId)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }
