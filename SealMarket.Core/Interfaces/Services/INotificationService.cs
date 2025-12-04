@@ -1,6 +1,7 @@
 ﻿namespace SealMarket.Core.Interfaces.Services
 {
-    public interface ICartService
+    public interface INotificationService
     {
+
     }
 }

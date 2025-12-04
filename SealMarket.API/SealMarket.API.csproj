@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SealMarket.Application\SealMarket.Application.csproj" />
     <ProjectReference Include="..\SealMarket.Infrastructure\SealMarket.Infrastructure.csproj" />
   </ItemGroup>
 

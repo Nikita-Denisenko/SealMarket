@@ -3,10 +3,13 @@ using SealMarket.Core.Interfaces.Services;
 
 namespace SealMarket.Application.Services
 {
-    public class UserService : BaseService<User>, IUserService
+    public class UserService : IUserService
     {
-        public UserService(IBaseRepository<User> repo) : base(repo)
+        private readonly IUserRepository _repo;
+
+        public UserService(IUserRepository repo) 
         {
+            _repo = repo;
         }
     }
 }

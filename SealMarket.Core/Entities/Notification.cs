@@ -5,6 +5,7 @@
         public int Id { get; private set; }
         public int AccountId { get; private set; }
         public Account Account { get; private set; }
+        public string Name { get; private set; }
         public string Message { get; private set; }
         public DateTime DateTime { get; private set; }
         public bool HasBeenRead { get; private set; }
@@ -14,13 +15,15 @@
         public Notification
         (
             int accountId,
-            string message
+            string message,
+            string name
         )
         {
             Message = message;
             DateTime = DateTime.UtcNow;
             HasBeenRead = false;
             AccountId = accountId;
+            Name = name;
         }
 
         public void MarkAsRead()

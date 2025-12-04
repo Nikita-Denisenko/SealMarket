@@ -297,6 +297,19 @@
           }
         }
       },
+      "SealMarket.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "SealMarket.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SealMarket.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SealMarket.Application.dll": {}
+        }
+      },
       "SealMarket.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
@@ -777,6 +790,11 @@
         "pomelo.entityframeworkcore.mysql.nuspec"
       ]
     },
+    "SealMarket.Application/1.0.0": {
+      "type": "project",
+      "path": "../SealMarket.Application/SealMarket.Application.csproj",
+      "msbuildProject": "../SealMarket.Application/SealMarket.Application.csproj"
+    },
     "SealMarket.Core/1.0.0": {
       "type": "project",
       "path": "../SealMarket.Core/SealMarket.Core.csproj",
@@ -792,6 +810,7 @@
     "net9.0": [
       "Microsoft.AspNetCore.OpenApi >= 9.0.9",
       "Pomelo.EntityFrameworkCore.MySql >= 9.0.0",
+      "SealMarket.Application >= 1.0.0",
       "SealMarket.Infrastructure >= 1.0.0"
     ]
   },
@@ -828,6 +847,9 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
+            "D:\\Projects\\SealMarket\\SealMarket.Application\\SealMarket.Application.csproj": {
+              "projectPath": "D:\\Projects\\SealMarket\\SealMarket.Application\\SealMarket.Application.csproj"
+            },
             "D:\\Projects\\SealMarket\\SealMarket.Infrastructure\\SealMarket.Infrastructure.csproj": {
               "projectPath": "D:\\Projects\\SealMarket\\SealMarket.Infrastructure\\SealMarket.Infrastructure.csproj"
             }
@@ -881,5 +903,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Произошла ошибка при получении данных уязвимости пакета: Не удалось загрузить индекс службы для источника https://api.nuget.org/v3/index.json."
+    }
+  ]
 }

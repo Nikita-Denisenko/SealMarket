@@ -3,9 +3,14 @@ using SealMarket.Core.Interfaces.Services;
 
 namespace SealMarket.Application.Services
 {
-    public class AccountService : BaseService<Account>, IAccountService
+    public class AccountService : IAccountService
     {
-        public AccountService(IBaseRepository<Account> repo) : base(repo) { }
+        private readonly IAccountRepository _repo;
+
+        public AccountService(IAccountRepository repo)
+        {
+            _repo = repo;
+        }
     }
 }
     

@@ -1,8 +1,8 @@
 ﻿namespace SealMarket.Core.Interfaces.Repositories
 {
-    public interface IBaseRepository<T> where T: class
+    public interface IBaseRepository<T> where T : class
     {
-        public Task SaveChangesAsync();
+        public Task<int> SaveChangesAsync();
 
         public Task<List<T>> GetAllAsync();
 
@@ -10,9 +10,18 @@
 
         public Task AddAsync(T entity);
 
-        public Task DeleteByIdAsync(int id);
+        public Task AddRangeAsync(IEnumerable<T> entities);
 
-        public Task UpdateAsync(T entity);
+        public void Update(T entity);
+
+        public void UpdateRange(IEnumerable<T> entities);
+
+        public void Delete(T entity);
+
+        public void DeleteRange(IEnumerable<T> entities);
+
+        public Task DeleteByIdAsync(int id);
+        public Task<bool> ExistsAsync(int id);
 
         public Task ClearAllAsync();
     }

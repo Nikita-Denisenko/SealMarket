@@ -3,8 +3,13 @@ using SealMarket.Core.Interfaces.Services;
 
 namespace SealMarket.Application.Services
 {
-    public class CartService : BaseService<Cart>, ICartService
+    public class CartService : ICartService
     {
-        public CartService(IBaseRepository<Cart> repo) : base(repo) { }
+        private readonly ICartRepository _repo;
+
+        public CartService(ICartRepository repo) 
+        {
+            _repo = repo;
+        }
     }
 }
