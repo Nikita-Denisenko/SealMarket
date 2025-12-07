@@ -1,6 +1,6 @@
 ﻿using SealMarket.Core.Models.Filters;
 
-namespace SealMarket.Core.Interfaces.Repositories
+namespace SealMarket.Core.Interfaces
 {
     public interface IAccountRepository : IBaseRepository<Account>
     {

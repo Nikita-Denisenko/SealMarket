@@ -1,5 +1,10 @@
-﻿using SealMarket.Core.Interfaces.Repositories;
-using SealMarket.Core.Interfaces.Services;
+﻿using SealMarket.Application.DTOs.Requests.CreateDTOs;
+using SealMarket.Application.DTOs.Requests.FilterDTOs;
+using SealMarket.Application.DTOs.Requests.UpdateDTOs;
+using SealMarket.Application.DTOs.Responses.CreatedDTOs;
+using SealMarket.Application.DTOs.Responses.EntityDtos;
+using SealMarket.Application.Interfaces;
+using SealMarket.Core.Interfaces;
 
 namespace SealMarket.Application.Services
 {
@@ -10,6 +15,36 @@ namespace SealMarket.Application.Services
         public CartService(ICartRepository repo) 
         {
             _repo = repo;
+        }
+
+        public Task<CreatedCartDto> CreateCartAsync(CreateCartDto createCartDto)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task DeleteCartAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<List<ReadCartDto>> GetAllCartsAsync()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<ReadCartDto> GetCartAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<List<ReadCartDto>> GetCartsAsync(CartsFilterDto cartsFilterDto)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task UpdateCartAsync(int id, UpdateCartDto updateCartDto)
+        {
+            throw new NotImplementedException();
         }
     }
 }

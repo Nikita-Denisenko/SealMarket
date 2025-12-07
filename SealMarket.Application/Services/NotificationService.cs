@@ -1,5 +1,9 @@
-﻿using SealMarket.Core.Interfaces.Repositories;
-using SealMarket.Core.Interfaces.Services;
+﻿using SealMarket.Application.DTOs.Requests.CreateDTOs;
+using SealMarket.Application.DTOs.Requests.FilterDTOs;
+using SealMarket.Application.DTOs.Responses.CreatedDTOs;
+using SealMarket.Application.DTOs.Responses.EntityDtos;
+using SealMarket.Application.Interfaces;
+using SealMarket.Core.Interfaces;
 
 namespace SealMarket.Application.Services
 {
@@ -10,6 +14,31 @@ namespace SealMarket.Application.Services
         public NotificationService(INotificationRepository repo)
         {
             _repo = repo; 
+        }
+
+        public Task<CreatedNotificationDto> CreateNotificationAsync(CreateNotificationDto createNotificationDto)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task DeleteNotificationAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<List<ReadNotificationDto>> GetAllNotificationsAsync()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<ReadNotificationDto> GetNotificationAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<List<ReadNotificationDto>> GetNotificationsAsync(NotificationsFilterDto notificationsFilterDto)
+        {
+            throw new NotImplementedException();
         }
     }
 }

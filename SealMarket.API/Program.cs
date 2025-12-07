@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using SealMarket.Application.Services;
-using SealMarket.Core.Interfaces.Repositories;
-using SealMarket.Core.Interfaces.Services;
+using SealMarket.Core.Interfaces;
+using SealMarket.Application.Interfaces;
 using SealMarket.Infrastructure.Data;
 using SealMarket.Infrastructure.Repositories;
 

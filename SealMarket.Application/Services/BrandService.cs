@@ -1,5 +1,10 @@
-﻿using SealMarket.Core.Interfaces.Repositories;
-using SealMarket.Core.Interfaces.Services;
+﻿using SealMarket.Application.DTOs.Requests.CreateDTOs;
+using SealMarket.Application.DTOs.Requests.FilterDTOs;
+using SealMarket.Application.DTOs.Requests.UpdateDTOs;
+using SealMarket.Application.DTOs.Responses.CreatedDTOs;
+using SealMarket.Application.DTOs.Responses.EntityDtos;
+using SealMarket.Application.Interfaces;
+using SealMarket.Core.Interfaces;
 
 namespace SealMarket.Application.Services
 {
@@ -10,6 +15,36 @@ namespace SealMarket.Application.Services
         public BrandService(IBrandRepository repo) 
         { 
             _repo = repo;
+        }
+
+        public Task<CreatedBrandDto> CreateBrandAsync(CreateBrandDto createBrandDto)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task DeleteBrandAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<List<ReadBrandDto>> GetAllBrandsAsync()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<ReadBrandDto> GetBrandAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<List<ReadBrandDto>> GetBrandsAsync(BrandsFilterDto brandsFilterDto)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task UpdateBrandAsync(int id, UpdateBrandDto updateBrandDto)
+        {
+            throw new NotImplementedException();
         }
     }
 }

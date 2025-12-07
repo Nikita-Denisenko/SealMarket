@@ -1,9 +1,9 @@
 ﻿using SealMarket.Core.Entities;
-using SealMarket.Core.Interfaces.Repositories;
 using SealMarket.Core.Models.Filters;
 using SealMarket.Infrastructure.Data;
 using SealMarket.Core.Constans;
 using Microsoft.EntityFrameworkCore;
+using SealMarket.Core.Interfaces;
 
 namespace SealMarket.Infrastructure.Repositories
 {

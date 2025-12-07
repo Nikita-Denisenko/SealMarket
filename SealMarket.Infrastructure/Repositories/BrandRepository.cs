@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SealMarket.Core.Entities;
-using SealMarket.Core.Interfaces.Repositories;
+using SealMarket.Core.Interfaces;
 using SealMarket.Core.Models.Filters;
 using SealMarket.Infrastructure.Data;
 using static SealMarket.Core.Constans.BrandOrderParameters;

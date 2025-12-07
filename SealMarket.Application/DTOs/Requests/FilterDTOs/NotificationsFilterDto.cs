@@ -2,7 +2,7 @@
 
 namespace SealMarket.Application.DTOs.Requests.FilterDTOs
 {
-    public record NotificationFilterDto
+    public record NotificationsFilterDto
     (
         int Page = 1,
         int Size = 20,
