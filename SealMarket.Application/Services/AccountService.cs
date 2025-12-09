@@ -37,11 +37,6 @@ namespace SealMarket.Application.Services
             throw new NotImplementedException();
         }
 
-        public Task<List<ReadAccountDto>> GetAllAccountsAsync()
-        {
-            throw new NotImplementedException();
-        }
-
         public Task UpdateAccountAsync(int id, UpdateAccountDto updateAccountDto)
         {
             throw new NotImplementedException();

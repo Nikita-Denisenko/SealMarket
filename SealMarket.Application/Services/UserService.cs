@@ -27,11 +27,6 @@ namespace SealMarket.Application.Services
             throw new NotImplementedException();
         }
 
-        public Task<List<ReadUserDto>> GetAllUsersAsync()
-        {
-            throw new NotImplementedException();
-        }
-
         public Task<ReadUserDto> GetUserAsync(int id)
         {
             throw new NotImplementedException();

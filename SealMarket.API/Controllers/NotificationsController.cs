@@ -5,7 +5,7 @@ namespace SealMarket.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CartController : ControllerBase
+    public class NotificationsController : ControllerBase
     {
     }
 }

@@ -4,8 +4,6 @@
     {
         public Task<int> SaveChangesAsync();
 
-        public Task<List<T>> GetAllAsync();
-
         public Task<T?> GetByIdAsync(int id);
 
         public Task AddAsync(T entity);

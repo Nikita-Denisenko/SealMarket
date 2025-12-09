@@ -8,7 +8,6 @@ namespace SealMarket.Application.Interfaces
 {
     public interface ICartService
     {
-        public Task<List<ReadCartDto>> GetAllCartsAsync();
         public Task<List<ReadCartDto>> GetCartsAsync(CartsFilterDto cartsFilterDto);
         public Task<ReadCartDto> GetCartAsync(int id);
         public Task<CreatedCartDto> CreateCartAsync(CreateCartDto createCartDto);

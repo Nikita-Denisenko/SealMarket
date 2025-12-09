@@ -27,11 +27,6 @@ namespace SealMarket.Application.Services
             throw new NotImplementedException();
         }
 
-        public Task<List<ReadBrandDto>> GetAllBrandsAsync()
-        {
-            throw new NotImplementedException();
-        }
-
         public Task<ReadBrandDto> GetBrandAsync(int id)
         {
             throw new NotImplementedException();

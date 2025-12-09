@@ -8,7 +8,6 @@ namespace SealMarket.Application.Interfaces
 {
     public interface IProductService
     {
-        public Task<List<ReadProductDto>> GetAllProductsAsync();
         public Task<List<ReadProductDto>> GetProductsAsync(ProductsFilterDto filter);
         public Task<ReadProductDto> GetProductAsync(int id);
         public Task<CreatedProductDto> CreateProductAsync(CreateProductDto createProductDto);

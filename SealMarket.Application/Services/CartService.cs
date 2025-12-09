@@ -27,11 +27,6 @@ namespace SealMarket.Application.Services
             throw new NotImplementedException();
         }
 
-        public Task<List<ReadCartDto>> GetAllCartsAsync()
-        {
-            throw new NotImplementedException();
-        }
-
         public Task<ReadCartDto> GetCartAsync(int id)
         {
             throw new NotImplementedException();
