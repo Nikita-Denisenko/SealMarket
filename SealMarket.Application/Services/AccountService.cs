@@ -27,7 +27,7 @@ namespace SealMarket.Application.Services
             throw new NotImplementedException();
         }
 
-        public Task<ReadAccountDto> GetAccountAsync(int id)
+        public Task<ReadAccountDto> GetAccountByIdAsync(int id)
         {
             throw new NotImplementedException();
         }

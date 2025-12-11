@@ -17,9 +17,6 @@ public abstract class BaseRepository<T> : IBaseRepository<T> where T : class
     public virtual async Task AddAsync(T entity)
         => await Set.AddAsync(entity);
 
-    public virtual void Update(T entity)
-        => Set.Update(entity);
-
     public virtual void Delete(T entity)
         => Set.Remove(entity);
 

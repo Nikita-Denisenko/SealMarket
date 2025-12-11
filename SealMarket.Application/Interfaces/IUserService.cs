@@ -9,7 +9,7 @@ namespace SealMarket.Application.Interfaces
     public interface IUserService
     {
         public Task<List<ReadUserDto>> GetUsersAsync(UsersFilterDto usersfilterDto);
-        public Task<ReadUserDto> GetUserAsync(int id);
+        public Task<ReadUserDto> GetUserByIdAsync(int id);
         public Task<CreatedUserDto> CreateUserAsync(CreateUserDto createUserDto);
         public Task UpdateUserAsync(int id, UpdateUserDto updateUserDto);
         public Task DeleteUserAsync(int id);

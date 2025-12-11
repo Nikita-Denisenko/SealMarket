@@ -9,7 +9,7 @@
         string Email,
         string PhoneNumber,
         DateTime CreatedAt,
-        Cart? Cart,
+        int CartId,
         List<int> NotificationsIds
     );
 }

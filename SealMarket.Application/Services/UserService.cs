@@ -5,6 +5,7 @@ using SealMarket.Application.DTOs.Responses.CreatedDTOs;
 using SealMarket.Application.DTOs.Responses.ReadDTOs;
 using SealMarket.Application.Interfaces;
 using SealMarket.Core.Interfaces;
+using SealMarket.Core.Models.Filters;
 
 namespace SealMarket.Application.Services
 {
@@ -17,29 +18,101 @@ namespace SealMarket.Application.Services
             _repo = repo;
         }
 
-        public Task<CreatedUserDto> CreateUserAsync(CreateUserDto createUserDto)
+        public async Task<CreatedUserDto> CreateUserAsync(CreateUserDto createUserDto)
         {
-            throw new NotImplementedException();
+            if (createUserDto is null)
+                throw new ArgumentNullException(nameof(createUserDto));
+
+            var user = new User
+            (
+                createUserDto.Name,
+                createUserDto.BirthDate,
+                createUserDto.City
+            );
+
+            await _repo.AddAsync(user);
+            await _repo.SaveChangesAsync();
+
+            var createdUser = new CreatedUserDto(user.Id, user.Name);
+
+            return createdUser;
         }
 
-        public Task DeleteUserAsync(int id)
+        public async Task DeleteUserAsync(int id)
         {
-            throw new NotImplementedException();
+            if (!await _repo.ExistsAsync(id))
+                throw new KeyNotFoundException("User to delete was not found");
+
+            await _repo.DeleteByIdAsync(id);
+            await _repo.SaveChangesAsync();
         }
 
-        public Task<ReadUserDto> GetUserAsync(int id)
+        public async Task<ReadUserDto> GetUserByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            var user = await _repo.GetByIdAsync(id);
+
+            if (user is null)
+                throw new KeyNotFoundException("User was not found.");
+
+            return new ReadUserDto
+            (
+                user.Id,
+                user.Name,
+                user.BirthDate,
+                user.City,
+                user.Account?.Id
+            );
         }
 
-        public Task<List<ReadUserDto>> GetUsersAsync(UsersFilterDto usersfilterDto)
+        public async Task<List<ReadUserDto>> GetUsersAsync(UsersFilterDto usersfilterDto)
         {
-            throw new NotImplementedException();
+            if (usersfilterDto is null)
+                throw new ArgumentNullException(nameof(usersfilterDto));
+
+            var filter = new UsersFilter
+            (
+                usersfilterDto.Page,
+                usersfilterDto.Size,
+                usersfilterDto.MinAge,
+                usersfilterDto.MaxAge,
+                usersfilterDto.OrderParam,
+                usersfilterDto.ByAscending,
+                usersfilterDto.SearchText
+            );
+
+            var users = await _repo.GetUsersAsync(filter);
+
+            var readUserDtos = users
+                .Select(user => new ReadUserDto
+                    (
+                        user.Id,
+                        user.Name,
+                        user.BirthDate,
+                        user.City,
+                        user.Account?.Id
+                    )
+                ).ToList();
+
+            return readUserDtos;
         }
 
-        public Task UpdateUserAsync(int id, UpdateUserDto updateUserDto)
+        public async Task UpdateUserAsync(int id, UpdateUserDto updateUserDto)
         {
-            throw new NotImplementedException();
+            if (updateUserDto is null)
+                throw new ArgumentNullException(nameof(updateUserDto));
+
+            var user = await _repo.GetByIdAsync(id);
+
+            if (user is null)
+                throw new KeyNotFoundException("User was not found.");
+
+            user.UpdatePersonalInfo
+            (
+                updateUserDto.Name ?? user.Name, 
+                updateUserDto.City ?? user.City
+            );
+
+            await _repo.SaveChangesAsync();
         }
     }
 }

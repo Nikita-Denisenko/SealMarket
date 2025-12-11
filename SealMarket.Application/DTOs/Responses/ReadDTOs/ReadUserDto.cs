@@ -1,10 +1,13 @@
-﻿namespace SealMarket.Application.DTOs.Responses.ReadDTOs
+﻿using SealMarket.Application.DTOs.Responses.EntityDtos;
+
+namespace SealMarket.Application.DTOs.Responses.ReadDTOs
 {
     public record ReadUserDto
     (
         int Id,
         string Name,
         DateOnly BirthDate,
-        string City
+        string City,
+        int? AccountId
     );
 }

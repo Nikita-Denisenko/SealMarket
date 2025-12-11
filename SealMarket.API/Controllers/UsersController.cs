@@ -37,7 +37,7 @@ namespace SealMarket.API.Controllers
         [HttpGet("{id:int}")]
         public async Task<IActionResult> GetUser([FromRoute] int id)
         {
-            var userDto = await _service.GetUserAsync(id);
+            var userDto = await _service.GetUserByIdAsync(id);
 
             if(userDto is null)
                 return NotFound("User was not found.");

@@ -9,7 +9,7 @@ namespace SealMarket.Application.Interfaces
     public interface IAccountService
     {
         public Task<List<ReadAccountDto>> GetAccountsAsync(AccountsFilterDto accountsFilterDto);
-        public Task<ReadAccountDto> GetAccountAsync(int id);
+        public Task<ReadAccountDto> GetAccountByIdAsync(int id);
         public Task<CreatedAccountDto> CreateAccountAsync(CreateAccountDto createAccountDto);
         public Task UpdateAccountAsync(int id, UpdateAccountDto updateAccountDto);
         public Task DeleteAccountAsync(int id);

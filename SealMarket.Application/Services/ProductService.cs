@@ -27,7 +27,7 @@ namespace SealMarket.Application.Services
             throw new NotImplementedException();
         }
 
-        public Task<ReadProductDto> GetProductAsync(int id)
+        public Task<ReadProductDto> GetProductByIdAsync(int id)
         {
             throw new NotImplementedException();
         }

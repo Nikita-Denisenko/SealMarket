@@ -9,7 +9,7 @@ namespace SealMarket.Application.Interfaces
     public interface IBrandService
     {
         public Task<List<ReadBrandDto>> GetBrandsAsync(BrandsFilterDto brandsFilterDto);
-        public Task<ReadBrandDto> GetBrandAsync(int id);
+        public Task<ReadBrandDto> GetBrandByIdAsync(int id);
         public Task<CreatedBrandDto> CreateBrandAsync(CreateBrandDto createBrandDto);
         public Task UpdateBrandAsync(int id, UpdateBrandDto updateBrandDto);
         public Task DeleteBrandAsync(int id);
