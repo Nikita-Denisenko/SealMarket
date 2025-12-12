@@ -18,11 +18,11 @@ public class Account
 
     public Account
     (
+        int userId,
         string login, 
         string password, 
         string email, 
-        string phone,
-        int userId
+        string phone
     )
     {
         Login = login;

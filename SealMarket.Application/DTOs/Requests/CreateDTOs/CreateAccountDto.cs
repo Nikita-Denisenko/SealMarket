@@ -20,10 +20,6 @@ namespace SealMarket.Application.DTOs.Requests.CreateDTOs
 
         [Required]
         [Phone]
-        string PhoneNumber,
-
-        [Required]
-        [Range(1, int.MaxValue)]
-        int UserId
+        string PhoneNumber
     );
 }

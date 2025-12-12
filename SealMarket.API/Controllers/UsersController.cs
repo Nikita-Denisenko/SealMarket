@@ -45,24 +45,6 @@ namespace SealMarket.API.Controllers
             return Ok(userDto);
         }
 
-        [HttpPost]
-        public async Task<IActionResult> CreateUserAsync([FromBody] CreateUserDto createUserDto)
-        {
-            if (!(ModelState.IsValid))
-                return BadRequest(ModelState);
-
-            try
-            {
-                var createdUser = await _service.CreateUserAsync(createUserDto);
-                return CreatedAtAction(nameof(GetUser), new { id = createdUser.Id}, createdUser); 
-            }
-            catch(Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                return BadRequest("User was not created.");
-            }
-        }
-
         [HttpPut("{id:int}")]
         public async Task<IActionResult> UpdateUserAsync
         (

@@ -13,7 +13,9 @@ namespace SealMarket.Infrastructure.Repositories
 
         public async Task<List<User>> GetUsersAsync(UsersFilter filter)
         {
-            var query = _context.Users.AsQueryable();
+            var query = _context.Users
+                .Include(u => u.Account)
+                .AsQueryable();
 
             query = query
                 .Where(u => u.Name.Contains(filter.SearchText));
@@ -40,6 +42,14 @@ namespace SealMarket.Infrastructure.Repositories
                 .Take(filter.Size);
 
             return await query.ToListAsync();
+        }
+        public override async Task<User?> GetByIdAsync(int id)
+        {
+            var user = await _context.Users
+                .Include(u => u.Account)
+                .FirstOrDefaultAsync(user => user.Id == id);
+
+            return user;
         }
     }
 }

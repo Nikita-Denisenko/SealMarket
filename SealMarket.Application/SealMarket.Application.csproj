@@ -7,11 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Validators\" />
+    <ProjectReference Include="..\SealMarket.Core\SealMarket.Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SealMarket.Core\SealMarket.Core.csproj" />
+    <Folder Include="Validators\" />
   </ItemGroup>
 
 </Project>

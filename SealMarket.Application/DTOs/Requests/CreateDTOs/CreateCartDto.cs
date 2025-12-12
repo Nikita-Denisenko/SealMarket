@@ -6,10 +6,6 @@ namespace SealMarket.Application.DTOs.Requests.CreateDTOs
     (
         [Required]
         [MaxLength(50)]
-        string Name,
-
-        [Required]
-        [Range(1, int.MaxValue)]
-        int AccountId
+        string Name
     );
 }
