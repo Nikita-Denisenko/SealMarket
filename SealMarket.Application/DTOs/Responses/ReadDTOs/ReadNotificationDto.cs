@@ -6,6 +6,6 @@
         string Message,
         DateTime DateTime,
         bool HasBeenRead,
-        int AccountId
+        int UserId
     );
 }

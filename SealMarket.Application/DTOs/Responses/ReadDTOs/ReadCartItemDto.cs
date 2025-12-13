@@ -7,6 +7,7 @@
         int CartId,
         int Quantity,
         DateTime AddedAt,
+        string ProductName,
         decimal ProductPrice,
         decimal TotalPrice
     );

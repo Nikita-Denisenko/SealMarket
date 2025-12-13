@@ -1,4 +1,5 @@
-﻿using SealMarket.Core.Entities;
+﻿using SealMarket.Application.DTOs.Responses.ReadDTOs;
+using SealMarket.Core.Entities;
 
 namespace SealMarket.Application.DTOs.Responses.EntityDtos
 {
@@ -7,6 +8,6 @@ namespace SealMarket.Application.DTOs.Responses.EntityDtos
         int Id,
         string Name,
         int AccountId,
-        List<int> ProductsIds
+        List<ReadCartItemDto> CartItems
     );
 }

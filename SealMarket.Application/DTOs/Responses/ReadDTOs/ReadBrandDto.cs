@@ -8,6 +8,6 @@ namespace SealMarket.Application.DTOs.Responses.EntityDtos
         string Name,
         string LogoUrl,
         string Description,
-        List<int> ProductsIds
+        List<ReadProductDto> Products
     );
 }

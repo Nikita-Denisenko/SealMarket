@@ -43,7 +43,7 @@ namespace SealMarket.Infrastructure.Repositories
 
             return await query.ToListAsync();
         }
-        public override async Task<User?> GetByIdAsync(int id)
+        public async Task<User?> GetWithAccountAsync(int id)
         {
             var user = await _context.Users
                 .Include(u => u.Account)

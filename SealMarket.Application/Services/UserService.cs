@@ -49,7 +49,7 @@ namespace SealMarket.Application.Services
 
         public async Task<ReadUserDto> GetUserByIdAsync(int id)
         {
-            var user = await _repo.GetByIdAsync(id);
+            var user = await _repo.GetWithAccountAsync(id);
 
             if (user is null)
                 throw new KeyNotFoundException("User was not found.");

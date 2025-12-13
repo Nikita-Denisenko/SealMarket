@@ -10,6 +10,6 @@
         string PhoneNumber,
         DateTime CreatedAt,
         int CartId,
-        List<int> NotificationsIds
+        List<ReadNotificationDto> Notifications
     );
 }

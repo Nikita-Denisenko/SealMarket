@@ -1,17 +1,18 @@
 ﻿using SealMarket.Core.Entities;
+using System.Globalization;
 
 public class Account
 {
     public int Id { get; private set; }
     public int UserId { get; private set; }
-    public User? User { get; private set; }
+    public User User { get; private set; }
     public decimal Balance { get; private set; }
     public string Login { get; private set; }
     public string Password { get; private set; }
     public string Email { get; private set; }
     public string PhoneNumber { get; private set; }
     public DateTime CreatedAt { get; private set; }
-    public Cart? Cart { get; private set; }
+    public Cart Cart { get; private set; }
     public List<Notification> Notifications { get; private set; }
 
     private Account() { }
@@ -22,13 +23,13 @@ public class Account
         string login, 
         string password, 
         string email, 
-        string phone
+        string phoneNumber
     )
     {
         Login = login;
         Password = password;
         Email = email;
-        PhoneNumber = phone;
+        PhoneNumber = phoneNumber;
         CreatedAt = DateTime.UtcNow;
         Balance = 0;
         UserId = userId;
@@ -47,11 +48,17 @@ public class Account
         Balance -= quantity;
     }
 
-    public void CreateCart(string name = "Default Cart")
+    public void UpdateAcccountData
+    (
+        string login, 
+        string password, 
+        string email, 
+        string phoneNumber
+    )
     {
-        if (Cart != null)
-            throw new InvalidOperationException("Account already has a cart");
-
-        Cart = new Cart(name, Id);
+        Login = login;
+        Password = password;
+        Email = email;
+        PhoneNumber = phoneNumber;
     }
 }

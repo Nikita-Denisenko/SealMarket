@@ -5,5 +5,6 @@ namespace SealMarket.Core.Interfaces
     public interface IAccountRepository : IBaseRepository<Account>
     {
         public Task<List<Account>> GetAccountsAsync(AccountsFilter filter);
+        public Task<Account?> GetAccountWithIncludesAsync(int id);
     }
 }

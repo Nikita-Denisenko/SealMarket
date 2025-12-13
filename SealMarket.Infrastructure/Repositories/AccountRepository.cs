@@ -3,6 +3,7 @@ using static SealMarket.Core.Constans.AccountOrderParameters;
 using SealMarket.Core.Models.Filters;
 using SealMarket.Infrastructure.Data;
 using SealMarket.Core.Interfaces;
+using System.Dynamic;
 
 namespace SealMarket.Infrastructure.Repositories
 {
@@ -12,7 +13,11 @@ namespace SealMarket.Infrastructure.Repositories
 
         public async Task<List<Account>> GetAccountsAsync(AccountsFilter filter)
         {
-            var query = _context.Accounts.AsQueryable();
+            var query = _context.Accounts
+                .Include(a => a.User)
+                .Include(a => a.Notifications)
+                .Include(a => a.Cart)
+                .AsQueryable();
 
             query = query
                .Where(a => a.Login.Contains(filter.SearchText));
@@ -40,6 +45,17 @@ namespace SealMarket.Infrastructure.Repositories
                 .Take(filter.Size);
 
             return await query.ToListAsync();
+        }
+
+        public async Task<Account?> GetAccountWithIncludesAsync(int id)
+        {
+            var account = await _context.Accounts
+                 .Include(a => a.User)
+                 .Include(a => a.Notifications)
+                 .Include(a => a.Cart)
+                 .FirstOrDefaultAsync(a => a.Id == id);
+
+            return account;
         }
     }
 }

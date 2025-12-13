@@ -12,6 +12,7 @@ namespace SealMarket.Application.DTOs.Responses.EntityDtos
         decimal Price,
         DateTime CreatedAt,
         bool IsActive,
-        int BrandId
+        int BrandId,
+        string BrandName
     );
 }
