@@ -1,13 +1,13 @@
 ﻿namespace SealMarket.Application.DTOs.Responses.ReadDTOs
 {
-    public record ReadCartItemDto
+    public record CartItemDto
     (
         int Id,
         int ProductId,
-        int CartId,
         int Quantity,
         DateTime AddedAt,
         string ProductName,
+        string ProductImageUrl,
         decimal ProductPrice,
         decimal TotalPrice
     );

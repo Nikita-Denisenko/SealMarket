@@ -3,6 +3,118 @@
   "WorkspaceRootPath": "D:\\Projects\\SealMarket\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{10D57021-52DE-4A32-8F37-944A95C07F57}|SealMarket.Infrastructure\\SealMarket.Infrastructure.csproj|d:\\projects\\sealmarket\\sealmarket.infrastructure\\repositories\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10D57021-52DE-4A32-8F37-944A95C07F57}|SealMarket.Infrastructure\\SealMarket.Infrastructure.csproj|solutionrelative:sealmarket.infrastructure\\repositories\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10D57021-52DE-4A32-8F37-944A95C07F57}|SealMarket.Infrastructure\\SealMarket.Infrastructure.csproj|d:\\projects\\sealmarket\\sealmarket.infrastructure\\repositories\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10D57021-52DE-4A32-8F37-944A95C07F57}|SealMarket.Infrastructure\\SealMarket.Infrastructure.csproj|solutionrelative:sealmarket.infrastructure\\repositories\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|d:\\projects\\sealmarket\\sealmarket.application\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|solutionrelative:sealmarket.application\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10C4BA6B-B7FD-4417-B63C-4F86BDC2ADCC}|SealMarket.Core\\SealMarket.Core.csproj|d:\\projects\\sealmarket\\sealmarket.core\\entities\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10C4BA6B-B7FD-4417-B63C-4F86BDC2ADCC}|SealMarket.Core\\SealMarket.Core.csproj|solutionrelative:sealmarket.core\\entities\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10C4BA6B-B7FD-4417-B63C-4F86BDC2ADCC}|SealMarket.Core\\SealMarket.Core.csproj|d:\\projects\\sealmarket\\sealmarket.core\\entities\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10C4BA6B-B7FD-4417-B63C-4F86BDC2ADCC}|SealMarket.Core\\SealMarket.Core.csproj|solutionrelative:sealmarket.core\\entities\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10C4BA6B-B7FD-4417-B63C-4F86BDC2ADCC}|SealMarket.Core\\SealMarket.Core.csproj|d:\\projects\\sealmarket\\sealmarket.core\\entities\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10C4BA6B-B7FD-4417-B63C-4F86BDC2ADCC}|SealMarket.Core\\SealMarket.Core.csproj|solutionrelative:sealmarket.core\\entities\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|d:\\projects\\sealmarket\\sealmarket.application\\dtos\\responses\\readdtos\\accountdtos\\accountdashborddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|solutionrelative:sealmarket.application\\dtos\\responses\\readdtos\\accountdtos\\accountdashborddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|d:\\projects\\sealmarket\\sealmarket.application\\dtos\\responses\\readdtos\\accountdtos\\shortaccountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|solutionrelative:sealmarket.application\\dtos\\responses\\readdtos\\accountdtos\\shortaccountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|d:\\projects\\sealmarket\\sealmarket.application\\dtos\\responses\\readdtos\\userdtos\\userprofiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|solutionrelative:sealmarket.application\\dtos\\responses\\readdtos\\userdtos\\userprofiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|d:\\projects\\sealmarket\\sealmarket.application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|solutionrelative:sealmarket.application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|d:\\projects\\sealmarket\\sealmarket.application\\dtos\\responses\\readdtos\\userdtos\\publicuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|solutionrelative:sealmarket.application\\dtos\\responses\\readdtos\\userdtos\\publicuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10D57021-52DE-4A32-8F37-944A95C07F57}|SealMarket.Infrastructure\\SealMarket.Infrastructure.csproj|d:\\projects\\sealmarket\\sealmarket.infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10D57021-52DE-4A32-8F37-944A95C07F57}|SealMarket.Infrastructure\\SealMarket.Infrastructure.csproj|solutionrelative:sealmarket.infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|d:\\projects\\sealmarket\\sealmarket.application\\dtos\\requests\\createdtos\\createbranddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|solutionrelative:sealmarket.application\\dtos\\requests\\createdtos\\createbranddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10C4BA6B-B7FD-4417-B63C-4F86BDC2ADCC}|SealMarket.Core\\SealMarket.Core.csproj|d:\\projects\\sealmarket\\sealmarket.core\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10C4BA6B-B7FD-4417-B63C-4F86BDC2ADCC}|SealMarket.Core\\SealMarket.Core.csproj|solutionrelative:sealmarket.core\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|d:\\projects\\sealmarket\\sealmarket.application\\dtos\\responses\\readdtos\\productdtos\\readproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|solutionrelative:sealmarket.application\\dtos\\responses\\readdtos\\productdtos\\readproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|d:\\projects\\sealmarket\\sealmarket.application\\dtos\\responses\\readdtos\\notificationdtos\\readnotificationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|solutionrelative:sealmarket.application\\dtos\\responses\\readdtos\\notificationdtos\\readnotificationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|d:\\projects\\sealmarket\\sealmarket.application\\interfaces\\iaccountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|solutionrelative:sealmarket.application\\interfaces\\iaccountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|d:\\projects\\sealmarket\\sealmarket.application\\dtos\\responses\\readdtos\\cartitemdtos\\readcartitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|solutionrelative:sealmarket.application\\dtos\\responses\\readdtos\\cartitemdtos\\readcartitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|d:\\projects\\sealmarket\\sealmarket.application\\dtos\\responses\\readdtos\\cartdtos\\readcartdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|solutionrelative:sealmarket.application\\dtos\\responses\\readdtos\\cartdtos\\readcartdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|d:\\projects\\sealmarket\\sealmarket.application\\dtos\\responses\\readdtos\\branddtos\\readbranddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|solutionrelative:sealmarket.application\\dtos\\responses\\readdtos\\branddtos\\readbranddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10C4BA6B-B7FD-4417-B63C-4F86BDC2ADCC}|SealMarket.Core\\SealMarket.Core.csproj|d:\\projects\\sealmarket\\sealmarket.core\\interfaces\\iaccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10C4BA6B-B7FD-4417-B63C-4F86BDC2ADCC}|SealMarket.Core\\SealMarket.Core.csproj|solutionrelative:sealmarket.core\\interfaces\\iaccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|d:\\projects\\sealmarket\\sealmarket.application\\services\\brandservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|solutionrelative:sealmarket.application\\services\\brandservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10C4BA6B-B7FD-4417-B63C-4F86BDC2ADCC}|SealMarket.Core\\SealMarket.Core.csproj|d:\\projects\\sealmarket\\sealmarket.core\\interfaces\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10C4BA6B-B7FD-4417-B63C-4F86BDC2ADCC}|SealMarket.Core\\SealMarket.Core.csproj|solutionrelative:sealmarket.core\\interfaces\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10C4BA6B-B7FD-4417-B63C-4F86BDC2ADCC}|SealMarket.Core\\SealMarket.Core.csproj|d:\\projects\\sealmarket\\sealmarket.core\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10C4BA6B-B7FD-4417-B63C-4F86BDC2ADCC}|SealMarket.Core\\SealMarket.Core.csproj|solutionrelative:sealmarket.core\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10C4BA6B-B7FD-4417-B63C-4F86BDC2ADCC}|SealMarket.Core\\SealMarket.Core.csproj|d:\\projects\\sealmarket\\sealmarket.core\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10C4BA6B-B7FD-4417-B63C-4F86BDC2ADCC}|SealMarket.Core\\SealMarket.Core.csproj|solutionrelative:sealmarket.core\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10C4BA6B-B7FD-4417-B63C-4F86BDC2ADCC}|SealMarket.Core\\SealMarket.Core.csproj|d:\\projects\\sealmarket\\sealmarket.core\\entities\\brand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10C4BA6B-B7FD-4417-B63C-4F86BDC2ADCC}|SealMarket.Core\\SealMarket.Core.csproj|solutionrelative:sealmarket.core\\entities\\brand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|d:\\projects\\sealmarket\\sealmarket.application\\dtos\\requests\\updatedtos\\updateaccountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|solutionrelative:sealmarket.application\\dtos\\requests\\updatedtos\\updateaccountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10C4BA6B-B7FD-4417-B63C-4F86BDC2ADCC}|SealMarket.Core\\SealMarket.Core.csproj|d:\\projects\\sealmarket\\sealmarket.core\\interfaces\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10C4BA6B-B7FD-4417-B63C-4F86BDC2ADCC}|SealMarket.Core\\SealMarket.Core.csproj|solutionrelative:sealmarket.core\\interfaces\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C262B966-C7A9-42A3-AB82-B36BC02124BF}|SealMarket.API\\SealMarket.API.csproj|d:\\projects\\sealmarket\\sealmarket.api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C262B966-C7A9-42A3-AB82-B36BC02124BF}|SealMarket.API\\SealMarket.API.csproj|solutionrelative:sealmarket.api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,14 +125,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|d:\\projects\\sealmarket\\sealmarket.application\\dtos\\requests\\createdtos\\createaccountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|solutionrelative:sealmarket.application\\dtos\\requests\\createdtos\\createaccountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10C4BA6B-B7FD-4417-B63C-4F86BDC2ADCC}|SealMarket.Core\\SealMarket.Core.csproj|d:\\projects\\sealmarket\\sealmarket.core\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10C4BA6B-B7FD-4417-B63C-4F86BDC2ADCC}|SealMarket.Core\\SealMarket.Core.csproj|solutionrelative:sealmarket.core\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|d:\\projects\\sealmarket\\sealmarket.application\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|solutionrelative:sealmarket.application\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|d:\\projects\\sealmarket\\sealmarket.application\\dtos\\requests\\createdtos\\createcartdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -41,14 +145,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|d:\\projects\\sealmarket\\sealmarket.application\\dtos\\requests\\createdtos\\createproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|solutionrelative:sealmarket.application\\dtos\\requests\\createdtos\\createproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|d:\\projects\\sealmarket\\sealmarket.application\\dtos\\requests\\createdtos\\createbranddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|solutionrelative:sealmarket.application\\dtos\\requests\\createdtos\\createbranddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|d:\\projects\\sealmarket\\sealmarket.application\\interfaces\\iaccountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|solutionrelative:sealmarket.application\\interfaces\\iaccountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|d:\\projects\\sealmarket\\sealmarket.application\\interfaces\\icartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -83,72 +179,12 @@
       "RelativeMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|solutionrelative:sealmarket.application\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|d:\\projects\\sealmarket\\sealmarket.application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|solutionrelative:sealmarket.application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10C4BA6B-B7FD-4417-B63C-4F86BDC2ADCC}|SealMarket.Core\\SealMarket.Core.csproj|d:\\projects\\sealmarket\\sealmarket.core\\entities\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10C4BA6B-B7FD-4417-B63C-4F86BDC2ADCC}|SealMarket.Core\\SealMarket.Core.csproj|solutionrelative:sealmarket.core\\entities\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10D57021-52DE-4A32-8F37-944A95C07F57}|SealMarket.Infrastructure\\SealMarket.Infrastructure.csproj|d:\\projects\\sealmarket\\sealmarket.infrastructure\\repositories\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10D57021-52DE-4A32-8F37-944A95C07F57}|SealMarket.Infrastructure\\SealMarket.Infrastructure.csproj|solutionrelative:sealmarket.infrastructure\\repositories\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10D57021-52DE-4A32-8F37-944A95C07F57}|SealMarket.Infrastructure\\SealMarket.Infrastructure.csproj|d:\\projects\\sealmarket\\sealmarket.infrastructure\\repositories\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10D57021-52DE-4A32-8F37-944A95C07F57}|SealMarket.Infrastructure\\SealMarket.Infrastructure.csproj|solutionrelative:sealmarket.infrastructure\\repositories\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10D57021-52DE-4A32-8F37-944A95C07F57}|SealMarket.Infrastructure\\SealMarket.Infrastructure.csproj|d:\\projects\\sealmarket\\sealmarket.infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10D57021-52DE-4A32-8F37-944A95C07F57}|SealMarket.Infrastructure\\SealMarket.Infrastructure.csproj|solutionrelative:sealmarket.infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10C4BA6B-B7FD-4417-B63C-4F86BDC2ADCC}|SealMarket.Core\\SealMarket.Core.csproj|d:\\projects\\sealmarket\\sealmarket.core\\interfaces\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10C4BA6B-B7FD-4417-B63C-4F86BDC2ADCC}|SealMarket.Core\\SealMarket.Core.csproj|solutionrelative:sealmarket.core\\interfaces\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10C4BA6B-B7FD-4417-B63C-4F86BDC2ADCC}|SealMarket.Core\\SealMarket.Core.csproj|d:\\projects\\sealmarket\\sealmarket.core\\interfaces\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10C4BA6B-B7FD-4417-B63C-4F86BDC2ADCC}|SealMarket.Core\\SealMarket.Core.csproj|solutionrelative:sealmarket.core\\interfaces\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10C4BA6B-B7FD-4417-B63C-4F86BDC2ADCC}|SealMarket.Core\\SealMarket.Core.csproj|d:\\projects\\sealmarket\\sealmarket.core\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10C4BA6B-B7FD-4417-B63C-4F86BDC2ADCC}|SealMarket.Core\\SealMarket.Core.csproj|solutionrelative:sealmarket.core\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{10D57021-52DE-4A32-8F37-944A95C07F57}|SealMarket.Infrastructure\\SealMarket.Infrastructure.csproj|d:\\projects\\sealmarket\\sealmarket.infrastructure\\repositories\\brandrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{10D57021-52DE-4A32-8F37-944A95C07F57}|SealMarket.Infrastructure\\SealMarket.Infrastructure.csproj|solutionrelative:sealmarket.infrastructure\\repositories\\brandrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{10D57021-52DE-4A32-8F37-944A95C07F57}|SealMarket.Infrastructure\\SealMarket.Infrastructure.csproj|d:\\projects\\sealmarket\\sealmarket.infrastructure\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{10D57021-52DE-4A32-8F37-944A95C07F57}|SealMarket.Infrastructure\\SealMarket.Infrastructure.csproj|solutionrelative:sealmarket.infrastructure\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|d:\\projects\\sealmarket\\sealmarket.application\\dtos\\responses\\readdtos\\readuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|solutionrelative:sealmarket.application\\dtos\\responses\\readdtos\\readuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|d:\\projects\\sealmarket\\sealmarket.application\\dtos\\responses\\readdtos\\readaccountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|solutionrelative:sealmarket.application\\dtos\\responses\\readdtos\\readaccountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|d:\\projects\\sealmarket\\sealmarket.application\\dtos\\responses\\readdtos\\readproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|solutionrelative:sealmarket.application\\dtos\\responses\\readdtos\\readproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|d:\\projects\\sealmarket\\sealmarket.application\\dtos\\responses\\readdtos\\readcartdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|solutionrelative:sealmarket.application\\dtos\\responses\\readdtos\\readcartdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|d:\\projects\\sealmarket\\sealmarket.application\\dtos\\responses\\readdtos\\readcartitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|solutionrelative:sealmarket.application\\dtos\\responses\\readdtos\\readcartitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|d:\\projects\\sealmarket\\sealmarket.application\\dtos\\responses\\readdtos\\readnotificationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|solutionrelative:sealmarket.application\\dtos\\responses\\readdtos\\readnotificationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|d:\\projects\\sealmarket\\sealmarket.application\\dtos\\responses\\readdtos\\readbranddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|solutionrelative:sealmarket.application\\dtos\\responses\\readdtos\\readbranddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|d:\\projects\\sealmarket\\sealmarket.application\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -163,10 +199,6 @@
       "RelativeMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|solutionrelative:sealmarket.application\\services\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|d:\\projects\\sealmarket\\sealmarket.application\\services\\brandservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|solutionrelative:sealmarket.application\\services\\brandservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|d:\\projects\\sealmarket\\sealmarket.application\\dtos\\responses\\createddtos\\createdaccountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|solutionrelative:sealmarket.application\\dtos\\responses\\createddtos\\createdaccountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -179,20 +211,12 @@
       "RelativeMoniker": "D:0:0:{C262B966-C7A9-42A3-AB82-B36BC02124BF}|SealMarket.API\\SealMarket.API.csproj|solutionrelative:sealmarket.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{10C4BA6B-B7FD-4417-B63C-4F86BDC2ADCC}|SealMarket.Core\\SealMarket.Core.csproj|d:\\projects\\sealmarket\\sealmarket.core\\interfaces\\iaccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10C4BA6B-B7FD-4417-B63C-4F86BDC2ADCC}|SealMarket.Core\\SealMarket.Core.csproj|solutionrelative:sealmarket.core\\interfaces\\iaccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{10C4BA6B-B7FD-4417-B63C-4F86BDC2ADCC}|SealMarket.Core\\SealMarket.Core.csproj|d:\\projects\\sealmarket\\sealmarket.core\\interfaces\\ibrandrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{10C4BA6B-B7FD-4417-B63C-4F86BDC2ADCC}|SealMarket.Core\\SealMarket.Core.csproj|solutionrelative:sealmarket.core\\interfaces\\ibrandrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|d:\\projects\\sealmarket\\sealmarket.application\\dtos\\requests\\updatedtos\\updatecartdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|solutionrelative:sealmarket.application\\dtos\\requests\\updatedtos\\updatecartdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|d:\\projects\\sealmarket\\sealmarket.application\\dtos\\requests\\updatedtos\\updateaccountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|solutionrelative:sealmarket.application\\dtos\\requests\\updatedtos\\updateaccountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|d:\\projects\\sealmarket\\sealmarket.application\\dtos\\requests\\filterdtos\\productsfilterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -241,10 +265,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{10D57021-52DE-4A32-8F37-944A95C07F57}|SealMarket.Infrastructure\\SealMarket.Infrastructure.csproj|d:\\projects\\sealmarket\\sealmarket.infrastructure\\repositories\\cartrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{10D57021-52DE-4A32-8F37-944A95C07F57}|SealMarket.Infrastructure\\SealMarket.Infrastructure.csproj|solutionrelative:sealmarket.infrastructure\\repositories\\cartrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10C4BA6B-B7FD-4417-B63C-4F86BDC2ADCC}|SealMarket.Core\\SealMarket.Core.csproj|d:\\projects\\sealmarket\\sealmarket.core\\entities\\brand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10C4BA6B-B7FD-4417-B63C-4F86BDC2ADCC}|SealMarket.Core\\SealMarket.Core.csproj|solutionrelative:sealmarket.core\\entities\\brand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{10C4BA6B-B7FD-4417-B63C-4F86BDC2ADCC}|SealMarket.Core\\SealMarket.Core.csproj|d:\\projects\\sealmarket\\sealmarket.core\\constans\\userorderparameters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -323,18 +343,6 @@
       "RelativeMoniker": "D:0:0:{10D57021-52DE-4A32-8F37-944A95C07F57}|SealMarket.Infrastructure\\SealMarket.Infrastructure.csproj|solutionrelative:sealmarket.infrastructure\\configurations\\brandconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{10C4BA6B-B7FD-4417-B63C-4F86BDC2ADCC}|SealMarket.Core\\SealMarket.Core.csproj|d:\\projects\\sealmarket\\sealmarket.core\\entities\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10C4BA6B-B7FD-4417-B63C-4F86BDC2ADCC}|SealMarket.Core\\SealMarket.Core.csproj|solutionrelative:sealmarket.core\\entities\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10C4BA6B-B7FD-4417-B63C-4F86BDC2ADCC}|SealMarket.Core\\SealMarket.Core.csproj|d:\\projects\\sealmarket\\sealmarket.core\\entities\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10C4BA6B-B7FD-4417-B63C-4F86BDC2ADCC}|SealMarket.Core\\SealMarket.Core.csproj|solutionrelative:sealmarket.core\\entities\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10C4BA6B-B7FD-4417-B63C-4F86BDC2ADCC}|SealMarket.Core\\SealMarket.Core.csproj|d:\\projects\\sealmarket\\sealmarket.core\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10C4BA6B-B7FD-4417-B63C-4F86BDC2ADCC}|SealMarket.Core\\SealMarket.Core.csproj|solutionrelative:sealmarket.core\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|d:\\projects\\sealmarket\\sealmarket.application\\dtos\\responses\\createddtos\\createdcartitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1BF075E6-A7A2-4D1D-8071-EDEEC118F2CB}|SealMarket.Application\\SealMarket.Application.csproj|solutionrelative:sealmarket.application\\dtos\\responses\\createddtos\\createdcartitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -362,11 +370,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "CreateBrandDto.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateBrandDto.cs",
               "RelativeDocumentMoniker": "SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateBrandDto.cs",
@@ -388,137 +396,202 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
+              "Title": "Account.cs",
+              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Core\\Entities\\Account.cs",
+              "RelativeDocumentMoniker": "SealMarket.Core\\Entities\\Account.cs",
+              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Core\\Entities\\Account.cs",
+              "RelativeToolTip": "SealMarket.Core\\Entities\\Account.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T12:24:47.997Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "AccountService.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\Services\\AccountService.cs",
               "RelativeDocumentMoniker": "SealMarket.Application\\Services\\AccountService.cs",
               "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Application\\Services\\AccountService.cs",
               "RelativeToolTip": "SealMarket.Application\\Services\\AccountService.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAowEwAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAswIAAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-04T21:01:16.478Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
+              "Title": "CartItem.cs",
+              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Core\\Entities\\CartItem.cs",
+              "RelativeDocumentMoniker": "SealMarket.Core\\Entities\\CartItem.cs",
+              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Core\\Entities\\CartItem.cs",
+              "RelativeToolTip": "SealMarket.Core\\Entities\\CartItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T10:59:27.664Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Cart.cs",
+              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Core\\Entities\\Cart.cs",
+              "RelativeDocumentMoniker": "SealMarket.Core\\Entities\\Cart.cs",
+              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Core\\Entities\\Cart.cs",
+              "RelativeToolTip": "SealMarket.Core\\Entities\\Cart.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T11:09:10.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AccountRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Infrastructure\\Repositories\\AccountRepository.cs",
+              "RelativeDocumentMoniker": "SealMarket.Infrastructure\\Repositories\\AccountRepository.cs",
+              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Infrastructure\\Repositories\\AccountRepository.cs",
+              "RelativeToolTip": "SealMarket.Infrastructure\\Repositories\\AccountRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-13T20:55:15.281Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BaseRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Infrastructure\\Repositories\\BaseRepository.cs",
+              "RelativeDocumentMoniker": "SealMarket.Infrastructure\\Repositories\\BaseRepository.cs",
+              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Infrastructure\\Repositories\\BaseRepository.cs",
+              "RelativeToolTip": "SealMarket.Infrastructure\\Repositories\\BaseRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAmwBMAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-26T19:07:24.699Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AccountDashbordDto.cs",
+              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\AccountDtos\\AccountDashbordDto.cs",
+              "RelativeDocumentMoniker": "SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\AccountDtos\\AccountDashbordDto.cs",
+              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\AccountDtos\\AccountDashbordDto.cs",
+              "RelativeToolTip": "SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\AccountDtos\\AccountDashbordDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T10:36:39.301Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ShortAccountDto.cs",
+              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\AccountDtos\\ShortAccountDto.cs",
+              "RelativeDocumentMoniker": "SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\AccountDtos\\ShortAccountDto.cs",
+              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\AccountDtos\\ShortAccountDto.cs",
+              "RelativeToolTip": "SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\AccountDtos\\ShortAccountDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T10:34:10.405Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserProfileDto.cs",
+              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\UserDtos\\UserProfileDto.cs",
+              "RelativeDocumentMoniker": "SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\UserDtos\\UserProfileDto.cs",
+              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\UserDtos\\UserProfileDto.cs",
+              "RelativeToolTip": "SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\UserDtos\\UserProfileDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T09:40:42.773Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "SealMarket.Application\\Services\\UserService.cs",
+              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Application\\Services\\UserService.cs",
+              "RelativeToolTip": "SealMarket.Application\\Services\\UserService.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAkwFgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T19:58:52.434Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PublicUserDto.cs",
+              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\UserDtos\\PublicUserDto.cs",
+              "RelativeDocumentMoniker": "SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\UserDtos\\PublicUserDto.cs",
+              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\UserDtos\\PublicUserDto.cs",
+              "RelativeToolTip": "SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\UserDtos\\PublicUserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T12:05:52.321Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Infrastructure\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "SealMarket.Infrastructure\\Repositories\\UserRepository.cs",
+              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Infrastructure\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "SealMarket.Infrastructure\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAiwDYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T19:41:34.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "User.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Core\\Entities\\User.cs",
               "RelativeDocumentMoniker": "SealMarket.Core\\Entities\\User.cs",
               "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Core\\Entities\\User.cs",
               "RelativeToolTip": "SealMarket.Core\\Entities\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-03T12:24:33.479Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CreateAccountDto.cs",
-              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateAccountDto.cs",
-              "RelativeDocumentMoniker": "SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateAccountDto.cs",
-              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateAccountDto.cs",
-              "RelativeToolTip": "SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateAccountDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T10:36:31.882Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AccountsController.cs",
-              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.API\\Controllers\\AccountsController.cs",
-              "RelativeDocumentMoniker": "SealMarket.API\\Controllers\\AccountsController.cs",
-              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.API\\Controllers\\AccountsController.cs",
-              "RelativeToolTip": "SealMarket.API\\Controllers\\AccountsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-12T11:06:27.108Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.API\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "SealMarket.API\\Controllers\\UsersController.cs",
-              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.API\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "SealMarket.API\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T19:27:14.371Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CreateCartDto.cs",
-              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateCartDto.cs",
-              "RelativeDocumentMoniker": "SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateCartDto.cs",
-              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateCartDto.cs",
-              "RelativeToolTip": "SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateCartDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T11:44:43.742Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CreateNotificationDto.cs",
-              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateNotificationDto.cs",
-              "RelativeDocumentMoniker": "SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateNotificationDto.cs",
-              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateNotificationDto.cs",
-              "RelativeToolTip": "SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateNotificationDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-12T10:02:31.762Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CreateCartItemDto.cs",
-              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateCartItemDto.cs",
-              "RelativeDocumentMoniker": "SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateCartItemDto.cs",
-              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateCartItemDto.cs",
-              "RelativeToolTip": "SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateCartItemDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T11:37:07.718Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CreateUserDto.cs",
-              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateUserDto.cs",
-              "RelativeDocumentMoniker": "SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateUserDto.cs",
-              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateUserDto.cs",
-              "RelativeToolTip": "SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateUserDto.cs",
+              "DocumentIndex": 14,
+              "Title": "ReadProductDto.cs",
+              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\ProductDtos\\ReadProductDto.cs",
+              "RelativeDocumentMoniker": "SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\ProductDtos\\ReadProductDto.cs",
+              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\ProductDtos\\ReadProductDto.cs",
+              "RelativeToolTip": "SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\ProductDtos\\ReadProductDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T19:25:21.304Z",
+              "WhenOpened": "2025-12-03T11:44:47.438Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "CreateProductDto.cs",
-              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateProductDto.cs",
-              "RelativeDocumentMoniker": "SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateProductDto.cs",
-              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateProductDto.cs",
-              "RelativeToolTip": "SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateProductDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 15,
+              "Title": "ReadNotificationDto.cs",
+              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\NotificationDtos\\ReadNotificationDto.cs",
+              "RelativeDocumentMoniker": "SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\NotificationDtos\\ReadNotificationDto.cs",
+              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\NotificationDtos\\ReadNotificationDto.cs",
+              "RelativeToolTip": "SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\NotificationDtos\\ReadNotificationDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T11:44:51.454Z",
+              "WhenOpened": "2025-12-03T11:44:59.456Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "IAccountService.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\Interfaces\\IAccountService.cs",
               "RelativeDocumentMoniker": "SealMarket.Application\\Interfaces\\IAccountService.cs",
@@ -531,7 +604,238 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 17,
+              "Title": "ReadCartItemDto.cs",
+              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\CartItemDtos\\ReadCartItemDto.cs",
+              "RelativeDocumentMoniker": "SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\CartItemDtos\\ReadCartItemDto.cs",
+              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\CartItemDtos\\ReadCartItemDto.cs",
+              "RelativeToolTip": "SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\CartItemDtos\\ReadCartItemDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T11:45:27.916Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ReadCartDto.cs",
+              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\CartDtos\\ReadCartDto.cs",
+              "RelativeDocumentMoniker": "SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\CartDtos\\ReadCartDto.cs",
+              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\CartDtos\\ReadCartDto.cs",
+              "RelativeToolTip": "SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\CartDtos\\ReadCartDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T11:45:00.844Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ReadBrandDto.cs",
+              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\BrandDtos\\ReadBrandDto.cs",
+              "RelativeDocumentMoniker": "SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\BrandDtos\\ReadBrandDto.cs",
+              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\BrandDtos\\ReadBrandDto.cs",
+              "RelativeToolTip": "SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\BrandDtos\\ReadBrandDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T19:11:37.688Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "IAccountRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Core\\Interfaces\\IAccountRepository.cs",
+              "RelativeDocumentMoniker": "SealMarket.Core\\Interfaces\\IAccountRepository.cs",
+              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Core\\Interfaces\\IAccountRepository.cs",
+              "RelativeToolTip": "SealMarket.Core\\Interfaces\\IAccountRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-26T18:06:08.077Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "BrandService.cs",
+              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\Services\\BrandService.cs",
+              "RelativeDocumentMoniker": "SealMarket.Application\\Services\\BrandService.cs",
+              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Application\\Services\\BrandService.cs",
+              "RelativeToolTip": "SealMarket.Application\\Services\\BrandService.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAxwCAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T20:56:43.169Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "IBaseRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Core\\Interfaces\\IBaseRepository.cs",
+              "RelativeDocumentMoniker": "SealMarket.Core\\Interfaces\\IBaseRepository.cs",
+              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Core\\Interfaces\\IBaseRepository.cs",
+              "RelativeToolTip": "SealMarket.Core\\Interfaces\\IBaseRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T08:42:15.703Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Core\\Interfaces\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "SealMarket.Core\\Interfaces\\IUserRepository.cs",
+              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Core\\Interfaces\\IUserRepository.cs",
+              "RelativeToolTip": "SealMarket.Core\\Interfaces\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T08:48:38.852Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Product.cs",
+              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Core\\Entities\\Product.cs",
+              "RelativeDocumentMoniker": "SealMarket.Core\\Entities\\Product.cs",
+              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Core\\Entities\\Product.cs",
+              "RelativeToolTip": "SealMarket.Core\\Entities\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T11:14:34.15Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Brand.cs",
+              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Core\\Entities\\Brand.cs",
+              "RelativeDocumentMoniker": "SealMarket.Core\\Entities\\Brand.cs",
+              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Core\\Entities\\Brand.cs",
+              "RelativeToolTip": "SealMarket.Core\\Entities\\Brand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T10:39:22.544Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "UpdateAccountDto.cs",
+              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Requests\\UpdateDTOs\\UpdateAccountDto.cs",
+              "RelativeDocumentMoniker": "SealMarket.Application\\DTOs\\Requests\\UpdateDTOs\\UpdateAccountDto.cs",
+              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Requests\\UpdateDTOs\\UpdateAccountDto.cs",
+              "RelativeToolTip": "SealMarket.Application\\DTOs\\Requests\\UpdateDTOs\\UpdateAccountDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T21:50:05.92Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "IProductRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Core\\Interfaces\\IProductRepository.cs",
+              "RelativeDocumentMoniker": "SealMarket.Core\\Interfaces\\IProductRepository.cs",
+              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Core\\Interfaces\\IProductRepository.cs",
+              "RelativeToolTip": "SealMarket.Core\\Interfaces\\IProductRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T08:48:01.644Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.API\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "SealMarket.API\\Controllers\\UsersController.cs",
+              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.API\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "SealMarket.API\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAIwCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T19:27:14.371Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "AccountsController.cs",
+              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.API\\Controllers\\AccountsController.cs",
+              "RelativeDocumentMoniker": "SealMarket.API\\Controllers\\AccountsController.cs",
+              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.API\\Controllers\\AccountsController.cs",
+              "RelativeToolTip": "SealMarket.API\\Controllers\\AccountsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T11:06:27.108Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "CreateAccountDto.cs",
+              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateAccountDto.cs",
+              "RelativeDocumentMoniker": "SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateAccountDto.cs",
+              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateAccountDto.cs",
+              "RelativeToolTip": "SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateAccountDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T10:36:31.882Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "CreateCartDto.cs",
+              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateCartDto.cs",
+              "RelativeDocumentMoniker": "SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateCartDto.cs",
+              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateCartDto.cs",
+              "RelativeToolTip": "SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateCartDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T11:44:43.742Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "CreateNotificationDto.cs",
+              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateNotificationDto.cs",
+              "RelativeDocumentMoniker": "SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateNotificationDto.cs",
+              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateNotificationDto.cs",
+              "RelativeToolTip": "SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateNotificationDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T10:02:31.762Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "CreateCartItemDto.cs",
+              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateCartItemDto.cs",
+              "RelativeDocumentMoniker": "SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateCartItemDto.cs",
+              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateCartItemDto.cs",
+              "RelativeToolTip": "SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateCartItemDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T11:37:07.718Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "CreateUserDto.cs",
+              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateUserDto.cs",
+              "RelativeDocumentMoniker": "SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateUserDto.cs",
+              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateUserDto.cs",
+              "RelativeToolTip": "SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateUserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T19:25:21.304Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "CreateProductDto.cs",
+              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateProductDto.cs",
+              "RelativeDocumentMoniker": "SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateProductDto.cs",
+              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateProductDto.cs",
+              "RelativeToolTip": "SealMarket.Application\\DTOs\\Requests\\CreateDTOs\\CreateProductDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T11:44:51.454Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
               "Title": "ICartService.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\Interfaces\\ICartService.cs",
               "RelativeDocumentMoniker": "SealMarket.Application\\Interfaces\\ICartService.cs",
@@ -544,7 +848,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 37,
               "Title": "NotificationsController.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.API\\Controllers\\NotificationsController.cs",
               "RelativeDocumentMoniker": "SealMarket.API\\Controllers\\NotificationsController.cs",
@@ -552,12 +856,11 @@
               "RelativeToolTip": "SealMarket.API\\Controllers\\NotificationsController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T19:23:00.736Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-09T19:23:00.736Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 38,
               "Title": "CartsController.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.API\\Controllers\\CartsController.cs",
               "RelativeDocumentMoniker": "SealMarket.API\\Controllers\\CartsController.cs",
@@ -565,12 +868,11 @@
               "RelativeToolTip": "SealMarket.API\\Controllers\\CartsController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-27T19:34:40.227Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-27T19:34:40.227Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 39,
               "Title": "BrandsController.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.API\\Controllers\\BrandsController.cs",
               "RelativeDocumentMoniker": "SealMarket.API\\Controllers\\BrandsController.cs",
@@ -578,12 +880,11 @@
               "RelativeToolTip": "SealMarket.API\\Controllers\\BrandsController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-12T11:06:28.075Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-12T11:06:28.075Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 40,
               "Title": "IBrandService.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\Interfaces\\IBrandService.cs",
               "RelativeDocumentMoniker": "SealMarket.Application\\Interfaces\\IBrandService.cs",
@@ -596,7 +897,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 41,
               "Title": "INotificationService.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\Interfaces\\INotificationService.cs",
               "RelativeDocumentMoniker": "SealMarket.Application\\Interfaces\\INotificationService.cs",
@@ -609,7 +910,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 42,
               "Title": "IProductService.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\Interfaces\\IProductService.cs",
               "RelativeDocumentMoniker": "SealMarket.Application\\Interfaces\\IProductService.cs",
@@ -622,7 +923,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 43,
               "Title": "IUserService.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\Interfaces\\IUserService.cs",
               "RelativeDocumentMoniker": "SealMarket.Application\\Interfaces\\IUserService.cs",
@@ -635,108 +936,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "SealMarket.Application\\Services\\UserService.cs",
-              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Application\\Services\\UserService.cs",
-              "RelativeToolTip": "SealMarket.Application\\Services\\UserService.cs",
-              "ViewState": "AgIAAFUAAAAAAAAAAAAcwHUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T19:58:52.434Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Account.cs",
-              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Core\\Entities\\Account.cs",
-              "RelativeDocumentMoniker": "SealMarket.Core\\Entities\\Account.cs",
-              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Core\\Entities\\Account.cs",
-              "RelativeToolTip": "SealMarket.Core\\Entities\\Account.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAADwvzgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T12:24:47.997Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "AccountRepository.cs",
-              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Infrastructure\\Repositories\\AccountRepository.cs",
-              "RelativeDocumentMoniker": "SealMarket.Infrastructure\\Repositories\\AccountRepository.cs",
-              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Infrastructure\\Repositories\\AccountRepository.cs",
-              "RelativeToolTip": "SealMarket.Infrastructure\\Repositories\\AccountRepository.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACoAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T22:19:37.485Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "BaseRepository.cs",
-              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Infrastructure\\Repositories\\BaseRepository.cs",
-              "RelativeDocumentMoniker": "SealMarket.Infrastructure\\Repositories\\BaseRepository.cs",
-              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Infrastructure\\Repositories\\BaseRepository.cs",
-              "RelativeToolTip": "SealMarket.Infrastructure\\Repositories\\BaseRepository.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAQwA0AAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T19:07:24.699Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Infrastructure\\Repositories\\UserRepository.cs",
-              "RelativeDocumentMoniker": "SealMarket.Infrastructure\\Repositories\\UserRepository.cs",
-              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Infrastructure\\Repositories\\UserRepository.cs",
-              "RelativeToolTip": "SealMarket.Infrastructure\\Repositories\\UserRepository.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAiwDQAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T19:41:34.943Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "IBaseRepository.cs",
-              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Core\\Interfaces\\IBaseRepository.cs",
-              "RelativeDocumentMoniker": "SealMarket.Core\\Interfaces\\IBaseRepository.cs",
-              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Core\\Interfaces\\IBaseRepository.cs",
-              "RelativeToolTip": "SealMarket.Core\\Interfaces\\IBaseRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T08:42:15.703Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "IProductRepository.cs",
-              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Core\\Interfaces\\IProductRepository.cs",
-              "RelativeDocumentMoniker": "SealMarket.Core\\Interfaces\\IProductRepository.cs",
-              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Core\\Interfaces\\IProductRepository.cs",
-              "RelativeToolTip": "SealMarket.Core\\Interfaces\\IProductRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T08:48:01.644Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "IUserRepository.cs",
-              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Core\\Interfaces\\IUserRepository.cs",
-              "RelativeDocumentMoniker": "SealMarket.Core\\Interfaces\\IUserRepository.cs",
-              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Core\\Interfaces\\IUserRepository.cs",
-              "RelativeToolTip": "SealMarket.Core\\Interfaces\\IUserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T08:48:38.852Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 44,
               "Title": "BrandRepository.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Infrastructure\\Repositories\\BrandRepository.cs",
               "RelativeDocumentMoniker": "SealMarket.Infrastructure\\Repositories\\BrandRepository.cs",
@@ -748,7 +948,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 45,
               "Title": "ProductRepository.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Infrastructure\\Repositories\\ProductRepository.cs",
               "RelativeDocumentMoniker": "SealMarket.Infrastructure\\Repositories\\ProductRepository.cs",
@@ -760,91 +960,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "ReadUserDto.cs",
-              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\ReadUserDto.cs",
-              "RelativeDocumentMoniker": "SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\ReadUserDto.cs",
-              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\ReadUserDto.cs",
-              "RelativeToolTip": "SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\ReadUserDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T12:05:52.321Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "ReadAccountDto.cs",
-              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\ReadAccountDto.cs",
-              "RelativeDocumentMoniker": "SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\ReadAccountDto.cs",
-              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\ReadAccountDto.cs",
-              "RelativeToolTip": "SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\ReadAccountDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T10:36:39.301Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "ReadProductDto.cs",
-              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\ReadProductDto.cs",
-              "RelativeDocumentMoniker": "SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\ReadProductDto.cs",
-              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\ReadProductDto.cs",
-              "RelativeToolTip": "SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\ReadProductDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T11:44:47.438Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "ReadCartDto.cs",
-              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\ReadCartDto.cs",
-              "RelativeDocumentMoniker": "SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\ReadCartDto.cs",
-              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\ReadCartDto.cs",
-              "RelativeToolTip": "SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\ReadCartDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T11:45:00.844Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "ReadCartItemDto.cs",
-              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\ReadCartItemDto.cs",
-              "RelativeDocumentMoniker": "SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\ReadCartItemDto.cs",
-              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\ReadCartItemDto.cs",
-              "RelativeToolTip": "SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\ReadCartItemDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T11:45:27.916Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "ReadNotificationDto.cs",
-              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\ReadNotificationDto.cs",
-              "RelativeDocumentMoniker": "SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\ReadNotificationDto.cs",
-              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\ReadNotificationDto.cs",
-              "RelativeToolTip": "SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\ReadNotificationDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T11:44:59.456Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "ReadBrandDto.cs",
-              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\ReadBrandDto.cs",
-              "RelativeDocumentMoniker": "SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\ReadBrandDto.cs",
-              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\ReadBrandDto.cs",
-              "RelativeToolTip": "SealMarket.Application\\DTOs\\Responses\\ReadDTOs\\ReadBrandDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T19:11:37.688Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 46,
               "Title": "ProductService.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\Services\\ProductService.cs",
               "RelativeDocumentMoniker": "SealMarket.Application\\Services\\ProductService.cs",
@@ -852,11 +968,12 @@
               "RelativeToolTip": "SealMarket.Application\\Services\\ProductService.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAqwB0AAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T19:58:47.73Z"
+              "WhenOpened": "2025-12-04T19:58:47.73Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 47,
               "Title": "NotificationService.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\Services\\NotificationService.cs",
               "RelativeDocumentMoniker": "SealMarket.Application\\Services\\NotificationService.cs",
@@ -864,11 +981,12 @@
               "RelativeToolTip": "SealMarket.Application\\Services\\NotificationService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T08:08:33.019Z"
+              "WhenOpened": "2025-12-04T08:08:33.019Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 48,
               "Title": "CartService.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\Services\\CartService.cs",
               "RelativeDocumentMoniker": "SealMarket.Application\\Services\\CartService.cs",
@@ -876,23 +994,12 @@
               "RelativeToolTip": "SealMarket.Application\\Services\\CartService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T19:51:23.302Z"
+              "WhenOpened": "2025-12-04T19:51:23.302Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "BrandService.cs",
-              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\Services\\BrandService.cs",
-              "RelativeDocumentMoniker": "SealMarket.Application\\Services\\BrandService.cs",
-              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Application\\Services\\BrandService.cs",
-              "RelativeToolTip": "SealMarket.Application\\Services\\BrandService.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwCAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T20:56:43.169Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 49,
               "Title": "CreatedAccountDto.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Responses\\CreatedDTOs\\CreatedAccountDto.cs",
               "RelativeDocumentMoniker": "SealMarket.Application\\DTOs\\Responses\\CreatedDTOs\\CreatedAccountDto.cs",
@@ -904,7 +1011,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 50,
               "Title": "DateTimeHelper.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\Helpers\\DateTimeHelper.cs",
               "RelativeDocumentMoniker": "SealMarket.Application\\Helpers\\DateTimeHelper.cs",
@@ -916,7 +1023,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 51,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.API\\Program.cs",
               "RelativeDocumentMoniker": "SealMarket.API\\Program.cs",
@@ -928,19 +1035,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "IAccountRepository.cs",
-              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Core\\Interfaces\\IAccountRepository.cs",
-              "RelativeDocumentMoniker": "SealMarket.Core\\Interfaces\\IAccountRepository.cs",
-              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Core\\Interfaces\\IAccountRepository.cs",
-              "RelativeToolTip": "SealMarket.Core\\Interfaces\\IAccountRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T18:06:08.077Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 52,
               "Title": "IBrandRepository.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Core\\Interfaces\\IBrandRepository.cs",
               "RelativeDocumentMoniker": "SealMarket.Core\\Interfaces\\IBrandRepository.cs",
@@ -952,7 +1047,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 53,
               "Title": "UpdateCartDto.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Requests\\UpdateDTOs\\UpdateCartDto.cs",
               "RelativeDocumentMoniker": "SealMarket.Application\\DTOs\\Requests\\UpdateDTOs\\UpdateCartDto.cs",
@@ -964,19 +1059,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "UpdateAccountDto.cs",
-              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Requests\\UpdateDTOs\\UpdateAccountDto.cs",
-              "RelativeDocumentMoniker": "SealMarket.Application\\DTOs\\Requests\\UpdateDTOs\\UpdateAccountDto.cs",
-              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Requests\\UpdateDTOs\\UpdateAccountDto.cs",
-              "RelativeToolTip": "SealMarket.Application\\DTOs\\Requests\\UpdateDTOs\\UpdateAccountDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T21:50:05.92Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 54,
               "Title": "ProductsFilterDto.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Requests\\FilterDTOs\\ProductsFilterDto.cs",
               "RelativeDocumentMoniker": "SealMarket.Application\\DTOs\\Requests\\FilterDTOs\\ProductsFilterDto.cs",
@@ -988,7 +1071,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 55,
               "Title": "NotificationsFilterDto.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Requests\\FilterDTOs\\NotificationsFilterDto.cs",
               "RelativeDocumentMoniker": "SealMarket.Application\\DTOs\\Requests\\FilterDTOs\\NotificationsFilterDto.cs",
@@ -1000,7 +1083,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 56,
               "Title": "NotificationRepository.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Infrastructure\\Repositories\\NotificationRepository.cs",
               "RelativeDocumentMoniker": "SealMarket.Infrastructure\\Repositories\\NotificationRepository.cs",
@@ -1012,7 +1095,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 57,
               "Title": "INotificationRepository.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Core\\Interfaces\\INotificationRepository.cs",
               "RelativeDocumentMoniker": "SealMarket.Core\\Interfaces\\INotificationRepository.cs",
@@ -1024,7 +1107,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 58,
               "Title": "AccountsFilterDto.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Requests\\FilterDTOs\\AccountsFilterDto.cs",
               "RelativeDocumentMoniker": "SealMarket.Application\\DTOs\\Requests\\FilterDTOs\\AccountsFilterDto.cs",
@@ -1036,7 +1119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 59,
               "Title": "CartsFilterDto.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Requests\\FilterDTOs\\CartsFilterDto.cs",
               "RelativeDocumentMoniker": "SealMarket.Application\\DTOs\\Requests\\FilterDTOs\\CartsFilterDto.cs",
@@ -1048,7 +1131,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 60,
               "Title": "UpdateBrandDto.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Requests\\UpdateDTOs\\UpdateBrandDto.cs",
               "RelativeDocumentMoniker": "SealMarket.Application\\DTOs\\Requests\\UpdateDTOs\\UpdateBrandDto.cs",
@@ -1060,7 +1143,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 61,
               "Title": "UpdateProductDto.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Requests\\UpdateDTOs\\UpdateProductDto.cs",
               "RelativeDocumentMoniker": "SealMarket.Application\\DTOs\\Requests\\UpdateDTOs\\UpdateProductDto.cs",
@@ -1072,7 +1155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 62,
               "Title": "UpdateUserDto.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Requests\\UpdateDTOs\\UpdateUserDto.cs",
               "RelativeDocumentMoniker": "SealMarket.Application\\DTOs\\Requests\\UpdateDTOs\\UpdateUserDto.cs",
@@ -1084,7 +1167,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 63,
               "Title": "UsersFilterDto.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Requests\\FilterDTOs\\UsersFilterDto.cs",
               "RelativeDocumentMoniker": "SealMarket.Application\\DTOs\\Requests\\FilterDTOs\\UsersFilterDto.cs",
@@ -1096,7 +1179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 64,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Infrastructure\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "SealMarket.Infrastructure\\Data\\AppDbContext.cs",
@@ -1108,7 +1191,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 65,
               "Title": "CartRepository.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Infrastructure\\Repositories\\CartRepository.cs",
               "RelativeDocumentMoniker": "SealMarket.Infrastructure\\Repositories\\CartRepository.cs",
@@ -1120,19 +1203,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
-              "Title": "Brand.cs",
-              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Core\\Entities\\Brand.cs",
-              "RelativeDocumentMoniker": "SealMarket.Core\\Entities\\Brand.cs",
-              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Core\\Entities\\Brand.cs",
-              "RelativeToolTip": "SealMarket.Core\\Entities\\Brand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T10:39:22.544Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 66,
               "Title": "UserOrderParameters.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Core\\Constans\\UserOrderParameters.cs",
               "RelativeDocumentMoniker": "SealMarket.Core\\Constans\\UserOrderParameters.cs",
@@ -1144,7 +1215,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 67,
               "Title": "ProductOrderParameters.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Core\\Constans\\ProductOrderParameters.cs",
               "RelativeDocumentMoniker": "SealMarket.Core\\Constans\\ProductOrderParameters.cs",
@@ -1156,7 +1227,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 68,
               "Title": "CartOrderParameters.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Core\\Constans\\CartOrderParameters.cs",
               "RelativeDocumentMoniker": "SealMarket.Core\\Constans\\CartOrderParameters.cs",
@@ -1168,7 +1239,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 69,
               "Title": "BrandOrderParameters.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Core\\Constans\\BrandOrderParameters.cs",
               "RelativeDocumentMoniker": "SealMarket.Core\\Constans\\BrandOrderParameters.cs",
@@ -1180,7 +1251,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 70,
               "Title": "AccountOrderParameters.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Core\\Constans\\AccountOrderParameters.cs",
               "RelativeDocumentMoniker": "SealMarket.Core\\Constans\\AccountOrderParameters.cs",
@@ -1192,7 +1263,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 71,
               "Title": "ICartRepository.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Core\\Interfaces\\ICartRepository.cs",
               "RelativeDocumentMoniker": "SealMarket.Core\\Interfaces\\ICartRepository.cs",
@@ -1204,7 +1275,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 72,
               "Title": "NotificationsFilter.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Core\\Models\\Filters\\NotificationsFilter.cs",
               "RelativeDocumentMoniker": "SealMarket.Core\\Models\\Filters\\NotificationsFilter.cs",
@@ -1216,7 +1287,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 73,
               "Title": "ProductsFilter.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Core\\Models\\Filters\\ProductsFilter.cs",
               "RelativeDocumentMoniker": "SealMarket.Core\\Models\\Filters\\ProductsFilter.cs",
@@ -1228,7 +1299,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 74,
               "Title": "UsersFilter.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Core\\Models\\Filters\\UsersFilter.cs",
               "RelativeDocumentMoniker": "SealMarket.Core\\Models\\Filters\\UsersFilter.cs",
@@ -1240,7 +1311,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 75,
               "Title": "NotificationOrderParams.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Core\\Constans\\NotificationOrderParams.cs",
               "RelativeDocumentMoniker": "SealMarket.Core\\Constans\\NotificationOrderParams.cs",
@@ -1252,7 +1323,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 76,
               "Title": "CartsFilter.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Core\\Models\\Filters\\CartsFilter.cs",
               "RelativeDocumentMoniker": "SealMarket.Core\\Models\\Filters\\CartsFilter.cs",
@@ -1264,7 +1335,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 77,
               "Title": "BrandsFilterDto.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Requests\\FilterDTOs\\BrandsFilterDto.cs",
               "RelativeDocumentMoniker": "SealMarket.Application\\DTOs\\Requests\\FilterDTOs\\BrandsFilterDto.cs",
@@ -1276,7 +1347,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 78,
               "Title": "AccountConfiguration.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Infrastructure\\Configurations\\AccountConfiguration.cs",
               "RelativeDocumentMoniker": "SealMarket.Infrastructure\\Configurations\\AccountConfiguration.cs",
@@ -1288,7 +1359,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 79,
               "Title": "NotificationConfiguration.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Infrastructure\\Configurations\\NotificationConfiguration.cs",
               "RelativeDocumentMoniker": "SealMarket.Infrastructure\\Configurations\\NotificationConfiguration.cs",
@@ -1300,7 +1371,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 80,
               "Title": "CartItemConfiguration.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Infrastructure\\Configurations\\CartItemConfiguration.cs",
               "RelativeDocumentMoniker": "SealMarket.Infrastructure\\Configurations\\CartItemConfiguration.cs",
@@ -1312,7 +1383,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 81,
               "Title": "CartConfiguration.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Infrastructure\\Configurations\\CartConfiguration.cs",
               "RelativeDocumentMoniker": "SealMarket.Infrastructure\\Configurations\\CartConfiguration.cs",
@@ -1324,7 +1395,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 82,
               "Title": "ProductConfiguration.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Infrastructure\\Configurations\\ProductConfiguration.cs",
               "RelativeDocumentMoniker": "SealMarket.Infrastructure\\Configurations\\ProductConfiguration.cs",
@@ -1336,7 +1407,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 83,
               "Title": "UserConfiguration.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Infrastructure\\Configurations\\UserConfiguration.cs",
               "RelativeDocumentMoniker": "SealMarket.Infrastructure\\Configurations\\UserConfiguration.cs",
@@ -1348,7 +1419,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 79,
+              "DocumentIndex": 84,
               "Title": "BrandConfiguration.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Infrastructure\\Configurations\\BrandConfiguration.cs",
               "RelativeDocumentMoniker": "SealMarket.Infrastructure\\Configurations\\BrandConfiguration.cs",
@@ -1360,43 +1431,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 80,
-              "Title": "CartItem.cs",
-              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Core\\Entities\\CartItem.cs",
-              "RelativeDocumentMoniker": "SealMarket.Core\\Entities\\CartItem.cs",
-              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Core\\Entities\\CartItem.cs",
-              "RelativeToolTip": "SealMarket.Core\\Entities\\CartItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T10:59:27.664Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 81,
-              "Title": "Cart.cs",
-              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Core\\Entities\\Cart.cs",
-              "RelativeDocumentMoniker": "SealMarket.Core\\Entities\\Cart.cs",
-              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Core\\Entities\\Cart.cs",
-              "RelativeToolTip": "SealMarket.Core\\Entities\\Cart.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T11:09:10.931Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 82,
-              "Title": "Product.cs",
-              "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Core\\Entities\\Product.cs",
-              "RelativeDocumentMoniker": "SealMarket.Core\\Entities\\Product.cs",
-              "ToolTip": "D:\\Projects\\SealMarket\\SealMarket.Core\\Entities\\Product.cs",
-              "RelativeToolTip": "SealMarket.Core\\Entities\\Product.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T11:14:34.15Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 83,
+              "DocumentIndex": 85,
               "Title": "CreatedCartItemDto.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Responses\\CreatedDTOs\\CreatedCartItemDto.cs",
               "RelativeDocumentMoniker": "SealMarket.Application\\DTOs\\Responses\\CreatedDTOs\\CreatedCartItemDto.cs",
@@ -1408,7 +1443,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 84,
+              "DocumentIndex": 86,
               "Title": "CreatedCartDto.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Responses\\CreatedDTOs\\CreatedCartDto.cs",
               "RelativeDocumentMoniker": "SealMarket.Application\\DTOs\\Responses\\CreatedDTOs\\CreatedCartDto.cs",
@@ -1420,7 +1455,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 85,
+              "DocumentIndex": 87,
               "Title": "CreatedProductDto.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Responses\\CreatedDTOs\\CreatedProductDto.cs",
               "RelativeDocumentMoniker": "SealMarket.Application\\DTOs\\Responses\\CreatedDTOs\\CreatedProductDto.cs",
@@ -1432,7 +1467,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 86,
+              "DocumentIndex": 88,
               "Title": "CreatedBrandDto.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Responses\\CreatedDTOs\\CreatedBrandDto.cs",
               "RelativeDocumentMoniker": "SealMarket.Application\\DTOs\\Responses\\CreatedDTOs\\CreatedBrandDto.cs",
@@ -1444,7 +1479,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 87,
+              "DocumentIndex": 89,
               "Title": "CreatedUserDto.cs",
               "DocumentMoniker": "D:\\Projects\\SealMarket\\SealMarket.Application\\DTOs\\Responses\\CreatedDTOs\\CreatedUserDto.cs",
               "RelativeDocumentMoniker": "SealMarket.Application\\DTOs\\Responses\\CreatedDTOs\\CreatedUserDto.cs",

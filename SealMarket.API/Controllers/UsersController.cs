@@ -1,10 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using SealMarket.Application.DTOs.Requests.CreateDTOs;
 using SealMarket.Application.DTOs.Requests.FilterDTOs;
 using SealMarket.Application.DTOs.Requests.UpdateDTOs;
 using SealMarket.Application.Interfaces;
-using System.Threading.Tasks;
 
 namespace SealMarket.API.Controllers
 {
@@ -35,14 +33,14 @@ namespace SealMarket.API.Controllers
         }
 
         [HttpGet("{id:int}")]
-        public async Task<IActionResult> GetUser([FromRoute] int id)
+        public async Task<IActionResult> GetUserProfileAsync([FromRoute] int id)
         {
-            var userDto = await _service.GetUserByIdAsync(id);
+            var userProfileDto = await _service.GetUserProfileAsync(id);
 
-            if(userDto is null)
+            if(userProfileDto is null)
                 return NotFound("User was not found.");
 
-            return Ok(userDto);
+            return Ok(userProfileDto);
         }
 
         [HttpPut("{id:int}")]

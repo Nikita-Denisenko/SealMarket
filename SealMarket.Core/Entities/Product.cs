@@ -7,7 +7,7 @@
         public Brand Brand { get; private set; }
         public int BrandId { get; private set; }
         public string Description { get; private set; } = string.Empty;
-        public string ImageUrl { get; private set; }
+        public string ImageUrl { get; private set; } = string.Empty;
         public int Quantity { get; private set; }
         public decimal Price { get; private set; }
         public DateTime CreatedAt { get; private set; }

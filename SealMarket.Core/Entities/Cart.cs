@@ -7,6 +7,7 @@ public class Cart
     public Account? Account { get; private set; }
     public string Name { get; private set; } = "AccountCart";
     public List<CartItem> CartItems { get; private set; } = [];
+    public decimal TotalPrice => CartItems.Sum(ci => ci.TotalPrice);
 
     private Cart() { }
 

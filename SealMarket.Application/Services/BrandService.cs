@@ -2,7 +2,7 @@
 using SealMarket.Application.DTOs.Requests.FilterDTOs;
 using SealMarket.Application.DTOs.Requests.UpdateDTOs;
 using SealMarket.Application.DTOs.Responses.CreatedDTOs;
-using SealMarket.Application.DTOs.Responses.EntityDtos;
+using SealMarket.Application.DTOs.Responses.ReadDTOs.BrandDtos;
 using SealMarket.Application.Interfaces;
 using SealMarket.Core.Interfaces;
 
@@ -27,12 +27,12 @@ namespace SealMarket.Application.Services
             throw new NotImplementedException();
         }
 
-        public Task<ReadBrandDto> GetBrandByIdAsync(int id)
+        public Task<BrandDto> GetBrandInfoAsync(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<List<ReadBrandDto>> GetBrandsAsync(BrandsFilterDto brandsFilterDto)
+        public Task<List<BrandDto>> GetBrandsAsync(BrandsFilterDto brandsFilterDto)
         {
             throw new NotImplementedException();
         }

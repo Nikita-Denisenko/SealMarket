@@ -2,7 +2,8 @@
 using SealMarket.Application.DTOs.Requests.FilterDTOs;
 using SealMarket.Application.DTOs.Requests.UpdateDTOs;
 using SealMarket.Application.DTOs.Responses.CreatedDTOs;
-using SealMarket.Application.DTOs.Responses.EntityDtos;
+using SealMarket.Application.DTOs.Responses.ReadDTOs.NotificationDtos;
+using SealMarket.Application.DTOs.Responses.ReadDTOs.AccountDtos;
 using SealMarket.Application.Interfaces;
 using SealMarket.Core.Interfaces;
 using SealMarket.Core.Models.Filters;
@@ -58,37 +59,25 @@ namespace SealMarket.Application.Services
             await _repo.SaveChangesAsync();
         }
 
-        public async Task<ReadAccountDto> GetAccountByIdAsync(int id)
+        public async Task<AccountDashboardDto> GetAccountAsync(int id)
         {
             var account = await _repo.GetAccountWithIncludesAsync(id);
 
             if (account is null)
                 throw new KeyNotFoundException("Account was not found.");
 
-            return new ReadAccountDto
+            return new AccountDashboardDto
             (
                 account.Id,
-                account.UserId,
                 account.Balance,
-                account.Login,
-                account.Email,
-                account.PhoneNumber,
                 account.CreatedAt,
                 account.Cart.Id,
-                account.Notifications
-                    .Select(n => new ReadNotificationDto
-                     (
-                          n.Id,
-                          n.Message,
-                          n.DateTime,
-                          n.HasBeenRead,
-                          n.AccountId
-                           )
-                     ).ToList()
+                account.Cart.CartItems.Count,
+                account.Notifications.Where(n => !n.HasBeenRead).Count()
             );
         }
 
-        public async Task<List<ReadAccountDto>> GetAccountsAsync(AccountsFilterDto accountsFilterDto)
+        public async Task<List<ShortAccountDto>> GetAccountsAsync(AccountsFilterDto accountsFilterDto)
         {
             if (accountsFilterDto is null)
                 throw new ArgumentNullException(nameof(accountsFilterDto));
@@ -106,31 +95,15 @@ namespace SealMarket.Application.Services
             
             var accounts = await _repo.GetAccountsAsync(filter);
 
-            var readAccountDtos = accounts
-                .Select(account => new ReadAccountDto
+            var shortAccountDtos = accounts
+                .Select(account => new ShortAccountDto
                     (
                         account.Id,
-                        account.UserId,
-                        account.Balance,
                         account.Login,
-                        account.Email,
-                        account.PhoneNumber,
-                        account.CreatedAt,
-                        account.Cart.Id,
-                        account.Notifications
-                            .Select(n => new ReadNotificationDto
-                                (
-                                    n.Id,
-                                    n.Message,
-                                    n.DateTime,
-                                    n.HasBeenRead,
-                                    n.AccountId
-                                )
-                            ).ToList()
-                    )
-                ).ToList();
+                        account.UserId
+                    )).ToList();
 
-            return readAccountDtos;
+            return shortAccountDtos;
         }
 
         public async Task UpdateAccountAsync(int id, UpdateAccountDto updateAccountDto)

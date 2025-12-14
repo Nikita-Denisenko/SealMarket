@@ -2,7 +2,7 @@
 using SealMarket.Application.DTOs.Requests.FilterDTOs;
 using SealMarket.Application.DTOs.Requests.UpdateDTOs;
 using SealMarket.Application.DTOs.Responses.CreatedDTOs;
-using SealMarket.Application.DTOs.Responses.ReadDTOs;
+using SealMarket.Application.DTOs.Responses.ReadDTOs.UserDtos;
 using SealMarket.Application.Interfaces;
 using SealMarket.Core.Interfaces;
 using SealMarket.Core.Models.Filters;
@@ -47,24 +47,48 @@ namespace SealMarket.Application.Services
             await _repo.SaveChangesAsync();
         }
 
-        public async Task<ReadUserDto> GetUserByIdAsync(int id)
+        public async Task<PublicUserDto> GetPublicUserProfileAsync(int id)
+        {
+            var user = await _repo.GetByIdAsync(id);
+
+            if (user is null)
+                throw new KeyNotFoundException("User was not found.");
+
+            return new PublicUserDto
+            (
+                id,
+                user.Name,
+                user.BirthDate,
+                user.City
+            );
+        }
+
+        public async Task<UserProfileDto> GetUserProfileAsync(int id)
         {
             var user = await _repo.GetWithAccountAsync(id);
 
             if (user is null)
                 throw new KeyNotFoundException("User was not found.");
 
-            return new ReadUserDto
+            if (user.Account is null)
+                throw new InvalidOperationException($"User {id} has no account");
+
+            return new UserProfileDto
             (
                 user.Id,
                 user.Name,
                 user.BirthDate,
                 user.City,
-                user.Account?.Id
+                user.Account.Id,
+                user.Account.Login,
+                user.Account.Email,
+                user.Account.PhoneNumber,
+                user.Account.Balance,
+                user.Account.CreatedAt
             );
         }
 
-        public async Task<List<ReadUserDto>> GetUsersAsync(UsersFilterDto usersfilterDto)
+        public async Task<List<ShortUserDto>> GetUsersAsync(UsersFilterDto usersfilterDto)
         {
             if (usersfilterDto is null)
                 throw new ArgumentNullException(nameof(usersfilterDto));
@@ -83,13 +107,10 @@ namespace SealMarket.Application.Services
             var users = await _repo.GetUsersAsync(filter);
 
             var readUserDtos = users
-                .Select(user => new ReadUserDto
+                .Select(user => new ShortUserDto
                     (
                         user.Id,
-                        user.Name,
-                        user.BirthDate,
-                        user.City,
-                        user.Account?.Id
+                        user.Name
                     )
                 ).ToList();
 

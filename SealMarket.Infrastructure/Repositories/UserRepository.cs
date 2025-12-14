@@ -14,7 +14,6 @@ namespace SealMarket.Infrastructure.Repositories
         public async Task<List<User>> GetUsersAsync(UsersFilter filter)
         {
             var query = _context.Users
-                .Include(u => u.Account)
                 .AsQueryable();
 
             query = query

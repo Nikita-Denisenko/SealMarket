@@ -1,8 +1,8 @@
 ﻿using SealMarket.Core.Entities;
 
-namespace SealMarket.Application.DTOs.Responses.EntityDtos
+namespace SealMarket.Application.DTOs.Responses.ReadDTOs.ProductDtos
 {
-    public record ReadProductDto
+    public record ProductDto
     (
         int Id,
         string Name,

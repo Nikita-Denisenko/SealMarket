@@ -1,7 +1,7 @@
 ﻿using SealMarket.Application.DTOs.Requests.CreateDTOs;
 using SealMarket.Application.DTOs.Requests.FilterDTOs;
 using SealMarket.Application.DTOs.Responses.CreatedDTOs;
-using SealMarket.Application.DTOs.Responses.EntityDtos;
+using SealMarket.Application.DTOs.Responses.ReadDTOs.NotificationDtos;
 using SealMarket.Application.Interfaces;
 using SealMarket.Core.Interfaces;
 
@@ -26,12 +26,12 @@ namespace SealMarket.Application.Services
             throw new NotImplementedException();
         }
 
-        public Task<ReadNotificationDto> GetNotificationByIdAsync(int id)
+        public Task<NotificationDto> GetNotificationAsync(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<List<ReadNotificationDto>> GetNotificationsAsync(NotificationsFilterDto notificationsFilterDto)
+        public Task<List<ShortNotificationDto>> GetNotificationsAsync(NotificationsFilterDto notificationsFilterDto)
         {
             throw new NotImplementedException();
         }
