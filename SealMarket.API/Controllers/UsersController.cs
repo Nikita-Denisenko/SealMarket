@@ -20,6 +20,9 @@ namespace SealMarket.API.Controllers
         [HttpGet]
         public async Task<IActionResult> GetUsersAsync([FromQuery] UsersFilterDto filterDto)
         {
+            if (!(ModelState.IsValid))
+                return BadRequest(ModelState);
+
             try
             {
                 var users = await _service.GetUsersAsync(filterDto);

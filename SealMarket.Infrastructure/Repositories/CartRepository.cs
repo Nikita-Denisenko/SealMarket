@@ -2,7 +2,7 @@
 using SealMarket.Core.Interfaces;
 using SealMarket.Core.Models.Filters;
 using SealMarket.Infrastructure.Data;
-using static SealMarket.Core.Constans.CartOrderParameters;
+using static SealMarket.Core.Constants.CartOrderParameters;
 
 namespace SealMarket.Infrastructure.Repositories
 {

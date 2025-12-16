@@ -18,26 +18,6 @@ namespace SealMarket.Application.Services
             _repo = repo;
         }
 
-        public async Task<CreatedUserDto> CreateUserAsync(CreateUserDto createUserDto)
-        {
-            if (createUserDto is null)
-                throw new ArgumentNullException(nameof(createUserDto));
-
-            var user = new User
-            (
-                createUserDto.Name,
-                createUserDto.BirthDate,
-                createUserDto.City
-            );
-
-            await _repo.AddAsync(user);
-            await _repo.SaveChangesAsync();
-
-            var createdUser = new CreatedUserDto(user.Id, user.Name);
-
-            return createdUser;
-        }
-
         public async Task DeleteUserAsync(int id)
         {
             if (!await _repo.ExistsAsync(id))

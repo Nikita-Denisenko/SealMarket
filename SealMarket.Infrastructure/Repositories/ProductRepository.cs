@@ -3,7 +3,7 @@ using SealMarket.Core.Entities;
 using SealMarket.Core.Interfaces;
 using SealMarket.Core.Models.Filters;
 using SealMarket.Infrastructure.Data;
-using static SealMarket.Core.Constans.ProductOrderParameters;
+using static SealMarket.Core.Constants.ProductOrderParameters;
 
 namespace SealMarket.Infrastructure.Repositories
 {

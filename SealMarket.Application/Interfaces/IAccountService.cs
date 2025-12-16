@@ -10,7 +10,6 @@ namespace SealMarket.Application.Interfaces
     {
         public Task<List<ShortAccountDto>> GetAccountsAsync(AccountsFilterDto accountsFilterDto);
         public Task<AccountDashboardDto> GetAccountAsync(int id);
-        public Task<CreatedAccountDto> CreateAccountAsync(int userId, CreateAccountDto createAccountDto);
         public Task UpdateAccountAsync(int id, UpdateAccountDto updateAccountDto);
         public Task DeleteAccountAsync(int id);
     }

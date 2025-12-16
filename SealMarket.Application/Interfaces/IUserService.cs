@@ -11,7 +11,6 @@ namespace SealMarket.Application.Interfaces
         public Task<List<ShortUserDto>> GetUsersAsync(UsersFilterDto usersfilterDto);
         public Task<UserProfileDto> GetUserProfileAsync(int id);
         public Task<PublicUserDto> GetPublicUserProfileAsync(int id);
-        public Task<CreatedUserDto> CreateUserAsync(CreateUserDto createUserDto);
         public Task UpdateUserAsync(int id, UpdateUserDto updateUserDto);
         public Task DeleteUserAsync(int id);
     }

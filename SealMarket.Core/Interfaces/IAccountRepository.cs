@@ -6,5 +6,7 @@ namespace SealMarket.Core.Interfaces
     {
         public Task<List<Account>> GetAccountsAsync(AccountsFilter filter);
         public Task<Account?> GetAccountWithIncludesAsync(int id);
+        public Task<bool> IsLoginTakenAsync(string login);
+        public Task<bool> IsEmailTakenAsync(string email);
     }
 }

@@ -3,3 +3,10 @@ D:\Projects\SealMarket\SealMarket.Core\obj\Debug\net9.0\SealMarket.Core.Assembly
 D:\Projects\SealMarket\SealMarket.Core\obj\Debug\net9.0\SealMarket.Core.AssemblyInfo.cs
 D:\Projects\SealMarket\SealMarket.Core\obj\Debug\net9.0\SealMarket.Core.csproj.CoreCompileInputs.cache
 D:\Projects\SealMarket\SealMarket.Core\obj\Debug\net9.0\SealMarket.Core.sourcelink.json
+D:\Projects\SealMarket\SealMarket.Core\bin\Debug\net9.0\SealMarket.Core.deps.json
+D:\Projects\SealMarket\SealMarket.Core\bin\Debug\net9.0\SealMarket.Core.dll
+D:\Projects\SealMarket\SealMarket.Core\bin\Debug\net9.0\SealMarket.Core.pdb
+D:\Projects\SealMarket\SealMarket.Core\obj\Debug\net9.0\SealMarket.Core.dll
+D:\Projects\SealMarket\SealMarket.Core\obj\Debug\net9.0\refint\SealMarket.Core.dll
+D:\Projects\SealMarket\SealMarket.Core\obj\Debug\net9.0\SealMarket.Core.pdb
+D:\Projects\SealMarket\SealMarket.Core\obj\Debug\net9.0\ref\SealMarket.Core.dll

@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using static SealMarket.Core.Constans.AccountOrderParameters;
+using static SealMarket.Core.Constants.AccountOrderParameters;
 using SealMarket.Core.Models.Filters;
 using SealMarket.Infrastructure.Data;
 using SealMarket.Core.Interfaces;
@@ -14,9 +14,6 @@ namespace SealMarket.Infrastructure.Repositories
         public async Task<List<Account>> GetAccountsAsync(AccountsFilter filter)
         {
             var query = _context.Accounts
-                .Include(a => a.User)
-                .Include(a => a.Notifications)
-                .Include(a => a.Cart)
                 .AsQueryable();
 
             query = query
@@ -57,5 +54,11 @@ namespace SealMarket.Infrastructure.Repositories
 
             return account;
         }
+
+        public async Task<bool> IsLoginTakenAsync(string login)
+            => await _context.Accounts.AnyAsync(account => account.Login == login);
+        
+        public async Task<bool> IsEmailTakenAsync(string email) 
+            => await _context.Accounts.AnyAsync(account => account.Email == email);
     }
 }

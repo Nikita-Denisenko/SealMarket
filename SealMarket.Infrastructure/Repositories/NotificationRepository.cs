@@ -1,7 +1,7 @@
 ﻿using SealMarket.Core.Entities;
 using SealMarket.Core.Models.Filters;
 using SealMarket.Infrastructure.Data;
-using SealMarket.Core.Constans;
+using SealMarket.Core.Constants;
 using Microsoft.EntityFrameworkCore;
 using SealMarket.Core.Interfaces;
 

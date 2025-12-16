@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace SealMarket.Application.DTOs.Requests.CreateDTOs
+namespace SealMarket.Application.DTOs.Requests.AuthDTOs
 {
-    public record CreateAccountDto
+    public record LoginDto
     (
         [Required]
         [MinLength(3)]
@@ -10,16 +10,8 @@ namespace SealMarket.Application.DTOs.Requests.CreateDTOs
         string Login,
 
         [Required]
-        [EmailAddress]
-        string Email,
-
-        [Required]
         [MinLength(8)]
         [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$")]
-        string Password,
-
-        [Required]
-        [Phone]
-        string PhoneNumber
+        string Password
     );
 }

@@ -2,7 +2,7 @@
 using SealMarket.Core.Interfaces;
 using SealMarket.Core.Models.Filters;
 using SealMarket.Infrastructure.Data;
-using static SealMarket.Core.Constans.UserOrderParameters;
+using static SealMarket.Core.Constants.UserOrderParameters;
 
 
 namespace SealMarket.Infrastructure.Repositories

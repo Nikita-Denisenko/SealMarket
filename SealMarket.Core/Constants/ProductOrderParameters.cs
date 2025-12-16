@@ -1,4 +1,4 @@
-﻿namespace SealMarket.Core.Constans
+﻿namespace SealMarket.Core.Constants
 {
     public static class ProductOrderParameters
     {

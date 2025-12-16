@@ -12,8 +12,9 @@ public class Account
     public string Email { get; private set; }
     public string PhoneNumber { get; private set; }
     public DateTime CreatedAt { get; private set; }
-    public Cart Cart { get; private set; }
-    public List<Notification> Notifications { get; private set; }
+    public Cart? Cart { get; private set; }
+    public List<Notification> Notifications { get; private set; } = [];
+    public string Role { get; private set; }
 
     private Account() { }
 
@@ -23,7 +24,8 @@ public class Account
         string login, 
         string password, 
         string email, 
-        string phoneNumber
+        string phoneNumber,
+        string role
     )
     {
         Login = login;
@@ -33,6 +35,12 @@ public class Account
         CreatedAt = DateTime.UtcNow;
         Balance = 0;
         UserId = userId;
+        Role = role;
+    }
+
+    public void CreateCart()
+    {
+        Cart = new Cart(Id);
     }
 
     public void Deposit(decimal quantity) => Balance += quantity;

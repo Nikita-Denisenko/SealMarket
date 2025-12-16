@@ -1,0 +1,6 @@
+D:\Projects\SealMarket\SealMarket.Application\obj\Debug\net9.0\SealMarket.Application.csproj.AssemblyReference.cache
+D:\Projects\SealMarket\SealMarket.Application\obj\Debug\net9.0\SealMarket.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\SealMarket\SealMarket.Application\obj\Debug\net9.0\SealMarket.Application.AssemblyInfoInputs.cache
+D:\Projects\SealMarket\SealMarket.Application\obj\Debug\net9.0\SealMarket.Application.AssemblyInfo.cs
+D:\Projects\SealMarket\SealMarket.Application\obj\Debug\net9.0\SealMarket.Application.csproj.CoreCompileInputs.cache
+D:\Projects\SealMarket\SealMarket.Application\obj\Debug\net9.0\SealMarket.Application.sourcelink.json
