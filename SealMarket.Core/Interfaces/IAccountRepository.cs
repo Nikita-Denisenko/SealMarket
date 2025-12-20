@@ -8,5 +8,6 @@ namespace SealMarket.Core.Interfaces
         public Task<Account?> GetAccountWithIncludesAsync(int id);
         public Task<bool> IsLoginTakenAsync(string login);
         public Task<bool> IsEmailTakenAsync(string email);
+        public Task<Account?> GetByLoginAsync(string login);
     }
 }

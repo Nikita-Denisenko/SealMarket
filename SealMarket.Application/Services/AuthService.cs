@@ -1,10 +1,12 @@
-﻿using SealMarket.Application.DTOs.Requests.AuthDTOs;
+﻿using Microsoft.AspNet.Identity;
+using SealMarket.Application.Constants;
+using SealMarket.Application.DTOs.Requests.AuthDTOs;
 using SealMarket.Application.DTOs.Requests.CreateDTOs;
 using SealMarket.Application.DTOs.Responses.AuthDTOs;
 using SealMarket.Application.Interfaces;
 using SealMarket.Application.Interfaces.SealMarket.Application.Interfaces;
 using SealMarket.Core.Interfaces;
-using SealMarket.Application.Constants;
+using IPasswordHasher = SealMarket.Application.Interfaces.IPasswordHasher;
 
 namespace SealMarket.Application.Services
 {
@@ -31,7 +33,36 @@ namespace SealMarket.Application.Services
 
         public async Task<AuthResultDto> Login(LoginDto loginDto)
         {
-            throw new NotImplementedException();
+            if (loginDto is null)
+                throw new ArgumentNullException(nameof(loginDto));
+
+            var account = await _accountRepo.GetByLoginAsync(loginDto.Login);
+
+            if (account is null)
+                throw new Exception("Login or password is invalid.");
+
+            if (!_passwordHasher.VerifyPassword(loginDto.Password, account.Password))
+                throw new Exception("Login or password is invalid.");
+
+            var role = account.Role;
+
+            var token = _tokenGenerator.GenerateToken
+            (
+                accountId: account.Id,
+                userId: account.UserId,
+                email: account.Email,
+                fullName: account.User.Name,
+                role: role
+            );
+
+            return new AuthResultDto
+            (
+                token,
+                account.Id,
+                account.Email,
+                account.User.Name,
+                role
+            );
         }
 
         public async Task<AuthResultDto> Register(RegisterDto registerDto)

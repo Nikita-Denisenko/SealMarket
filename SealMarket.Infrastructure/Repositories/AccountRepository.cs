@@ -4,6 +4,7 @@ using SealMarket.Core.Models.Filters;
 using SealMarket.Infrastructure.Data;
 using SealMarket.Core.Interfaces;
 using System.Dynamic;
+using Microsoft.EntityFrameworkCore.Query.Internal;
 
 namespace SealMarket.Infrastructure.Repositories
 {
@@ -60,5 +61,10 @@ namespace SealMarket.Infrastructure.Repositories
         
         public async Task<bool> IsEmailTakenAsync(string email) 
             => await _context.Accounts.AnyAsync(account => account.Email == email);
+
+        public async Task<Account?> GetByLoginAsync(string login)
+             => await _context.Accounts
+                .Include(a => a.User)
+                .FirstOrDefaultAsync(a => a.Login == login);
     }
 }
