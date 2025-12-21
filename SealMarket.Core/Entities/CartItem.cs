@@ -9,17 +9,20 @@
         public Cart Cart { get; private set; }
         public int Quantity { get; private set; }
         public DateTime AddedAt { get; private set; }
-        public decimal ProductPrice { get; private set; }
-        public decimal TotalPrice => Quantity * ProductPrice;
+        public decimal TotalPrice => Quantity * Product.Price;
         private CartItem(){ }
 
-        public CartItem(int productId, int cartId, int quantity, decimal productPrice) 
+        public CartItem
+        (
+            int productId, 
+            int cartId, 
+            int quantity
+        ) 
         { 
             ProductId = productId;
             CartId = cartId;
             Quantity = quantity;
-            ProductPrice = productPrice;
             AddedAt = DateTime.UtcNow;
-        }
+        } 
     }
 }

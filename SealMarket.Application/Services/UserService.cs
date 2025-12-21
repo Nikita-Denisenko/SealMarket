@@ -1,7 +1,5 @@
-﻿using SealMarket.Application.DTOs.Requests.CreateDTOs;
-using SealMarket.Application.DTOs.Requests.FilterDTOs;
+﻿using SealMarket.Application.DTOs.Requests.FilterDTOs;
 using SealMarket.Application.DTOs.Requests.UpdateDTOs;
-using SealMarket.Application.DTOs.Responses.CreatedDTOs;
 using SealMarket.Application.DTOs.Responses.ReadDTOs.UserDtos;
 using SealMarket.Application.Interfaces;
 using SealMarket.Core.Interfaces;

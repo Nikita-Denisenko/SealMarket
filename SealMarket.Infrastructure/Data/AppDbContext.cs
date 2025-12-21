@@ -14,5 +14,14 @@ namespace SealMarket.Infrastructure.Data
         public DbSet<Notification> Notifications { get; set; }
 
         public AppDbContext(DbContextOptions<AppDbContext> options) { }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.ApplyConfigurationsFromAssembly(
+                typeof(AppDbContext).Assembly
+            );
+        }
     }
 }

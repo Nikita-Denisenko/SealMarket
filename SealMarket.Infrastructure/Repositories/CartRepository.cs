@@ -14,11 +14,12 @@ namespace SealMarket.Infrastructure.Repositories
         {
             var cartsWithTotal = _context.Carts
                 .Include(c => c.CartItems)
+                .ThenInclude(ci => ci.Product)
                 .Where(c => c.Name.Contains(filter.SearchText))
                 .Select(c => new
                 {
                     Cart = c,
-                    TotalPrice = c.CartItems.Sum(item => item.ProductPrice * item.Quantity)
+                    TotalPrice = c.CartItems.Sum(item => item.Product.Price * item.Quantity)
                 })
                 .AsQueryable();
 
@@ -43,5 +44,17 @@ namespace SealMarket.Infrastructure.Repositories
                 .Take(filter.Size)
                 .ToListAsync();
         }
+
+        public async Task<Cart?> GetCartByAccountAsync(int accountId)
+            => await _context.Carts
+                .Include(c => c.CartItems)
+                .ThenInclude(ci => ci.Product)
+                .FirstOrDefaultAsync(c => c.AccountId == accountId);
+
+        public async Task<Cart?> GetCartWithIncludesAsync(int id)   
+            => await _context.Carts
+                .Include(c => c.CartItems)
+                .ThenInclude(ci => ci.Product)
+                .FirstOrDefaultAsync(c => c.Id == id);
     }
 }

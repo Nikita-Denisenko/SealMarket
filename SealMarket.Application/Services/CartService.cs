@@ -1,10 +1,9 @@
-﻿using SealMarket.Application.DTOs.Requests.CreateDTOs;
-using SealMarket.Application.DTOs.Requests.FilterDTOs;
-using SealMarket.Application.DTOs.Requests.UpdateDTOs;
-using SealMarket.Application.DTOs.Responses.CreatedDTOs;
+﻿using SealMarket.Application.DTOs.Requests.FilterDTOs;
+using SealMarket.Application.DTOs.Responses.ReadDTOs;
 using SealMarket.Application.DTOs.Responses.ReadDTOs.CartDtos;
 using SealMarket.Application.Interfaces;
 using SealMarket.Core.Interfaces;
+using SealMarket.Core.Models.Filters;
 
 namespace SealMarket.Application.Services
 {
@@ -17,29 +16,87 @@ namespace SealMarket.Application.Services
             _repo = repo;
         }
 
-        public Task<CreatedCartDto> CreateCartAsync(CreateCartDto createCartDto)
+        public async Task<CartDto> GetMyCartAsync(int accountId)
         {
-            throw new NotImplementedException();
+            var cart = await _repo.GetCartByAccountAsync(accountId);
+
+            if (cart is null)
+                throw new KeyNotFoundException("Cart was not found!");
+
+            return new CartDto
+            (
+                cart.Id,
+                cart.Name,
+                cart.TotalPrice,
+                cart.CartItems.Select(
+                    ci => new CartItemDto
+                    (
+                        ci.Id,
+                        ci.ProductId,
+                        ci.Quantity,
+                        ci.AddedAt,
+                        ci.Product.Name,
+                        ci.Product.ImageUrl,
+                        ci.Product.Price,
+                        ci.TotalPrice
+                    )
+                )
+                .ToList()
+            );
         }
 
-        public Task DeleteCartAsync(int id)
+        public async Task<CartDto> GetCartForAdminAsync(int id)
         {
-            throw new NotImplementedException();
+            var cart = await _repo.GetCartWithIncludesAsync(id);
+
+            if (cart is null)
+                throw new KeyNotFoundException("Cart was not found!");
+
+            return new CartDto
+            (
+                cart.Id,
+                cart.Name,
+                cart.TotalPrice,
+                cart.CartItems.Select(
+                    ci => new CartItemDto
+                    (
+                        ci.Id,
+                        ci.ProductId,
+                        ci.Quantity,
+                        ci.AddedAt,
+                        ci.Product.Name,
+                        ci.Product.ImageUrl,
+                        ci.Product.Price,
+                        ci.TotalPrice
+                    )
+                )
+                .ToList()
+            );
         }
 
-        public Task<CartDto> GetCartAsync(int id)
+        public async Task<List<ShortCartDto>> GetCartsForAdminAsync(CartsFilterDto cartsFilterDto)
         {
-            throw new NotImplementedException();
-        }
+            if (cartsFilterDto is null)
+                throw new ArgumentNullException(nameof(cartsFilterDto));
 
-        public Task<List<ShortCartDto>> GetCartsAsync(CartsFilterDto cartsFilterDto)
-        {
-            throw new NotImplementedException();
-        }
+            var filter = new CartsFilter
+            (
+                cartsFilterDto.Page,
+                cartsFilterDto.Size,
+                cartsFilterDto.MinTotalPrice,
+                cartsFilterDto.MaxTotalPrice,
+                cartsFilterDto.OrderParam,
+                cartsFilterDto.ByAscending,
+                cartsFilterDto.SearchText
+            );
 
-        public Task UpdateCartAsync(int id, UpdateCartDto updateCartDto)
-        {
-            throw new NotImplementedException();
+            var carts = await _repo.GetCartsAsync(filter);
+
+            var shortCartDtos = carts
+                .Select(c => new ShortCartDto(c.Id, c.AccountId))
+                .ToList();
+
+            return shortCartDtos;
         }
     }
 }
