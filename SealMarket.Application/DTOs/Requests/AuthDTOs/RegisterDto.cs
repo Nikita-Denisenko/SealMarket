@@ -5,10 +5,12 @@ namespace SealMarket.Application.DTOs.Requests.AuthDTOs
     public record RegisterDto
     (
         [Required]
+        [MinLength(2)]
         [MaxLength(120)]
         string UserName,
 
         [Required]
+        [DataType(DataType.Date)]
         DateOnly BirthDate,
 
         [Required]

@@ -1,6 +1,4 @@
-﻿using SealMarket.Core.Entities;
-
-namespace SealMarket.Application.DTOs.Responses.ReadDTOs.ProductDtos
+﻿namespace SealMarket.Application.DTOs.Responses.ReadDTOs.ProductDtos
 {
     public record ShortProductDto
     (
@@ -8,7 +6,6 @@ namespace SealMarket.Application.DTOs.Responses.ReadDTOs.ProductDtos
         string Name,
         string ImageUrl,
         decimal Price,
-        string BrandName,
         int BrandId
     );
 }

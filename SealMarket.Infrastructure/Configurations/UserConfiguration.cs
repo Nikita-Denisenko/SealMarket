@@ -11,7 +11,9 @@ namespace SealMarket.Infrastructure.Configurations
 
             builder
                .HasOne(u => u.Account)
-               .WithOne(a => a.User);
+               .WithOne(a => a.User)
+               .HasForeignKey<Account>(a => a.UserId)
+               .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

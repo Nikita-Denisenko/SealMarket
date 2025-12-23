@@ -73,7 +73,7 @@ namespace SealMarket.API.Controllers
         {
             try
             {
-                await _service.DeleteUserAsync(id);
+                await _service.DeleteUserProfileAsync(id);
                 return NoContent();
             }
             catch(Exception ex)

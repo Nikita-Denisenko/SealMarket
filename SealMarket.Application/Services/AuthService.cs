@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNet.Identity;
-using SealMarket.Application.Constants;
+﻿using SealMarket.Application.Constants;
 using SealMarket.Application.DTOs.Requests.AuthDTOs;
 using SealMarket.Application.DTOs.Requests.CreateDTOs;
 using SealMarket.Application.DTOs.Responses.AuthDTOs;

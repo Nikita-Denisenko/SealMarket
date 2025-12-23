@@ -16,7 +16,7 @@ namespace SealMarket.Application.Services
             _repo = repo;
         }
 
-        public async Task DeleteUserAsync(int id)
+        public async Task DeleteUserProfileAsync(int id)
         {
             if (!await _repo.ExistsAsync(id))
                 throw new KeyNotFoundException("User to delete was not found");

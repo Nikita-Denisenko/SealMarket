@@ -46,5 +46,10 @@ namespace SealMarket.Infrastructure.Repositories
 
             return await query.ToListAsync();
         }
+
+        public async Task<Product?> GetWithBrandByIdAsync(int id)    
+           => await _context.Products
+                .Include(p => p.Brand)
+                .FirstOrDefaultAsync(p => p.Id == id); 
     }
 }

@@ -12,11 +12,13 @@ namespace SealMarket.Infrastructure.Configurations
             builder
                 .HasOne(a => a.Cart)
                 .WithOne(c => c.Account)
+                .HasForeignKey<Cart>(c => c.AccountId)
                 .OnDelete(DeleteBehavior.Cascade);
 
             builder
                 .HasMany(a => a.Notifications)
                 .WithOne(n => n.Account)
+                .HasForeignKey(n => n.AccountId)
                 .OnDelete(DeleteBehavior.Cascade);
         }
     }

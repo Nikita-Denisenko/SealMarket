@@ -4,7 +4,7 @@
     {
         public int Id { get; private set; }
         public string Name { get; private set; } = string.Empty;
-        public Brand? Brand { get; private set; }
+        public Brand Brand { get; private set; }
         public int BrandId { get; private set; }
         public string Description { get; private set; } = string.Empty;
         public string ImageUrl { get; private set; } = string.Empty;
@@ -35,20 +35,6 @@
             IsActive = isActive;
         }
 
-        public void UpdatePrice(decimal newPrice)
-        {
-            if (newPrice < 0)
-                throw new ArgumentException("Price cannot be negative");
-            Price = newPrice;
-        }
-
-        public void UpdateQuantity(int newQuantity)
-        {
-            if (newQuantity < 0)
-                throw new ArgumentException("Quantity cannot be negative");
-            Quantity = newQuantity;
-        }
-
         public void Activate() => IsActive = true;
         public void Deactivate() => IsActive = false;
 
@@ -64,6 +50,24 @@
             if (amount <= 0)
                 throw new ArgumentException("Amount must be positive");
             Quantity += amount;
+        }
+
+        public void UpdateInfo
+        (
+            string name,
+            string description, 
+            string imageUrl,
+            int quantity,
+            decimal price,
+            bool isActive
+        )
+        {
+            Name = name;
+            Description = description;
+            ImageUrl = imageUrl;
+            Quantity = quantity;
+            Price = price;
+            IsActive = isActive;
         }
     }
 }
