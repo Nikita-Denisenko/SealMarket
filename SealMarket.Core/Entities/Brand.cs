@@ -21,5 +21,17 @@
             LogoUrl = logoUrl;
             Description = description;
         }
+
+        public void UpdateInfo
+        (
+            string name,
+            string logoUrl,
+            string description
+        )
+        {
+            Name = name;
+            LogoUrl = logoUrl;
+            Description = description;
+        }
     }
 }

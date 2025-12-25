@@ -1,4 +1,4 @@
-﻿using static SealMarket.Core.Constans.BrandOrderParameters;
+﻿using static SealMarket.Core.Constants.BrandOrderParameters;
 
 namespace SealMarket.Application.DTOs.Requests.FilterDTOs
 {
@@ -9,6 +9,7 @@ namespace SealMarket.Application.DTOs.Requests.FilterDTOs
         decimal MinAverageProductPrice = 0,
         decimal MaxAverageProductPrice= 1000000000,
         string OrderParam = Name,
+        bool ByAscending = true,
         string SearchText = ""
     );
 }

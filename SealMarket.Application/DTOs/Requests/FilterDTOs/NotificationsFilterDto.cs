@@ -1,4 +1,4 @@
-﻿using static SealMarket.Core.Constans.NotificationOrderParams;
+﻿using static SealMarket.Core.Constants.NotificationOrderParams;
 
 namespace SealMarket.Application.DTOs.Requests.FilterDTOs
 {

@@ -1,4 +1,4 @@
-﻿using static SealMarket.Core.Constans.CartOrderParameters;
+﻿using static SealMarket.Core.Constants.CartOrderParameters;
 
 namespace SealMarket.Application.DTOs.Requests.FilterDTOs
 {

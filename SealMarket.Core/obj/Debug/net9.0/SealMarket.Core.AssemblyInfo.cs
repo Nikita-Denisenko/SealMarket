@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SealMarket.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ebf2079915aebfc73229d9b5d3e8992d641c6498")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+469a3806f25f1aa3e3199e8d8acb3b410922ef7c")]
 [assembly: System.Reflection.AssemblyProductAttribute("SealMarket.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SealMarket.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

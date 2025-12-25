@@ -2,8 +2,11 @@
 using SealMarket.Application.DTOs.Requests.FilterDTOs;
 using SealMarket.Application.DTOs.Responses.CreatedDTOs;
 using SealMarket.Application.DTOs.Responses.ReadDTOs.NotificationDtos;
+using SealMarket.Application.Helpers;
 using SealMarket.Application.Interfaces;
+using SealMarket.Core.Entities;
 using SealMarket.Core.Interfaces;
+using SealMarket.Core.Models.Filters;
 
 namespace SealMarket.Application.Services
 {
@@ -16,24 +19,80 @@ namespace SealMarket.Application.Services
             _repo = repo; 
         }
 
-        public Task<CreatedNotificationDto> CreateNotificationAsync(CreateNotificationDto createNotificationDto)
+        public async Task<CreatedNotificationDto> CreateNotificationAsync(CreateNotificationDto createNotificationDto)
         {
-            throw new NotImplementedException();
+            if (createNotificationDto is null)
+                throw new ArgumentNullException(nameof(createNotificationDto));
+
+            var notification = new Notification
+            (
+                createNotificationDto.AccountId, 
+                createNotificationDto.Message, 
+                createNotificationDto.Name
+            );
+
+            await _repo.AddAsync(notification);
+
+            return new CreatedNotificationDto
+            (
+                notification.Id,
+                notification.AccountId
+            );
         }
 
-        public Task DeleteNotificationAsync(int id)
+        public async Task DeleteNotificationAsync(int id)
         {
-            throw new NotImplementedException();
+            if (!await _repo.ExistsAsync(id))
+                throw new KeyNotFoundException($"Notification with id {id} not found.");
+
+            await _repo.DeleteByIdAsync(id);
+            await _repo.SaveChangesAsync();
         }
 
-        public Task<NotificationDto> GetNotificationAsync(int id)
+        public async Task<NotificationDto> GetNotificationAsync(int id)
         {
-            throw new NotImplementedException();
+            var notification = await _repo.GetByIdAsync(id);
+
+            if (notification is null)
+                throw new KeyNotFoundException($"Notification with id {id} not found.");
+
+            return new NotificationDto
+            (
+                notification.Id,
+                notification.Name,
+                notification.Message,
+                notification.DateTime,
+                notification.HasBeenRead,
+                notification.AccountId
+            );
         }
 
-        public Task<List<ShortNotificationDto>> GetNotificationsAsync(NotificationsFilterDto notificationsFilterDto)
+        public async Task<List<ShortNotificationDto>> GetNotificationsAsync(NotificationsFilterDto notificationsFilterDto)
         {
-            throw new NotImplementedException();
+            if (notificationsFilterDto is null)
+                throw new ArgumentNullException(nameof(notificationsFilterDto));
+
+            var filter = new NotificationsFilter
+            (
+                notificationsFilterDto.Page,
+                notificationsFilterDto.Size,
+                notificationsFilterDto.FromDateTime ?? DateTimeHelper.MinDateToFilter,
+                notificationsFilterDto.ToDateTime ?? DateTimeHelper.MaxDateToFilter,
+                notificationsFilterDto.HasBeenRead,
+                notificationsFilterDto.OrderParam,
+                notificationsFilterDto.ByAscending,
+                notificationsFilterDto.SearchText
+            );
+
+            var notifications = await _repo.GetNotificationsAsync(filter);
+
+            return notifications.Select(notification => new ShortNotificationDto
+            (
+                notification.Id,
+                notification.Name,
+                notification.DateTime,
+                notification.HasBeenRead
+            )).ToList();
         }
     }
 }

@@ -4,7 +4,9 @@ using SealMarket.Application.DTOs.Requests.UpdateDTOs;
 using SealMarket.Application.DTOs.Responses.CreatedDTOs;
 using SealMarket.Application.DTOs.Responses.ReadDTOs.BrandDtos;
 using SealMarket.Application.Interfaces;
+using SealMarket.Core.Entities;
 using SealMarket.Core.Interfaces;
+using SealMarket.Core.Models.Filters;
 
 namespace SealMarket.Application.Services
 {
@@ -17,29 +19,100 @@ namespace SealMarket.Application.Services
             _repo = repo;
         }
 
-        public Task<CreatedBrandDto> CreateBrandAsync(CreateBrandDto createBrandDto)
+        public async Task<CreatedBrandDto> CreateBrandAsync(CreateBrandDto createBrandDto)
         {
-            throw new NotImplementedException();
+            if (createBrandDto is null)
+               throw new ArgumentNullException(nameof(createBrandDto));
+
+            var brand = new Brand
+            (
+                createBrandDto.Name, 
+                createBrandDto.LogoUrl, 
+                createBrandDto.Description
+            );
+
+            await _repo.AddAsync(brand);
+            await _repo.SaveChangesAsync();
+
+            return new CreatedBrandDto
+            (
+                brand.Id,
+                brand.Name
+            );
         }
 
-        public Task DeleteBrandAsync(int id)
+        public async Task DeleteBrandAsync(int id)
         {
-            throw new NotImplementedException();
+            if (!await _repo.ExistsAsync(id))
+                throw new KeyNotFoundException($"Brand with id {id} not found.");
+
+            await _repo.DeleteByIdAsync(id);
+            await _repo.SaveChangesAsync();
         }
 
-        public Task<BrandDto> GetBrandInfoAsync(int id)
+        public async Task<BrandDto> GetBrandInfoAsync(int id)
         {
-            throw new NotImplementedException();
+            var brand = await _repo.GetWithProductsAsync(id);
+
+            if (brand is null)
+                throw new KeyNotFoundException($"Brand with id {id} not found.");
+
+            return new BrandDto
+            (
+                brand.Id,
+                brand.Name,
+                brand.LogoUrl,
+                brand.Description,
+                brand.Products.Count
+            );
         }
 
-        public Task<List<BrandDto>> GetBrandsAsync(BrandsFilterDto brandsFilterDto)
+        public async Task<List<BrandDto>> GetBrandsAsync(BrandsFilterDto brandsFilterDto)
         {
-            throw new NotImplementedException();
+            if (brandsFilterDto is null)
+                throw new ArgumentNullException(nameof(brandsFilterDto));
+
+            var filter = new BrandsFilter
+            (
+                brandsFilterDto.Page,
+                brandsFilterDto.Size,
+                brandsFilterDto.MinAverageProductPrice,
+                brandsFilterDto.MaxAverageProductPrice,
+                brandsFilterDto.OrderParam,
+                brandsFilterDto.ByAscending,
+                brandsFilterDto.SearchText
+            );
+
+            var brands = await _repo.GetBrandsAsync(filter);
+
+            return brands.Select(brand => new BrandDto
+            (
+                brand.Id,
+                brand.Name,
+                brand.LogoUrl,
+                brand.Description,
+                brand.Products.Count
+            )).ToList();
         }
 
-        public Task UpdateBrandAsync(int id, UpdateBrandDto updateBrandDto)
+        public async Task UpdateBrandAsync(int id, UpdateBrandDto updateBrandDto)
         {
-            throw new NotImplementedException();
+            if (updateBrandDto is null)
+                throw new ArgumentNullException(nameof(updateBrandDto));
+
+            var brandToUpdate = await _repo.GetByIdAsync(id);
+
+            if (brandToUpdate is null)
+                throw new KeyNotFoundException($"Brand with id {id} not found.");
+
+            brandToUpdate.UpdateInfo
+            (
+                updateBrandDto.Name ?? brandToUpdate.Name,
+                updateBrandDto.LogoUrl ?? brandToUpdate.LogoUrl,
+                updateBrandDto.Description ?? brandToUpdate.Description
+            );
+
+            await _repo.SaveChangesAsync();
         }
     }
 }

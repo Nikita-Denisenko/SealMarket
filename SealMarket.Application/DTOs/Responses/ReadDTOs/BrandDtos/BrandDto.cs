@@ -1,6 +1,4 @@
-﻿using SealMarket.Application.DTOs.Responses.ReadDTOs.ProductDtos;
-
-namespace SealMarket.Application.DTOs.Responses.ReadDTOs.BrandDtos
+﻿namespace SealMarket.Application.DTOs.Responses.ReadDTOs.BrandDtos
 {
     public record BrandDto
     (

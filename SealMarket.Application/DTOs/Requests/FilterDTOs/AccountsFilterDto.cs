@@ -1,4 +1,4 @@
-﻿using static SealMarket.Core.Constans.AccountOrderParameters;
+﻿using static SealMarket.Core.Constants.AccountOrderParameters;
 
 namespace SealMarket.Application.DTOs.Requests.FilterDTOs
 {
