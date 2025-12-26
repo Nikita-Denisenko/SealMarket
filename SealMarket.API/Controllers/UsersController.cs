@@ -1,8 +1,9 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SealMarket.Application.DTOs.Requests.FilterDTOs;
 using SealMarket.Application.DTOs.Requests.UpdateDTOs;
 using SealMarket.Application.Interfaces;
+using static SealMarket.Application.Constants.Roles;
 
 namespace SealMarket.API.Controllers
 {
@@ -11,54 +12,89 @@ namespace SealMarket.API.Controllers
     public class UsersController : ControllerBase
     {
         private readonly IUserService _service;
+        private readonly ICurrentAccountService _currentAccount;
 
-        public UsersController(IUserService service)
+        public UsersController(IUserService service, ICurrentAccountService currentAccount)
         {
             _service = service;
+            _currentAccount = currentAccount;
         }
+
 
         [HttpGet]
         public async Task<IActionResult> GetUsersAsync([FromQuery] UsersFilterDto filterDto)
         {
-            if (!(ModelState.IsValid))
-                return BadRequest(ModelState);
-
             try
             {
                 var users = await _service.GetUsersAsync(filterDto);
                 return Ok(users);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
                 return BadRequest("Operation failed.");
             }
         }
 
-        [HttpGet("{id:int}")]
-        public async Task<IActionResult> GetUserProfileAsync([FromRoute] int id)
+        [Authorize(Roles = Customer)]
+        [HttpGet("my-profile")]
+        public async Task<IActionResult> GetMyProfileAsync()
         {
-            var userProfileDto = await _service.GetUserProfileAsync(id);
+            if (_currentAccount.UserId is null)
+                return Unauthorized("User ID not found in token");
 
-            if(userProfileDto is null)
-                return NotFound("User was not found.");
-
-            return Ok(userProfileDto);
-        }
-
-        [HttpPut("{id:int}")]
-        public async Task<IActionResult> UpdateUserAsync
-        (
-            [FromRoute] int id, 
-            [FromBody] UpdateUserDto updateUserDto
-        )
-        {
-            if (!(ModelState.IsValid))
-                return BadRequest(ModelState);
+            var userId = _currentAccount.UserId.Value;
 
             try
             {
-                await _service.UpdateUserAsync(id, updateUserDto);
+                var userProfileDto = await _service.GetUserProfileAsync(userId);
+
+                if (userProfileDto is null)
+                    return NotFound("User Profile was not found.");
+
+                return Ok(userProfileDto);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return BadRequest("Operation failed");
+            }
+        }
+
+        [HttpGet("{id:int}")]
+        public async Task<IActionResult> GetPublicUserProfileAsync([FromRoute] int id)
+        {
+            try
+            {
+                var profile = await _service.GetPublicUserProfileAsync(id);
+
+                if (profile is null)
+                    return NotFound("User Profile was not found.");
+
+                return Ok(profile);
+            }
+            catch (Exception ex) 
+            {
+                Console.WriteLine(ex.Message);
+                return BadRequest("Operation failed");
+            }
+        }
+
+        [HttpPut]
+        [Authorize(Roles = Customer)]
+        public async Task<IActionResult> UpdateMyProfileAsync
+        (
+            [FromBody] UpdateUserDto updateUserDto
+        )
+        {
+            if (_currentAccount.UserId is null)
+                return Unauthorized("User ID not found in token");
+
+            var userId = _currentAccount.UserId.Value;
+
+            try
+            {
+                await _service.UpdateUserAsync(userId, updateUserDto);
                 return Ok("User was sucсessfuly updated.");
             }
             catch(Exception ex)
@@ -69,7 +105,8 @@ namespace SealMarket.API.Controllers
         }
 
         [HttpDelete("{id:int}")]
-        public async Task<IActionResult> DeleteUserAsync(int id) 
+        [Authorize(Roles = Admin)]
+        public async Task<IActionResult> DeleteUserAccountForAdminAsync(int id) 
         {
             try
             {
@@ -79,7 +116,28 @@ namespace SealMarket.API.Controllers
             catch(Exception ex)
             {
                 Console.WriteLine(ex.Message);
-                return BadRequest("User was not deleted.");
+                return BadRequest("Account was not deleted.");
+            }
+        }
+
+        [HttpDelete("my-account")]
+        [Authorize(Roles = Customer)]
+        public async Task<IActionResult> DeleteMyAccountAsync()
+        {
+            if (_currentAccount.UserId is null)
+                return Unauthorized("User ID not found in token");
+
+            var userId = _currentAccount.UserId.Value;
+
+            try
+            {
+                await _service.DeleteUserProfileAsync(userId);
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return BadRequest("Account was not deleted.");
             }
         }
     }

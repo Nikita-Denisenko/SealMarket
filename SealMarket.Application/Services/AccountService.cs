@@ -1,14 +1,10 @@
 ﻿using SealMarket.Application.DTOs.Requests.CreateDTOs;
 using SealMarket.Application.DTOs.Requests.FilterDTOs;
 using SealMarket.Application.DTOs.Requests.UpdateDTOs;
-using SealMarket.Application.DTOs.Responses.CreatedDTOs;
-using SealMarket.Application.DTOs.Responses.ReadDTOs.NotificationDtos;
 using SealMarket.Application.DTOs.Responses.ReadDTOs.AccountDtos;
 using SealMarket.Application.Interfaces;
 using SealMarket.Core.Interfaces;
 using SealMarket.Core.Models.Filters;
-using System.Linq;
-using System.Net.WebSockets;
 
 namespace SealMarket.Application.Services
 {
@@ -19,18 +15,6 @@ namespace SealMarket.Application.Services
         public AccountService(IAccountRepository repo)
         {
             _repo = repo;
-        }
-
-        public async Task DeleteAccountAsync(int id)
-        {
-            var account = await _repo.GetByIdAsync(id);
-
-            if (account is null)
-                throw new KeyNotFoundException("Account to delete was not found.");
-
-            _repo.Delete(account);
-
-            await _repo.SaveChangesAsync();
         }
 
         public async Task<AccountDashboardDto> GetAccountAsync(int id)

@@ -1,6 +1,6 @@
 ﻿namespace SealMarket.Application.Constants
 {
-    static class Roles
+    public static class Roles
     {
         public const string Customer = nameof(Customer);
         public const string Admin = nameof(Admin);

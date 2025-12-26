@@ -1,29 +1,31 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SealMarket.Application.DTOs.Requests.FilterDTOs;
 using SealMarket.Application.DTOs.Requests.UpdateDTOs;
 using SealMarket.Application.Interfaces;
+using static SealMarket.Application.Constants.Roles;
 
 namespace SealMarket.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class AccountsController : ControllerBase
     {
         private readonly IAccountService _service;
+        private readonly ICurrentAccountService _currentAccount;
 
-        public AccountsController(IAccountService service)
+        public AccountsController(IAccountService service, ICurrentAccountService currentAccount)
         {
             _service = service;
+            _currentAccount = currentAccount;
         }
 
         [HttpGet]
+        [Authorize(Roles = Admin)]
         public async Task<IActionResult> GetAccountsAsync([FromQuery] AccountsFilterDto accountsFilterDto)
         {
-
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
             try
             {
                 var accounts = await _service.GetAccountsAsync(accountsFilterDto);
@@ -36,8 +38,34 @@ namespace SealMarket.API.Controllers
             }
         }
 
+        [HttpGet("my-account")]
+        [Authorize(Roles = Customer)]
+        public async Task<IActionResult> GetMyAccountAsync()
+        {
+            if (_currentAccount.AccountId is null)
+                return Unauthorized("Account ID not found in token");
+
+            var accountId = _currentAccount.AccountId.Value;
+
+            try
+            {
+                var account = await _service.GetAccountAsync(accountId);
+
+                if (account is null)
+                    return NotFound();
+
+                return Ok(account);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return BadRequest("Operation failed.");
+            }
+        }
+
         [HttpGet("{id:int}")]
-        public async Task<IActionResult> GetAccountAsync([FromRoute] int id)
+        [Authorize(Roles = Admin)]
+        public async Task<IActionResult> GetAccountForAdminAsync([FromRoute] int id)
         {
             try
             {
@@ -55,35 +83,22 @@ namespace SealMarket.API.Controllers
             }
         }
 
-        [HttpPut("{id:int}")]
-        public async Task<IActionResult> UpdateAccountAsync
+        [HttpPut]
+        [Authorize(Roles = Customer)]
+        public async Task<IActionResult> UpdateMyAccountAsync
         (
-            [FromRoute] int id,
             [FromBody] UpdateAccountDto updateAccountDto
         )
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
+            if (_currentAccount.AccountId is null)
+                return Unauthorized("Account ID not found in token");
+
+            var accountId = _currentAccount.AccountId.Value;
 
             try
             {
-                await _service.UpdateAccountAsync(id, updateAccountDto);
+                await _service.UpdateAccountAsync(accountId, updateAccountDto);
                 return Ok("Account was successfuly updated.");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                return BadRequest("Operation failed.");
-            }
-        }
-
-        [HttpDelete("{id:int}")]
-        public async Task<IActionResult> DeleteAccountAsync([FromRoute] int id)
-        {
-            try
-            {
-                await _service.DeleteAccountAsync(id);
-                return NoContent();
             }
             catch (Exception ex)
             {
