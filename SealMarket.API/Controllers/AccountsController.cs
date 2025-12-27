@@ -83,7 +83,7 @@ namespace SealMarket.API.Controllers
             }
         }
 
-        [HttpPut]
+        [HttpPut("my-account")]
         [Authorize(Roles = Customer)]
         public async Task<IActionResult> UpdateMyAccountAsync
         (

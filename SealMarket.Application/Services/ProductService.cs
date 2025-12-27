@@ -62,7 +62,7 @@ namespace SealMarket.Application.Services
             await _repo.SaveChangesAsync();
         }
 
-        public async Task<ProductDto> GetProductAsync(int id)
+        public async Task<ProductDto> GetProductInfoAsync(int id)
         {
             var product = await _repo.GetWithBrandByIdAsync(id);
 
