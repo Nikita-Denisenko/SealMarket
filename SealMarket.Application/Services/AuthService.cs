@@ -30,7 +30,7 @@ namespace SealMarket.Application.Services
             _tokenGenerator = tokenGenerator;
         }
 
-        public async Task<AuthResultDto> Login(LoginDto loginDto)
+        public async Task<AuthResultDto> LoginAsync(LoginDto loginDto)
         {
             if (loginDto is null)
                 throw new ArgumentNullException(nameof(loginDto));
@@ -64,7 +64,7 @@ namespace SealMarket.Application.Services
             );
         }
 
-        public async Task<AuthResultDto> Register(RegisterDto registerDto)
+        public async Task<AuthResultDto> RegisterAsync(RegisterDto registerDto)
         {
             if (registerDto is null) 
                 throw new ArgumentNullException(nameof(registerDto));

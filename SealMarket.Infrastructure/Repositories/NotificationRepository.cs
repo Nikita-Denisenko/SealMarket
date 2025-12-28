@@ -11,9 +11,12 @@ namespace SealMarket.Infrastructure.Repositories
     {
        public NotificationRepository(AppDbContext context) : base(context) { }
 
-        public async Task<List<Notification>> GetNotificationsAsync(NotificationsFilter filter)
+        public async Task<List<Notification>> GetNotificationsAsync(NotificationsFilter filter, int? AccountId)
         {
             var query = _context.Notifications.AsQueryable();
+
+            if (AccountId.HasValue)
+                query = query.Where(n => n.AccountId == AccountId.Value);
 
             query = query
                 .Where(n => n.Name.Contains(filter.SearchText));

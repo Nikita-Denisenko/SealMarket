@@ -7,7 +7,7 @@ namespace SealMarket.Application.Interfaces
 {
     public interface INotificationService
     {
-        public Task<List<ShortNotificationDto>> GetNotificationsAsync(NotificationsFilterDto notificationsFilterDto);
+        public Task<List<ShortNotificationDto>> GetNotificationsAsync(NotificationsFilterDto notificationsFilterDto, int? AccountId);
         public Task<NotificationDto> GetNotificationAsync(int id);
         public Task<CreatedNotificationDto> CreateNotificationAsync(CreateNotificationDto createNotificationDto);
         public Task DeleteNotificationAsync(int id);

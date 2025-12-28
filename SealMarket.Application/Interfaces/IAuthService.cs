@@ -5,8 +5,8 @@ namespace SealMarket.Application.Interfaces
 {
     public interface IAuthService
     {
-        public Task<AuthResultDto> Register(RegisterDto registerDto);
+        public Task<AuthResultDto> RegisterAsync(RegisterDto registerDto);
 
-        public Task<AuthResultDto> Login(LoginDto loginDto);
+        public Task<AuthResultDto> LoginAsync(LoginDto loginDto);
     }
 }

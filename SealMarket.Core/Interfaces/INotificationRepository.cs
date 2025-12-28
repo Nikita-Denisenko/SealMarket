@@ -5,6 +5,6 @@ namespace SealMarket.Core.Interfaces
 {
     public interface INotificationRepository : IBaseRepository<Notification>
     {
-        public Task<List<Notification>> GetNotificationsAsync(NotificationsFilter filter);
+        public Task<List<Notification>> GetNotificationsAsync(NotificationsFilter filter, int? AccountId);
     }
 }

@@ -67,7 +67,7 @@ namespace SealMarket.Application.Services
             );
         }
 
-        public async Task<List<ShortNotificationDto>> GetNotificationsAsync(NotificationsFilterDto notificationsFilterDto)
+        public async Task<List<ShortNotificationDto>> GetNotificationsAsync(NotificationsFilterDto notificationsFilterDto, int? AccountId)
         {
             if (notificationsFilterDto is null)
                 throw new ArgumentNullException(nameof(notificationsFilterDto));
@@ -84,7 +84,7 @@ namespace SealMarket.Application.Services
                 notificationsFilterDto.SearchText
             );
 
-            var notifications = await _repo.GetNotificationsAsync(filter);
+            var notifications = await _repo.GetNotificationsAsync(filter, AccountId);
 
             return notifications.Select(notification => new ShortNotificationDto
             (
