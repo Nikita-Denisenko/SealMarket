@@ -13,6 +13,8 @@ namespace SealMarket.Application.DTOs.Responses.ReadDTOs.ProductDtos
         DateTime CreatedAt,
         bool IsActive,
         int BrandId,
-        string BrandName
+        string BrandName,
+        int CategoryId,
+        string CategoryName
     );
 }

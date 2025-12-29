@@ -8,6 +8,7 @@
         decimal MaxPrice,
         string OrderParam,
         bool ByAscending,
-        string SearchText
+        string SearchText,
+        string CategoryName
     );
 }

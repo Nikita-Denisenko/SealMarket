@@ -13,7 +13,12 @@ namespace SealMarket.Infrastructure.Repositories
 
         public async Task<List<Product>> GetProductsAsync(ProductsFilter filter)
         {
-            var query = _context.Products.AsQueryable();
+            var query = _context.Products
+                .Include(p => p.Category)
+                .AsQueryable();
+
+            query = query
+                .Where(query => query.Category.Name == filter.CategoryName);
 
             query = query
                 .Where(p => p.Name.Contains(filter.SearchText));

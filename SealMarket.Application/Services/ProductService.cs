@@ -33,6 +33,7 @@ namespace SealMarket.Application.Services
             (
                 createProductDto.Name,
                 createProductDto.BrandId,
+                createProductDto.CategoryId,
                 createProductDto.Description,
                 createProductDto.ImageUrl,
                 createProductDto.Quantity,
@@ -80,7 +81,9 @@ namespace SealMarket.Application.Services
                 product.CreatedAt,
                 product.IsActive,
                 product.BrandId,
-                product.Brand.Name
+                product.Brand.Name,
+                product.CategoryId,
+                product.Category.Name
             );
         }
 
@@ -97,7 +100,8 @@ namespace SealMarket.Application.Services
                 filterDto.MaxPrice,
                 filterDto.OrderParam,
                 filterDto.ByAscending,
-                filterDto.SearchText
+                filterDto.SearchText,
+                filterDto.CategoryName
             );
 
             var products = await _repo.GetProductsAsync(filter);
@@ -110,7 +114,8 @@ namespace SealMarket.Application.Services
                         p.Name,
                         p.ImageUrl,
                         p.Price,
-                        p.BrandId
+                        p.BrandId,
+                        p.CategoryId
                     )
                 ).ToList();
 

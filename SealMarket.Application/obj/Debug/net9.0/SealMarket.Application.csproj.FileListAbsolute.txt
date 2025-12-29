@@ -4,3 +4,13 @@ D:\Projects\SealMarket\SealMarket.Application\obj\Debug\net9.0\SealMarket.Applic
 D:\Projects\SealMarket\SealMarket.Application\obj\Debug\net9.0\SealMarket.Application.AssemblyInfo.cs
 D:\Projects\SealMarket\SealMarket.Application\obj\Debug\net9.0\SealMarket.Application.csproj.CoreCompileInputs.cache
 D:\Projects\SealMarket\SealMarket.Application\obj\Debug\net9.0\SealMarket.Application.sourcelink.json
+D:\Projects\SealMarket\SealMarket.Application\bin\Debug\net9.0\SealMarket.Application.deps.json
+D:\Projects\SealMarket\SealMarket.Application\bin\Debug\net9.0\SealMarket.Application.dll
+D:\Projects\SealMarket\SealMarket.Application\bin\Debug\net9.0\SealMarket.Application.pdb
+D:\Projects\SealMarket\SealMarket.Application\bin\Debug\net9.0\SealMarket.Core.dll
+D:\Projects\SealMarket\SealMarket.Application\bin\Debug\net9.0\SealMarket.Core.pdb
+D:\Projects\SealMarket\SealMarket.Application\obj\Debug\net9.0\SealMark.BF428C58.Up2Date
+D:\Projects\SealMarket\SealMarket.Application\obj\Debug\net9.0\SealMarket.Application.dll
+D:\Projects\SealMarket\SealMarket.Application\obj\Debug\net9.0\refint\SealMarket.Application.dll
+D:\Projects\SealMarket\SealMarket.Application\obj\Debug\net9.0\SealMarket.Application.pdb
+D:\Projects\SealMarket\SealMarket.Application\obj\Debug\net9.0\ref\SealMarket.Application.dll

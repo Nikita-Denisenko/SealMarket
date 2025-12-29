@@ -6,6 +6,7 @@
         string Name,
         string ImageUrl,
         decimal Price,
-        int BrandId
+        int BrandId,
+        int CategoryId
     );
 }

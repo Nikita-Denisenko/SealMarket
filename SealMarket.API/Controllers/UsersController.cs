@@ -20,6 +20,16 @@ namespace SealMarket.API.Controllers
             _currentAccount = currentAccount;
         }
 
+        [HttpGet("health-check")]
+        public IActionResult HealthCheck()
+        {
+            return Ok(new
+            {
+                Status = "API is running",
+                Timestamp = DateTime.UtcNow,
+                Version = "1.0"
+            });
+        }
 
         [HttpGet]
         public async Task<IActionResult> GetUsersAsync([FromQuery] UsersFilterDto filterDto)

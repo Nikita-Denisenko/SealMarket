@@ -10,6 +10,7 @@ namespace SealMarket.Application.DTOs.Requests.FilterDTOs
         decimal MaxPrice = 1000000000,
         string OrderParam = Name,
         bool ByAscending = true,
-        string SearchText = ""
+        string SearchText = "",
+        string CategoryName = ""
     );
 }

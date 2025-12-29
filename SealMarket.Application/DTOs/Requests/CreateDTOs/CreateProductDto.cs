@@ -13,6 +13,10 @@ namespace SealMarket.Application.DTOs.Requests.CreateDTOs
         [Range(0, int.MaxValue)]
         int BrandId,
 
+        [Required]
+        [Range(0, int.MaxValue)]
+        int CategoryId,
+
         [MaxLength(500)]
         string Description,
 

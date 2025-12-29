@@ -6,6 +6,8 @@
         public string Name { get; private set; } = string.Empty;
         public Brand Brand { get; private set; }
         public int BrandId { get; private set; }
+        public Category Category { get; private set; }
+        public int CategoryId { get; private set; }
         public string Description { get; private set; } = string.Empty;
         public string ImageUrl { get; private set; } = string.Empty;
         public int Quantity { get; private set; }
@@ -18,6 +20,7 @@
         public Product(
             string name,
             int brandId,
+            int categoryId,
             string description,
             string imageUrl,
             int quantity,
@@ -26,30 +29,14 @@
         )
         {
             Name = name;
-            BrandId = brandId;       
+            BrandId = brandId;
+            CategoryId = categoryId;
             Description = description;
             ImageUrl = imageUrl;
             Quantity = quantity;
             Price = price;
             CreatedAt = DateTime.UtcNow;
             IsActive = isActive;
-        }
-
-        public void Activate() => IsActive = true;
-        public void Deactivate() => IsActive = false;
-
-        public void ReduceQuantity(int amount)
-        {
-            if (amount > Quantity)
-                throw new InvalidOperationException("Not enough quantity in stock");
-            Quantity -= amount;
-        }
-
-        public void IncreaseQuantity(int amount)
-        {
-            if (amount <= 0)
-                throw new ArgumentException("Amount must be positive");
-            Quantity += amount;
         }
 
         public void UpdateInfo

@@ -4,3 +4,13 @@ D:\Projects\SealMarket\SealMarket.Infrastructure\obj\Debug\net9.0\SealMarket.Inf
 D:\Projects\SealMarket\SealMarket.Infrastructure\obj\Debug\net9.0\SealMarket.Infrastructure.AssemblyInfo.cs
 D:\Projects\SealMarket\SealMarket.Infrastructure\obj\Debug\net9.0\SealMarket.Infrastructure.csproj.CoreCompileInputs.cache
 D:\Projects\SealMarket\SealMarket.Infrastructure\obj\Debug\net9.0\SealMarket.Infrastructure.sourcelink.json
+D:\Projects\SealMarket\SealMarket.Infrastructure\bin\Debug\net9.0\SealMarket.Infrastructure.deps.json
+D:\Projects\SealMarket\SealMarket.Infrastructure\bin\Debug\net9.0\SealMarket.Infrastructure.dll
+D:\Projects\SealMarket\SealMarket.Infrastructure\bin\Debug\net9.0\SealMarket.Infrastructure.pdb
+D:\Projects\SealMarket\SealMarket.Infrastructure\bin\Debug\net9.0\SealMarket.Core.dll
+D:\Projects\SealMarket\SealMarket.Infrastructure\bin\Debug\net9.0\SealMarket.Core.pdb
+D:\Projects\SealMarket\SealMarket.Infrastructure\obj\Debug\net9.0\SealMark.622810F1.Up2Date
+D:\Projects\SealMarket\SealMarket.Infrastructure\obj\Debug\net9.0\SealMarket.Infrastructure.dll
+D:\Projects\SealMarket\SealMarket.Infrastructure\obj\Debug\net9.0\refint\SealMarket.Infrastructure.dll
+D:\Projects\SealMarket\SealMarket.Infrastructure\obj\Debug\net9.0\SealMarket.Infrastructure.pdb
+D:\Projects\SealMarket\SealMarket.Infrastructure\obj\Debug\net9.0\ref\SealMarket.Infrastructure.dll
