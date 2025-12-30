@@ -24,5 +24,21 @@
             Quantity = quantity;
             AddedAt = DateTime.UtcNow;
         } 
+
+        public void IncreaseQuantity(int amount = 1)
+        {
+            if (amount < 1)
+                throw new ArgumentException("Amount must be at least 1.", nameof(amount));
+            Quantity += amount;
+        }
+
+        public void DecreaseQuantity(int amount = 1)
+        {
+            if (amount < 1)
+                throw new ArgumentException("Amount must be at least 1.", nameof(amount));
+            if (Quantity - amount < 0)
+                throw new InvalidOperationException("Quantity cannot be negative.");
+            Quantity -= amount;
+        }
     }
 }

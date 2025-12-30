@@ -8,5 +8,7 @@ namespace SealMarket.Application.Interfaces
         public Task<List<ShortCartDto>> GetCartsForAdminAsync(CartsFilterDto cartsFilterDto);
         public Task<CartDto> GetCartForAdminAsync(int id);
         public Task<CartDto> GetMyCartAsync(int accountId);
+        public Task AddItemToMyCart(int cartId, int productId, int quantity);
+        public Task RemoveItemFromMyCart(int cartId, int itemId, bool removeAll = true);
     }
 }

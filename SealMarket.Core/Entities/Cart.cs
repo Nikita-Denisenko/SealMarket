@@ -16,17 +16,28 @@ public class Cart
         AccountId = accountId;
     }
 
-    public void AddProduct(CartItem newItem)
+    public void AddItem(CartItem newItem)
     {
-        if (!CartItems.Any(item => item.Id == newItem.Id))
-            CartItems.Add(newItem);
+        var item = CartItems.FirstOrDefault(item => item.Product.Id == newItem.Product.Id);
+
+        if (item != null)
+        {
+            item.IncreaseQuantity();
+            return;
+        }
+
+        CartItems.Add(newItem);
     }
 
-    public void RemoveProduct(int newItemId)
+    public void RemoveItem(CartItem item, bool removeAll = true)
     {
-        var item = CartItems.FirstOrDefault(item => item.Id == newItemId);
-        if (item != null)
-            CartItems.Remove(item);
+        if (!(removeAll || item.Quantity <= 1))
+        {
+            item.DecreaseQuantity();
+            return;
+        }
+
+        CartItems.Remove(item);
     }
 
     public void Clear() => CartItems.Clear();
