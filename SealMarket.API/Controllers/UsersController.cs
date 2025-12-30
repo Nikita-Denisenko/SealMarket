@@ -20,17 +20,6 @@ namespace SealMarket.API.Controllers
             _currentAccount = currentAccount;
         }
 
-        [HttpGet("health-check")]
-        public IActionResult HealthCheck()
-        {
-            return Ok(new
-            {
-                Status = "API is running",
-                Timestamp = DateTime.UtcNow,
-                Version = "1.0"
-            });
-        }
-
         [HttpGet]
         public async Task<IActionResult> GetUsersAsync([FromQuery] UsersFilterDto filterDto)
         {
@@ -58,10 +47,6 @@ namespace SealMarket.API.Controllers
             try
             {
                 var userProfileDto = await _service.GetUserProfileAsync(userId);
-
-                if (userProfileDto is null)
-                    return NotFound("User Profile was not found.");
-
                 return Ok(userProfileDto);
             }
             catch (Exception ex)
@@ -77,10 +62,6 @@ namespace SealMarket.API.Controllers
             try
             {
                 var profile = await _service.GetPublicUserProfileAsync(id);
-
-                if (profile is null)
-                    return NotFound("User Profile was not found.");
-
                 return Ok(profile);
             }
             catch (Exception ex) 

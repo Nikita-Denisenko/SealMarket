@@ -31,10 +31,6 @@ namespace SealMarket.API.Controllers
             try
             {
                 var cart = await _service.GetMyCartAsync(accountId);
-
-                if (cart is null)
-                    return NotFound($"Cart with AccountID {accountId} not found.");
-
                 return Ok(cart);
             }
             catch (Exception ex)
@@ -51,10 +47,6 @@ namespace SealMarket.API.Controllers
             try
             {
                 var cart = await _service.GetCartForAdminAsync(id);
-
-                if (cart is null)
-                    return NotFound($"Cart with ID {id} not found.");
-
                 return Ok(cart);
             }
             catch (Exception ex)

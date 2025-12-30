@@ -44,10 +44,6 @@ namespace SealMarket.API.Controllers
             try
             {
                 var product = await _service.GetProductInfoAsync(id);
-
-                if (product is null)
-                    return NotFound($"Product with ID {id} was not found.");
-
                 return Ok(product);
             }
             catch (Exception ex)
@@ -67,9 +63,6 @@ namespace SealMarket.API.Controllers
             try
             {
                 var createdProduct = await _service.CreateProductAsync(createProductDto);
-
-                if (createdProduct is null)
-                    return BadRequest("Creation failed.");
 
                 return CreatedAtAction
                 (

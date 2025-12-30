@@ -67,9 +67,6 @@ namespace SealMarket.API.Controllers
             {
                 var notification = await _service.GetNotificationAsync(id);
 
-                if (notification is null)
-                    return NotFound("Notification not found");
-
                 if (_currentAccount.Role == Customer && notification.AccountId != _currentAccount.AccountId)
                     return Forbid("You are not authorized to access this notification");
 

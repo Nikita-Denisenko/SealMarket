@@ -27,10 +27,6 @@ namespace SealMarket.API.Controllers
             try
             {
                 var brand = await _service.GetBrandInfoAsync(id);
-
-                if (brand is null)
-                    return NotFound($"Brand with ID {id} was not found.");
-
                 return Ok(brand);
             }
             catch (Exception ex)
@@ -68,9 +64,6 @@ namespace SealMarket.API.Controllers
             try
             {
                 var createdBrand = await _service.CreateBrandAsync(createBrandDto);
-
-                if (createdBrand is null)
-                    return BadRequest("Creation failed.");
 
                 return CreatedAtAction
                 (

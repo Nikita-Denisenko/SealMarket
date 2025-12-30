@@ -51,9 +51,6 @@ namespace SealMarket.API.Controllers
             {
                 var account = await _service.GetAccountAsync(accountId);
 
-                if (account is null)
-                    return NotFound();
-
                 return Ok(account);
             }
             catch (Exception ex)
@@ -70,9 +67,6 @@ namespace SealMarket.API.Controllers
             try
             {
                 var account = await _service.GetAccountAsync(id);
-
-                if (account is null)
-                    return NotFound();
 
                 return Ok(account);
             }
