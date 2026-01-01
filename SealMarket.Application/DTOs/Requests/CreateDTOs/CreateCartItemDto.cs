@@ -3,11 +3,12 @@
 namespace SealMarket.Application.DTOs.Requests.CreateDTOs
 {
     public record CreateCartItemDto
-    (
+    (       
        [Required]
+       [Range(0, int.MaxValue)]
        int ProductId,
 
-       [Required]
+       [Range(1, int.MaxValue)]
        int Quantity = 1
    );
 }

@@ -1,4 +1,6 @@
-﻿using SealMarket.Application.DTOs.Requests.FilterDTOs;
+﻿using SealMarket.Application.DTOs.Requests.CreateDTOs;
+using SealMarket.Application.DTOs.Requests.FilterDTOs;
+using SealMarket.Application.DTOs.Responses.CreatedDTOs;
 using SealMarket.Application.DTOs.Responses.ReadDTOs;
 using SealMarket.Application.DTOs.Responses.ReadDTOs.CartDtos;
 using SealMarket.Application.Interfaces;
@@ -102,9 +104,10 @@ namespace SealMarket.Application.Services
             return shortCartDtos;
         }
 
-        public async Task AddItemToMyCart(int accountId, int productId, int quantity)
+        public async Task<CreatedCartItemDto> AddItemToMyCartAsync(int accountId, CreateCartItemDto createCartItemDto)
         {
             var cart = await _repo.GetCartByAccountAsync(accountId);
+            var productId = createCartItemDto.ProductId;
 
             if (cart is null)
                 throw new KeyNotFoundException("Cart was not found!");
@@ -112,14 +115,22 @@ namespace SealMarket.Application.Services
             if (!await _productRepo.ExistsAsync(productId))
                 throw new KeyNotFoundException("Product was not found!");
 
-            var item = new CartItem(productId, cart.Id, quantity);
+            var item = new CartItem(productId, cart.Id, createCartItemDto.Quantity);
 
             cart.AddItem(item);
 
             await _repo.SaveChangesAsync();
+
+            return new CreatedCartItemDto
+            (
+                item.Id,
+                item.Product.Name,
+                item.ProductId,
+                item.CartId
+            );
         }
 
-        public async Task RemoveItemFromMyCart(int accountId, int itemId, bool removeAll = true)
+        public async Task RemoveItemFromMyCartAsync(int accountId, int itemId, bool removeAll = true)
         {
             var cart = await _repo.GetCartByAccountAsync(accountId);
 

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using SealMarket.Application.DTOs.Requests.CreateDTOs;
 using SealMarket.Application.DTOs.Requests.FilterDTOs;
 using SealMarket.Application.Interfaces;
 using static SealMarket.Application.Constants.Roles;
@@ -67,6 +68,50 @@ namespace SealMarket.API.Controllers
             {
                 var carts = await _service.GetCartsForAdminAsync(cartsFilterDto);
                 return Ok(carts);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return BadRequest("Operation failed.");
+            }
+        }
+
+        [HttpPost("my-cart/add-item")]
+        [Authorize(Roles = Customer)]
+        public async Task<IActionResult> AddItemToMyCartAsync
+        (
+            [FromBody] CreateCartItemDto createCartItemDto
+        )
+        {
+            if (_currentAccount.AccountId is null)
+                return Unauthorized("Account ID not found in token");
+
+            try
+            {
+                var createdCartItem = await _service.AddItemToMyCartAsync(_currentAccount.AccountId.Value, createCartItemDto);
+                return CreatedAtAction(nameof(GetMyCartAsync), new { createdCartItem.Id }, createdCartItem);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return BadRequest("Operation failed.");
+            }
+        }
+
+        [HttpDelete("my-cart/remove-item/{itemId:int}")]
+        [Authorize(Roles = Customer)]
+        public async Task<IActionResult> RemoveItemFromMyCartAsync
+        (
+            [FromRoute] int itemId,
+            [FromQuery] bool removeAll = true
+        )
+        {
+            if (_currentAccount.AccountId is null)
+                return Unauthorized("Account ID not found in token");
+            try
+            {
+                await _service.RemoveItemFromMyCartAsync(_currentAccount.AccountId.Value, itemId, removeAll);
+                return NoContent();
             }
             catch (Exception ex)
             {
