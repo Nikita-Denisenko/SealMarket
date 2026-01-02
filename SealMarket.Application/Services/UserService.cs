@@ -68,9 +68,6 @@ namespace SealMarket.Application.Services
 
         public async Task<List<ShortUserDto>> GetUsersAsync(UsersFilterDto usersfilterDto)
         {
-            if (usersfilterDto is null)
-                throw new ArgumentNullException(nameof(usersfilterDto));
-
             var filter = new UsersFilter
             (
                 usersfilterDto.Page,
@@ -97,9 +94,6 @@ namespace SealMarket.Application.Services
 
         public async Task UpdateUserAsync(int id, UpdateUserDto updateUserDto)
         {
-            if (updateUserDto is null)
-                throw new ArgumentNullException(nameof(updateUserDto));
-
             var user = await _repo.GetByIdAsync(id);
 
             if (user is null)

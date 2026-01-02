@@ -15,10 +15,12 @@ namespace SealMarket.API.Controllers
     public class BrandsController : ControllerBase
     {
         private readonly IBrandService _service;
+        private readonly ILogger<BrandsController> _logger;
 
-        public BrandsController(IBrandService service, ICurrentAccountService currentAccount)
+        public BrandsController(IBrandService service, ILogger<BrandsController> logger)
         {
             _service = service;
+            _logger = logger;
         }
 
         [HttpGet("{id:int}")]
@@ -27,12 +29,18 @@ namespace SealMarket.API.Controllers
             try
             {
                 var brand = await _service.GetBrandInfoAsync(id);
+                _logger.LogInformation("Brand with brand ID {BrandId} received successfully", id);
                 return Ok(brand);
+            }
+            catch (KeyNotFoundException ex)
+            {
+                _logger.LogWarning(ex, ex.Message);
+                return NotFound(new { error = ex.Message });
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                return BadRequest("Operation failed.");
+                _logger.LogError(ex, "Unexpected error");
+                return StatusCode(500, new { error = "Internal server error" });
             }
         }
 
@@ -45,12 +53,13 @@ namespace SealMarket.API.Controllers
             try
             {
                 var brands = await _service.GetBrandsAsync(brandsFilterDto);
+                _logger.LogInformation("Brands received successfully");
                 return Ok(brands);
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                return BadRequest("Operation failed.");
+                _logger.LogError(ex, "Unexpected error");
+                return StatusCode(500, new { error = "Internal server error" });
             }
         }
 
@@ -64,6 +73,7 @@ namespace SealMarket.API.Controllers
             try
             {
                 var createdBrand = await _service.CreateBrandAsync(createBrandDto);
+                _logger.LogInformation("Brand with brand ID {BrandId} created successfully", createdBrand.Id);
 
                 return CreatedAtAction
                 (
@@ -74,8 +84,8 @@ namespace SealMarket.API.Controllers
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                return BadRequest("Operation failed.");
+                _logger.LogError(ex, "Unexpected error");
+                return StatusCode(500, new { error = "Internal server error" });
             }
         }
 
@@ -86,12 +96,18 @@ namespace SealMarket.API.Controllers
             try
             {
                 await _service.DeleteBrandAsync(id);
+                _logger.LogInformation("Brand with brand ID {BrandId} deleted successfully", id);
                 return NoContent();
+            }
+            catch (KeyNotFoundException ex)
+            {
+                _logger.LogWarning(ex, ex.Message);
+                return NotFound(new { error = ex.Message });
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                return BadRequest("Operation failed.");
+                _logger.LogError(ex, "Unexpected error");
+                return StatusCode(500, new { error = "Internal server error" });
             }
         }
 
@@ -106,12 +122,18 @@ namespace SealMarket.API.Controllers
             try
             {
                 await _service.UpdateBrandAsync(id, updateBrandDto);
+                _logger.LogInformation("Brand with brand ID {BrandId} updated successfully", id);
                 return NoContent();
+            }
+            catch (KeyNotFoundException ex)
+            {
+                _logger.LogWarning(ex, ex.Message);
+                return NotFound(new { error = ex.Message });
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                return BadRequest("Operation failed.");
+                _logger.LogError(ex, "Unexpected error");
+                return StatusCode(500, new { error = "Internal server error" });
             }
         }
     }

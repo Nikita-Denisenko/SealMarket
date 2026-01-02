@@ -13,11 +13,18 @@ namespace SealMarket.API.Controllers
     {
         private readonly IUserService _service;
         private readonly ICurrentAccountService _currentAccount;
+        private readonly ILogger<UsersController> _logger;
 
-        public UsersController(IUserService service, ICurrentAccountService currentAccount)
+        public UsersController
+        (
+            IUserService service, 
+            ICurrentAccountService currentAccount, 
+            ILogger<UsersController> logger
+        )
         {
             _service = service;
             _currentAccount = currentAccount;
+            _logger = logger;
         }
 
         [HttpGet]
@@ -26,12 +33,13 @@ namespace SealMarket.API.Controllers
             try
             {
                 var users = await _service.GetUsersAsync(filterDto);
+                _logger.LogInformation("Users received successfully");
                 return Ok(users);
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                return BadRequest("Operation failed.");
+                _logger.LogError(ex, "Unexpected error");
+                return StatusCode(500, new { error = "Internal server error" });
             }
         }
 
@@ -40,19 +48,28 @@ namespace SealMarket.API.Controllers
         public async Task<IActionResult> GetMyProfileAsync()
         {
             if (_currentAccount.UserId is null)
-                return Unauthorized("User ID not found in token");
+            {
+                _logger.LogWarning("User ID not found in token");
+                return Unauthorized(new { error = "User ID not found in token" });
+            }
 
             var userId = _currentAccount.UserId.Value;
 
             try
             {
                 var userProfileDto = await _service.GetUserProfileAsync(userId);
+                _logger.LogInformation("User profile with user ID {UserId} received successfully", userId);
                 return Ok(userProfileDto);
+            }
+            catch (KeyNotFoundException ex)
+            {
+                _logger.LogWarning(ex, ex.Message);
+                return NotFound(new { error = ex.Message });
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                return BadRequest("Operation failed");
+                _logger.LogError(ex, "Unexpected error");
+                return StatusCode(500, new { error = "Internal server error" });
             }
         }
 
@@ -62,12 +79,18 @@ namespace SealMarket.API.Controllers
             try
             {
                 var profile = await _service.GetPublicUserProfileAsync(id);
+                _logger.LogInformation("User profile with user ID {UserId} received successfully", id);
                 return Ok(profile);
             }
-            catch (Exception ex) 
+            catch (KeyNotFoundException ex)
             {
-                Console.WriteLine(ex.Message);
-                return BadRequest("Operation failed");
+                _logger.LogWarning(ex, ex.Message);
+                return NotFound(new { error = ex.Message });
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Unexpected error");
+                return StatusCode(500, new { error = "Internal server error" });
             }
         }
 
@@ -79,19 +102,28 @@ namespace SealMarket.API.Controllers
         )
         {
             if (_currentAccount.UserId is null)
-                return Unauthorized("User ID not found in token");
+            {
+                _logger.LogWarning("User ID not found in token");
+                return Unauthorized(new { error = "User ID not found in token" });
+            }
 
             var userId = _currentAccount.UserId.Value;
 
             try
             {
                 await _service.UpdateUserAsync(userId, updateUserDto);
+                _logger.LogInformation("User profile with user ID {UserId} updated successfully", userId);
                 return Ok("User was sucсessfuly updated.");
             }
-            catch(Exception ex)
+            catch (KeyNotFoundException ex)
             {
-                Console.WriteLine(ex.Message);
-                return BadRequest("User was not updated.");
+                _logger.LogWarning(ex, ex.Message);
+                return NotFound(new { error = ex.Message });
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Unexpected error");
+                return StatusCode(500, new { error = "Internal server error" });
             }
         }
 
@@ -102,12 +134,18 @@ namespace SealMarket.API.Controllers
             try
             {
                 await _service.DeleteUserProfileAsync(id);
+                _logger.LogInformation("User account with user ID {UserId} deleted successfully", id);
                 return NoContent();
             }
-            catch(Exception ex)
+            catch (KeyNotFoundException ex)
             {
-                Console.WriteLine(ex.Message);
-                return BadRequest("Account was not deleted.");
+                _logger.LogWarning(ex, ex.Message);
+                return NotFound(new { error = ex.Message });
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Unexpected error");
+                return StatusCode(500, new { error = "Internal server error" });
             }
         }
 
@@ -116,19 +154,28 @@ namespace SealMarket.API.Controllers
         public async Task<IActionResult> DeleteMyAccountAsync()
         {
             if (_currentAccount.UserId is null)
-                return Unauthorized("User ID not found in token");
+            {
+                _logger.LogWarning("User ID not found in token");
+                return Unauthorized(new { error = "User ID not found in token" });
+            }
 
             var userId = _currentAccount.UserId.Value;
 
             try
             {
                 await _service.DeleteUserProfileAsync(userId);
+                _logger.LogInformation("User account deleted successfully for user ID {UserId}", userId);
                 return NoContent();
+            }
+            catch (KeyNotFoundException ex)
+            {
+                _logger.LogWarning(ex, ex.Message);
+                return NotFound(new { error = ex.Message });
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                return BadRequest("Account was not deleted.");
+                _logger.LogError(ex, "Unexpected error");
+                return StatusCode(500, new { error = "Internal server error" });
             }
         }
     }

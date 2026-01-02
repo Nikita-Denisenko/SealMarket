@@ -9,6 +9,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using SealMarket.Application.Interfaces.SealMarket.Application.Interfaces;
 using SealMarket.Application.Services.SealMarket.Application.Services;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -44,6 +45,13 @@ builder.Services.AddAuthentication(options =>
 
 builder.Services.AddAuthorization();
 builder.Services.AddHttpContextAccessor();
+
+// Logger
+builder.Services.AddLogging();
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.File("Logs/log-.txt", rollingInterval: RollingInterval.Day)
+    .WriteTo.Console()
+    .CreateLogger();
 
 // Repositories DI
 builder.Services.AddScoped<IUserRepository, UserRepository>();

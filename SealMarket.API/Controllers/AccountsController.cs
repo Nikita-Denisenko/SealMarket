@@ -15,11 +15,18 @@ namespace SealMarket.API.Controllers
     {
         private readonly IAccountService _service;
         private readonly ICurrentAccountService _currentAccount;
+        private readonly ILogger<AccountsController> _logger;
 
-        public AccountsController(IAccountService service, ICurrentAccountService currentAccount)
+        public AccountsController
+        (
+            IAccountService service, 
+            ICurrentAccountService currentAccount,
+            ILogger<AccountsController> logger
+        )
         {
             _service = service;
             _currentAccount = currentAccount;
+            _logger = logger;
         }
 
         [HttpGet]
@@ -29,12 +36,13 @@ namespace SealMarket.API.Controllers
             try
             {
                 var accounts = await _service.GetAccountsAsync(accountsFilterDto);
+                _logger.LogInformation("Accounts received successfully for Admin");
                 return Ok(accounts);
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                return BadRequest("Operation failed.");
+                _logger.LogError(ex, "Unexpected error");
+                return StatusCode(500, new { error = "Internal server error" });
             }
         }
 
@@ -43,20 +51,28 @@ namespace SealMarket.API.Controllers
         public async Task<IActionResult> GetMyAccountAsync()
         {
             if (_currentAccount.AccountId is null)
-                return Unauthorized("Account ID not found in token");
+            {
+                _logger.LogWarning("Account ID not found in token");
+                return Unauthorized(new { error = "Account ID not found in token" });
+            }
 
             var accountId = _currentAccount.AccountId.Value;
 
             try
             {
                 var account = await _service.GetAccountAsync(accountId);
-
+                _logger.LogInformation("Account with account ID {AccountId} received successfully", accountId);
                 return Ok(account);
+            }
+            catch (KeyNotFoundException ex)
+            {
+                _logger.LogWarning(ex, ex.Message);
+                return NotFound(new { error = ex.Message });
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                return BadRequest("Operation failed.");
+                _logger.LogError(ex, "Unexpected error");
+                return StatusCode(500, new { error = "Internal server error" });
             }
         }
 
@@ -67,13 +83,18 @@ namespace SealMarket.API.Controllers
             try
             {
                 var account = await _service.GetAccountAsync(id);
-
+                _logger.LogInformation("Account with account ID {AccountId} received successfully", id);
                 return Ok(account);
+            }
+            catch (KeyNotFoundException ex)
+            {
+                _logger.LogWarning(ex, ex.Message);
+                return NotFound(new { error = ex.Message });
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                return BadRequest("Operation failed.");
+                _logger.LogError(ex, "Unexpected error");
+                return StatusCode(500, new { error = "Internal server error" });
             }
         }
 
@@ -85,19 +106,28 @@ namespace SealMarket.API.Controllers
         )
         {
             if (_currentAccount.AccountId is null)
-                return Unauthorized("Account ID not found in token");
+            {
+                _logger.LogWarning("Account ID not found in token");
+                return Unauthorized(new { error = "Account ID not found in token" });
+            }
 
             var accountId = _currentAccount.AccountId.Value;
 
             try
             {
                 await _service.UpdateAccountAsync(accountId, updateAccountDto);
+                _logger.LogInformation("Account with account ID {AccountId} updated successfully", accountId);
                 return Ok("Account was successfuly updated.");
+            }
+            catch (KeyNotFoundException ex)
+            {
+                _logger.LogWarning(ex, ex.Message);
+                return NotFound(new { error = ex.Message });
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                return BadRequest("Operation failed.");
+                _logger.LogError(ex, "Unexpected error");
+                return StatusCode(500, new { error = "Internal server error" });
             }
         }
     }

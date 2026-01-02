@@ -23,9 +23,6 @@ namespace SealMarket.Application.Services
 
         public async Task<CreatedProductDto> CreateProductAsync(CreateProductDto createProductDto)
         {
-            if (createProductDto is null)
-                throw new ArgumentNullException(nameof(createProductDto));
-
             if (!await _brandRepo.ExistsAsync(createProductDto.BrandId))
                 throw new KeyNotFoundException($"Brand with id {createProductDto.BrandId} not found");
 
@@ -89,9 +86,6 @@ namespace SealMarket.Application.Services
 
         public async Task<List<ShortProductDto>> GetProductsAsync(ProductsFilterDto filterDto)
         {
-            if (filterDto is null)
-                throw new ArgumentNullException(nameof(filterDto));
-
             var filter = new ProductsFilter
             (
                 filterDto.Page,
@@ -124,9 +118,6 @@ namespace SealMarket.Application.Services
 
         public async Task UpdateProductAsync(int id, UpdateProductDto updateProductDto)
         {
-            if (updateProductDto is null)
-                throw new ArgumentNullException(nameof(updateProductDto));
-
             var productToUpdate = await _repo.GetByIdAsync(id);
 
             if (productToUpdate is null)

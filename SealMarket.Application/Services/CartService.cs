@@ -81,9 +81,6 @@ namespace SealMarket.Application.Services
 
         public async Task<List<ShortCartDto>> GetCartsForAdminAsync(CartsFilterDto cartsFilterDto)
         {
-            if (cartsFilterDto is null)
-                throw new ArgumentNullException(nameof(cartsFilterDto));
-
             var filter = new CartsFilter
             (
                 cartsFilterDto.Page,

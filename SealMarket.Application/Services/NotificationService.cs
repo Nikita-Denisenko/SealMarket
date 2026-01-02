@@ -21,9 +21,6 @@ namespace SealMarket.Application.Services
 
         public async Task<CreatedNotificationDto> CreateNotificationAsync(CreateNotificationDto createNotificationDto)
         {
-            if (createNotificationDto is null)
-                throw new ArgumentNullException(nameof(createNotificationDto));
-
             var notification = new Notification
             (
                 createNotificationDto.AccountId, 
@@ -69,9 +66,6 @@ namespace SealMarket.Application.Services
 
         public async Task<List<ShortNotificationDto>> GetNotificationsAsync(NotificationsFilterDto notificationsFilterDto, int? AccountId)
         {
-            if (notificationsFilterDto is null)
-                throw new ArgumentNullException(nameof(notificationsFilterDto));
-
             var filter = new NotificationsFilter
             (
                 notificationsFilterDto.Page,

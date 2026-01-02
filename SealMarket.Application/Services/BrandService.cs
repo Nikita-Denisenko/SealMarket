@@ -21,9 +21,6 @@ namespace SealMarket.Application.Services
 
         public async Task<CreatedBrandDto> CreateBrandAsync(CreateBrandDto createBrandDto)
         {
-            if (createBrandDto is null)
-               throw new ArgumentNullException(nameof(createBrandDto));
-
             var brand = new Brand
             (
                 createBrandDto.Name, 
@@ -69,9 +66,6 @@ namespace SealMarket.Application.Services
 
         public async Task<List<BrandDto>> GetBrandsAsync(BrandsFilterDto brandsFilterDto)
         {
-            if (brandsFilterDto is null)
-                throw new ArgumentNullException(nameof(brandsFilterDto));
-
             var filter = new BrandsFilter
             (
                 brandsFilterDto.Page,
@@ -97,9 +91,6 @@ namespace SealMarket.Application.Services
 
         public async Task UpdateBrandAsync(int id, UpdateBrandDto updateBrandDto)
         {
-            if (updateBrandDto is null)
-                throw new ArgumentNullException(nameof(updateBrandDto));
-
             var brandToUpdate = await _repo.GetByIdAsync(id);
 
             if (brandToUpdate is null)

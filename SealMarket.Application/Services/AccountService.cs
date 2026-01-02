@@ -22,7 +22,7 @@ namespace SealMarket.Application.Services
             var account = await _repo.GetAccountWithIncludesAsync(id);
 
             if (account is null)
-                throw new KeyNotFoundException("Account was not found.");
+                throw new KeyNotFoundException($"Account with ID {id} was not found.");
 
             return new AccountDashboardDto
             (
@@ -37,9 +37,6 @@ namespace SealMarket.Application.Services
 
         public async Task<List<ShortAccountDto>> GetAccountsAsync(AccountsFilterDto accountsFilterDto)
         {
-            if (accountsFilterDto is null)
-                throw new ArgumentNullException(nameof(accountsFilterDto));
-
             var filter = new AccountsFilter
             (
                 accountsFilterDto.Page,
@@ -66,13 +63,10 @@ namespace SealMarket.Application.Services
 
         public async Task UpdateAccountAsync(int id, UpdateAccountDto updateAccountDto)
         {
-            if (updateAccountDto is null)
-                throw new ArgumentNullException(nameof(updateAccountDto));
-
             var account = await _repo.GetByIdAsync(id);
 
             if (account is null)
-                throw new KeyNotFoundException("Account to update was not found.");
+                throw new KeyNotFoundException($"Account with ID {id} to update was not found.");
 
             account.UpdateAcccountData
             (

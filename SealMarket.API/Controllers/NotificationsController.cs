@@ -15,31 +15,42 @@ namespace SealMarket.API.Controllers
     {
         private readonly INotificationService _service;
         private readonly ICurrentAccountService _currentAccount;
+        private readonly ILogger<NotificationsController> _logger;
 
-        public NotificationsController(INotificationService service, ICurrentAccountService currentAccount)
+        public NotificationsController
+        (
+            INotificationService service, 
+            ICurrentAccountService currentAccount, 
+            ILogger<NotificationsController> logger
+        )
         {
             _service = service;
             _currentAccount = currentAccount;
+            _logger = logger;
         }
 
         [HttpGet("my-notifications")]
         [Authorize(Roles = Customer)]
         public async Task<IActionResult> GetMyNotificationsAsync([FromQuery] NotificationsFilterDto notificationsFilterDto)
         {
-            if (_currentAccount.UserId is null)
-                return Unauthorized("User ID not found in token");
+            if (_currentAccount.AccountId is null)
+            {
+                _logger.LogWarning("Account ID not found in token");
+                return Unauthorized(new { error = "Account ID not found in token" });
+            }
 
-            var accountId = _currentAccount.UserId.Value;
+            var accountId = _currentAccount.AccountId.Value;
 
             try
             {
                 var notifications = await _service.GetNotificationsAsync(notificationsFilterDto, accountId);
+                _logger.LogInformation("Notifications received successfully for account ID {AccountId}", accountId);
                 return Ok(notifications);
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                return BadRequest("Operation failed");
+                _logger.LogError(ex, "Unexpected error");
+                return StatusCode(500, new { error = "Internal server error" });
             }
         }
 
@@ -50,12 +61,13 @@ namespace SealMarket.API.Controllers
             try
             {
                 var notifications = await _service.GetNotificationsAsync(notificationsFilterDto, null);
+                _logger.LogInformation("Notifications received successfully");
                 return Ok(notifications);
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                return BadRequest("Operation failed");
+                _logger.LogError(ex, "Unexpected error");
+                return StatusCode(500, new { error = "Internal server error" });
             }
         }
 
@@ -68,15 +80,30 @@ namespace SealMarket.API.Controllers
                 var notification = await _service.GetNotificationAsync(id);
 
                 if (_currentAccount.Role == Customer && notification.AccountId != _currentAccount.AccountId)
+                {
+                    _logger.LogWarning
+                    (
+                        "Unauthorized access attempt by account ID {AccountId} to notification ID {NotificationId}",
+                        _currentAccount.AccountId, id
+                    );
+
                     return Forbid("You are not authorized to access this notification");
+                }
+
+                _logger.LogInformation("Notification with ID {NotificationId} received successfully", id);
 
                 return Ok(notification);
             }
 
+            catch (KeyNotFoundException ex)
+            {
+                _logger.LogWarning(ex, ex.Message);
+                return NotFound(new { error = ex.Message });
+            }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                return BadRequest("Operation failed");
+                _logger.LogError(ex, "Unexpected error");
+                return StatusCode(500, new { error = "Internal server error" });
             }
         }
 
@@ -87,12 +114,13 @@ namespace SealMarket.API.Controllers
             try
             {
                 var createdNotification = await _service.CreateNotificationAsync(createNotificationDto);
+                _logger.LogInformation("Notification with ID {NotificationId} created successfully", createdNotification.Id);
                 return CreatedAtAction(nameof(GetNotificationAsync), new { id = createdNotification.Id }, createdNotification);
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                return BadRequest("Operation failed");
+                _logger.LogError(ex, "Unexpected error");
+                return StatusCode(500, new { error = "Internal server error" });
             }
         }
 
@@ -103,12 +131,18 @@ namespace SealMarket.API.Controllers
             try
             {
                 await _service.DeleteNotificationAsync(id);
+                _logger.LogInformation("Notification with ID {NotificationId} deleted successfully", id);
                 return NoContent();
+            }
+            catch (KeyNotFoundException ex)
+            {
+                _logger.LogWarning(ex, ex.Message);
+                return NotFound(new { error = ex.Message });
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                return BadRequest("Operation failed");
+                _logger.LogError(ex, "Unexpected error");
+                return StatusCode(500, new { error = "Internal server error" });
             }
         }
     }

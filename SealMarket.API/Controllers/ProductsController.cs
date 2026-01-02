@@ -13,10 +13,15 @@ namespace SealMarket.API.Controllers
     public class ProductsController : ControllerBase
     {
         private readonly IProductService _service;
+        private readonly ILogger<ProductsController> _logger;
 
-        public ProductsController(IProductService service, ICurrentAccountService currentAccount)
+        public ProductsController
+        (
+            IProductService service,
+            ILogger<ProductsController> logger)
         {
             _service = service;
+            _logger = logger;
         }
 
         [HttpGet]
@@ -28,13 +33,13 @@ namespace SealMarket.API.Controllers
             try
             {
                 var products = await _service.GetProductsAsync(productsFilterDto);
+
                 return Ok(products);
             }
             catch (Exception ex)
             {
-
-                Console.WriteLine(ex);
-                return BadRequest("Operation failed");
+                _logger.LogError(ex, "Unexpected error");
+                return StatusCode(500, new { error = "Internal server error" });
             }
         }
 
@@ -44,12 +49,18 @@ namespace SealMarket.API.Controllers
             try
             {
                 var product = await _service.GetProductInfoAsync(id);
+                _logger.LogInformation("Product with ID {ProductId} received successfully", id);
                 return Ok(product);
+            }
+            catch (KeyNotFoundException ex)
+            {
+                _logger.LogWarning(ex, ex.Message);
+                return NotFound(new { error = ex.Message });
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex);
-                return BadRequest("Operation failed");
+                _logger.LogError(ex, "Unexpected error");
+                return StatusCode(500, new { error = "Internal server error" });
             }
         }
 
@@ -64,6 +75,8 @@ namespace SealMarket.API.Controllers
             {
                 var createdProduct = await _service.CreateProductAsync(createProductDto);
 
+                _logger.LogInformation("Product with ID {ProductId} created successfully", createdProduct.Id);
+
                 return CreatedAtAction
                 (
                     nameof(GetProductInfoAsync),
@@ -73,8 +86,8 @@ namespace SealMarket.API.Controllers
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                return BadRequest("Operation failed");
+                _logger.LogError(ex, "Unexpected error");
+                return StatusCode(500, new { error = "Internal server error" });
             }
         }
 
@@ -89,12 +102,18 @@ namespace SealMarket.API.Controllers
             try
             {
                 await _service.UpdateProductAsync(id, updateProductDto);
+                _logger.LogInformation("Product with ID {ProductId} updated successfully", id);
                 return Ok("Product was successfuly updated");
             }
-            catch (Exception ex) 
+            catch (KeyNotFoundException ex)
             {
-                Console.WriteLine(ex.Message);
-                return BadRequest("Operation failed");
+                _logger.LogWarning(ex, ex.Message);
+                return NotFound(new { error = ex.Message });
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Unexpected error");
+                return StatusCode(500, new { error = "Internal server error" });
             }
         }
 
@@ -105,12 +124,18 @@ namespace SealMarket.API.Controllers
             try
             {
                 await _service.DeleteProductAsync(id);
+                _logger.LogInformation("Product with ID {ProductId} deleted successfully", id);
                 return NoContent();
+            }
+            catch (KeyNotFoundException ex)
+            {
+                _logger.LogWarning(ex, ex.Message);
+                return NotFound(new { error = ex.Message });
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                return BadRequest("Product was not deleted.");
+                _logger.LogError(ex, "Unexpected error");
+                return StatusCode(500, new { error = "Internal server error" });
             }
         }
     }

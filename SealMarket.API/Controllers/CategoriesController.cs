@@ -14,10 +14,12 @@ namespace SealMarket.API.Controllers
     public class CategoriesController : ControllerBase
     {
         private readonly ICategoryService _categoryService;
+        private readonly ILogger<CategoriesController> _logger;
 
-        public CategoriesController(ICategoryService categoryService)
+        public CategoriesController(ICategoryService categoryService, ILogger<CategoriesController> logger)
         {
             _categoryService = categoryService;
+            _logger = logger;
         }
 
         [HttpGet]
@@ -26,12 +28,13 @@ namespace SealMarket.API.Controllers
             try
             {
                 var categories = await _categoryService.GetCategoriesAsync(categoriesFilterDto);
+                _logger.LogInformation("Categories received successfully");
                 return Ok(categories);
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                return BadRequest("Operation failed");
+                _logger.LogError(ex, "Unexpected error");
+                return StatusCode(500, new { error = "Internal server error" });
             }
         }
 
@@ -41,12 +44,18 @@ namespace SealMarket.API.Controllers
             try
             {
                 var category = await _categoryService.GetCategoryAsync(id);
+                _logger.LogInformation("Category with ID {CategoryId} received successfully", id);
                 return Ok(category);
+            }
+            catch (KeyNotFoundException ex)
+            {
+                _logger.LogWarning(ex, ex.Message);
+                return NotFound(new { error = ex.Message });
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                return BadRequest("Operation failed");
+                _logger.LogError(ex, "Unexpected error");
+                return StatusCode(500, new { error = "Internal server error" });
             }
         }
 
@@ -57,12 +66,13 @@ namespace SealMarket.API.Controllers
             try
             {
                 var createdCategory = await _categoryService.CreateCategory(createCategoryDto);
+                _logger.LogInformation("Category with ID {CategoryId} created successfully", createdCategory.Id);
                 return CreatedAtAction(nameof(GetCategory), new { id = createdCategory.Id }, createdCategory);
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                return BadRequest("Operation failed");
+                _logger.LogError(ex, "Unexpected error");
+                return StatusCode(500, new { error = "Internal server error" });
             }
         }
 
@@ -73,12 +83,18 @@ namespace SealMarket.API.Controllers
             try
             {
                 await _categoryService.DeleteCategoryAsync(id);
+                _logger.LogInformation("Category with ID {CategoryId} deleted successfully", id);
                 return NoContent();
+            }
+            catch (KeyNotFoundException ex)
+            {
+                _logger.LogWarning(ex, ex.Message);
+                return NotFound(new { error = ex.Message });
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                return BadRequest("Operation failed");
+                _logger.LogError(ex, "Unexpected error");
+                return StatusCode(500, new { error = "Internal server error" });
             }
         }
 
@@ -89,12 +105,18 @@ namespace SealMarket.API.Controllers
             try
             {
                 await _categoryService.UpdateCategoryAsync(id, updateCategoryDto);
+                _logger.LogInformation("Category with ID {CategoryId} updated successfully", id);
                 return NoContent();
+            }
+            catch (KeyNotFoundException ex)
+            {
+                _logger.LogWarning(ex, ex.Message);
+                return NotFound(new { error = ex.Message });
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                return BadRequest("Operation failed");
+                _logger.LogError(ex, "Unexpected error");
+                return StatusCode(500, new { error = "Internal server error" });
             }
         }
     }

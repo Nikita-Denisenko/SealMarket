@@ -32,9 +32,6 @@ namespace SealMarket.Application.Services
 
         public async Task<AuthResultDto> LoginAsync(LoginDto loginDto)
         {
-            if (loginDto is null)
-                throw new ArgumentNullException(nameof(loginDto));
-
             var account = await _accountRepo.GetByLoginAsync(loginDto.Login);
 
             if (account is null)
@@ -66,9 +63,6 @@ namespace SealMarket.Application.Services
 
         public async Task<AuthResultDto> RegisterAsync(RegisterDto registerDto)
         {
-            if (registerDto is null) 
-                throw new ArgumentNullException(nameof(registerDto));
-
             var login = registerDto.Login;
 
             if (await _accountRepo.IsLoginTakenAsync(login))

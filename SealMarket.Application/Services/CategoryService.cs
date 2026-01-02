@@ -21,9 +21,6 @@ namespace SealMarket.Application.Services
 
         public async Task<CreatedCategoryDto> CreateCategory(CreateCategoryDto createCategoryDto)
         {
-            if (createCategoryDto is null)
-                throw new ArgumentNullException(nameof(createCategoryDto));
-
             var category = new Category
             (
                 createCategoryDto.Name,
@@ -51,9 +48,6 @@ namespace SealMarket.Application.Services
 
         public async Task<List<ShortCategoryDto>> GetCategoriesAsync(CategoriesFilterDto filterDto)
         {
-            if (filterDto is null)
-                throw new ArgumentNullException(nameof(filterDto));
-
             var filter = new CategoriesFilter
             (
                 filterDto.Page,
