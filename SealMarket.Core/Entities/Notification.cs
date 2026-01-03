@@ -4,9 +4,9 @@
     {
         public int Id { get; private set; }
         public int AccountId { get; private set; }
-        public Account Account { get; private set; }
-        public string Name { get; private set; }
-        public string Message { get; private set; }
+        public Account? Account { get; private set; }
+        public string Name { get; private set; } = string.Empty;
+        public string Message { get; private set; } = string.Empty;
         public DateTime DateTime { get; private set; }
         public bool HasBeenRead { get; private set; }
         

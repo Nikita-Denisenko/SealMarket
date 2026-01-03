@@ -13,7 +13,7 @@ namespace SealMarket.Infrastructure.Configurations
             builder
                 .HasOne(p => p.Brand)
                 .WithMany(b => b.Products)
-                .HasForeignKey(p => p.Brand)
+                .HasForeignKey(p => p.BrandId)
                 .OnDelete(DeleteBehavior.Restrict);
         }
     }

@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using SealMarket.Application.Interfaces.SealMarket.Application.Interfaces;
-using SealMarket.Application.Services.SealMarket.Application.Services;
+using SealMarket.Application.Services;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -72,7 +72,12 @@ builder.Services.AddScoped<INotificationService, NotificationService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
-builder.Services.AddScoped<IJwtTokenGenerator, JwtTokenGenerator>();
+builder.Services.AddScoped<IJwtTokenGenerator>(provider =>
+    new JwtTokenGenerator(
+        builder.Configuration["Jwt:Key"] ?? "fallback_key",
+        builder.Configuration["Jwt:Issuer"] ?? "SealMarket",
+        builder.Configuration["Jwt:Audience"] ?? "SealMarketUsers"
+    ));
 builder.Services.AddScoped<ICurrentAccountService, CurrentAccountService>();
 
 var app = builder.Build();

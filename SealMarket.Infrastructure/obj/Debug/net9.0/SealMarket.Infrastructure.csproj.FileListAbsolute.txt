@@ -14,3 +14,5 @@ D:\Projects\SealMarket\SealMarket.Infrastructure\obj\Debug\net9.0\SealMarket.Inf
 D:\Projects\SealMarket\SealMarket.Infrastructure\obj\Debug\net9.0\refint\SealMarket.Infrastructure.dll
 D:\Projects\SealMarket\SealMarket.Infrastructure\obj\Debug\net9.0\SealMarket.Infrastructure.pdb
 D:\Projects\SealMarket\SealMarket.Infrastructure\obj\Debug\net9.0\ref\SealMarket.Infrastructure.dll
+D:\Projects\SealMarket\SealMarket.Infrastructure\bin\Debug\net9.0\SealMarket.Infrastructure.runtimeconfig.json
+D:\Projects\SealMarket\SealMarket.Infrastructure\obj\Debug\net9.0\SealMarket.Infrastructure.genruntimeconfig.cache

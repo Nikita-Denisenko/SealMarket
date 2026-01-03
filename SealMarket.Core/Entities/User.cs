@@ -1,9 +1,9 @@
 ﻿public class User
 {
     public int Id { get; private set; }
-    public string Name { get; private set; }
+    public string Name { get; private set; } = string.Empty;
     public DateOnly BirthDate { get; private set; }
-    public string City { get; private set; }
+    public string City { get; private set; } = string.Empty;
     public Account? Account { get; private set; }
 
     private User() { }

@@ -4,9 +4,9 @@
     {
         public int Id { get; private set; }
         public string Name { get; private set; } = string.Empty;
-        public Brand Brand { get; private set; }
+        public Brand? Brand { get; private set; }
         public int BrandId { get; private set; }
-        public Category Category { get; private set; }
+        public Category? Category { get; private set; }
         public int CategoryId { get; private set; }
         public string Description { get; private set; } = string.Empty;
         public string ImageUrl { get; private set; } = string.Empty;

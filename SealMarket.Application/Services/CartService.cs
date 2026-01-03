@@ -32,7 +32,7 @@ namespace SealMarket.Application.Services
             (
                 cart.Id,
                 cart.Name,
-                cart.TotalPrice,
+                cart.TotalPrice ?? 0,
                 cart.CartItems.Select(
                     ci => new CartItemDto
                     (
@@ -40,10 +40,10 @@ namespace SealMarket.Application.Services
                         ci.ProductId,
                         ci.Quantity,
                         ci.AddedAt,
-                        ci.Product.Name,
-                        ci.Product.ImageUrl,
-                        ci.Product.Price,
-                        ci.TotalPrice
+                        ci?.Product?.Name ?? "",
+                        ci?.Product?.ImageUrl ?? "",
+                        ci?.Product?.Price ?? 0,
+                        ci?.TotalPrice ?? 0
                     )
                 )
                 .ToList()
@@ -61,7 +61,7 @@ namespace SealMarket.Application.Services
             (
                 cart.Id,
                 cart.Name,
-                cart.TotalPrice,
+                cart?.TotalPrice ?? 0,
                 cart.CartItems.Select(
                     ci => new CartItemDto
                     (
@@ -72,7 +72,7 @@ namespace SealMarket.Application.Services
                         ci.Product.Name,
                         ci.Product.ImageUrl,
                         ci.Product.Price,
-                        ci.TotalPrice
+                        ci.TotalPrice ?? 0
                     )
                 )
                 .ToList()

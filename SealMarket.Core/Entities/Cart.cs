@@ -4,10 +4,10 @@ public class Cart
 {
     public int Id { get; private set; }
     public int AccountId { get; private set; }
-    public Account Account { get; private set; }
+    public Account? Account { get; private set; }
     public string Name { get; private set; } = "MyCart";
     public List<CartItem> CartItems { get; private set; } = [];
-    public decimal TotalPrice => CartItems.Sum(ci => ci.TotalPrice);
+    public decimal? TotalPrice => CartItems.Sum(ci => ci.TotalPrice);
 
     private Cart() { }
 

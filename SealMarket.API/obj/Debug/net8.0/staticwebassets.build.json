@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "zg1aRlymGj78z6yi9eeY1XXy1wjkjbl5txpjUqozNWs=",
+  "Source": "SealMarket.API",
+  "BasePath": "_content/SealMarket.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

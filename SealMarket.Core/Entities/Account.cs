@@ -5,7 +5,7 @@ public class Account
 {
     public int Id { get; private set; }
     public int UserId { get; private set; }
-    public User User { get; private set; }
+    public User? User { get; private set; }
     public decimal Balance { get; private set; }
     public string Login { get; private set; }
     public string Password { get; private set; }

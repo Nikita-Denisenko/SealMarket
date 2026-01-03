@@ -14,7 +14,20 @@ namespace SealMarket.Infrastructure.Data
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<Category> Categories { get; set; }
 
-        public AppDbContext(DbContextOptions<AppDbContext> options) { }
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                var connectionString = "Server=localhost;Database=sealmarket;Uid=seal_app;Pwd=";
+
+                optionsBuilder.UseMySql(
+                    connectionString,
+                    new MySqlServerVersion(new Version(8, 0, 0))
+                );
+            }
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
