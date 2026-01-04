@@ -13,6 +13,7 @@ namespace SealMarket.Infrastructure.Data
         public DbSet<CartItem> CartItems { get; set; }
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Transaction> Transactions { get; set; }
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 

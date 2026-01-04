@@ -20,6 +20,12 @@ namespace SealMarket.Infrastructure.Configurations
                 .WithOne(n => n.Account)
                 .HasForeignKey(n => n.AccountId)
                 .OnDelete(DeleteBehavior.Cascade);
+
+            builder
+                .HasMany(a => a.Transactions)
+                .WithOne(t => t.Account)
+                .HasForeignKey(t => t.AccountId)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

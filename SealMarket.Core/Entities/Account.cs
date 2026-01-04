@@ -15,6 +15,7 @@ public class Account
     public Cart? Cart { get; private set; }
     public List<Notification> Notifications { get; private set; } = [];
     public string Role { get; private set; }
+    public List<Transaction> Transactions { get; private set; } = [];
 
     private Account() { }
 
