@@ -37,7 +37,8 @@ namespace SealMarket.Application.Services
                 id,
                 user.Name,
                 user.BirthDate,
-                user.City
+                user.City,
+                user.AvatarUrl
             );
         }
 
@@ -62,7 +63,8 @@ namespace SealMarket.Application.Services
                 user.Account.Email,
                 user.Account.PhoneNumber,
                 user.Account.Balance,
-                user.Account.CreatedAt
+                user.Account.CreatedAt,
+                user.AvatarUrl
             );
         }
 
@@ -102,7 +104,8 @@ namespace SealMarket.Application.Services
             user.UpdatePersonalInfo
             (
                 updateUserDto.Name ?? user.Name, 
-                updateUserDto.City ?? user.City
+                updateUserDto.City ?? user.City,
+                updateUserDto.AvatarUrl ?? user.AvatarUrl
             );
 
             await _repo.SaveChangesAsync();

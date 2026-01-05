@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace SealMarket.Application.DTOs.Requests.UpdateDTOs
 {
@@ -12,6 +13,10 @@ namespace SealMarket.Application.DTOs.Requests.UpdateDTOs
         DateOnly? BirthDate = null,
 
         [MaxLength(50)]
-        string? City = null
+        string? City = null,
+
+        [Url]
+        [MaxLength(500)]
+        string? AvatarUrl = null
     );
 }

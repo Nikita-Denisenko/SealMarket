@@ -84,6 +84,29 @@ builder.Services.AddScoped<ICurrentAccountService, CurrentAccountService>();
 
 var app = builder.Build();
 
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    var logger = services.GetRequiredService<ILogger<Program>>();
+
+    try
+    {
+        var context = services.GetRequiredService<AppDbContext>();
+
+        logger.LogInformation("Применение миграций БД...");
+        await context.Database.MigrateAsync();
+
+        logger.LogInformation("Запуск seed данных...");
+        await AppDbContextSeed.SeedAsync(context);
+
+        logger.LogInformation("Seed успешно выполнен!");
+    }
+    catch (Exception ex)
+    {
+        logger.LogError(ex, "Ошибка при seed данных");
+    }
+}
+
 // Configure the HTTP request pipeline.
 
 app.UseHttpsRedirection();

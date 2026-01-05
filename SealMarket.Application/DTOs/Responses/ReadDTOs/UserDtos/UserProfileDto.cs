@@ -11,6 +11,7 @@
         string Email,
         string PhoneNumber,
         decimal Balance,
-        DateTime RegisteredAt
+        DateTime RegisteredAt,
+        string AvatarUrl
     );
 }

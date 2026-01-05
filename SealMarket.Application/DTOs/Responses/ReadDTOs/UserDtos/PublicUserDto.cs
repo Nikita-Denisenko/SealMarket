@@ -5,6 +5,7 @@
         int Id,
         string Name,
         DateOnly BirthDate,
-        string City
+        string City,
+        string AvatarUrl
     );
 }

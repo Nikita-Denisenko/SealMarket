@@ -18,7 +18,7 @@ public class Cart
 
     public void AddItem(CartItem newItem)
     {
-        var item = CartItems.FirstOrDefault(item => item.Product.Id == newItem.Product.Id);
+        var item = CartItems.FirstOrDefault(item => item.ProductId == newItem.ProductId);
 
         if (item != null)
         {
