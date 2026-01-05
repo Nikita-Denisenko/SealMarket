@@ -3,7 +3,6 @@
     public record CreatedTransactionDto
     (
         int Id,
-        int AccountId,
-        string Name
+        int AccountId
     );
 }

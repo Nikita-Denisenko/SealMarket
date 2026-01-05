@@ -38,7 +38,7 @@ namespace SealMarket.Infrastructure.Repositories
                 .ToListAsync();
         }
 
-        public async Task<Transaction?> GetTransactionWithIncludes(int id)
+        public async Task<Transaction?> GetTransactionWithIncludesAsync(int id)
             => await _context.Transactions
                 .Include(t => t.Account)
                 .FirstOrDefaultAsync(t => t.Id == id);
