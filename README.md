@@ -49,7 +49,7 @@ erDiagram
 | `Id` | `int` | PK |
 | `UserId` | `int` | FK → User.Id |
 | `Login` | `string` | Уникальный логин |
-| `PasswordHash` | `string` | Хэш пароля (BCrypt) |
+| `Password` | `string` | Хэш пароля (BCrypt) |
 | `Email` | `string` | Уникальный email |
 | `PhoneNumber` | `string` | Номер телефона |
 | `Balance` | `decimal` | Баланс (default: 0) |
