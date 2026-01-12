@@ -9,6 +9,9 @@ namespace SealMarket.Infrastructure.Configurations
         public void Configure(EntityTypeBuilder<Notification> builder)
         {
             builder.HasKey(n => n.Id);
+
+            builder.Property(n => n.Id)
+                 .ValueGeneratedOnAdd();
         }
     }
 }

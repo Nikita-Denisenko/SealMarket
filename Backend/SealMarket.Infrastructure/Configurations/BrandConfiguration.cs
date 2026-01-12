@@ -9,6 +9,9 @@ namespace SealMarket.Infrastructure.Configurations
         public void Configure(EntityTypeBuilder<Brand> builder)
         {
             builder.HasKey(b => b.Id);
+            
+            builder.Property(b => b.Id)
+                  .ValueGeneratedOnAdd(); 
         }
     }
 }

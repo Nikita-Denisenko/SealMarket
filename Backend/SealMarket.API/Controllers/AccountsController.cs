@@ -31,7 +31,7 @@ namespace SealMarket.API.Controllers
 
         [HttpGet]
         [Authorize(Roles = Admin)]
-        public async Task<IActionResult> GetAccountsAsync([FromQuery] AccountsFilterDto accountsFilterDto)
+        public async Task<IActionResult> GetAccounts([FromQuery] AccountsFilterDto accountsFilterDto)
         {
             try
             {
@@ -48,7 +48,7 @@ namespace SealMarket.API.Controllers
 
         [HttpGet("my-account")]
         [Authorize(Roles = Customer)]
-        public async Task<IActionResult> GetMyAccountAsync()
+        public async Task<IActionResult> GetMyAccount()
         {
             if (_currentAccount.AccountId is null)
             {
@@ -78,7 +78,7 @@ namespace SealMarket.API.Controllers
 
         [HttpGet("{id:int}")]
         [Authorize(Roles = Admin)]
-        public async Task<IActionResult> GetAccountForAdminAsync([FromRoute] int id)
+        public async Task<IActionResult> GetAccountForAdmin([FromRoute] int id)
         {
             try
             {
@@ -100,7 +100,7 @@ namespace SealMarket.API.Controllers
 
         [HttpPut("my-account")]
         [Authorize(Roles = Customer)]
-        public async Task<IActionResult> UpdateMyAccountAsync
+        public async Task<IActionResult> UpdateMyAccount
         (
             [FromBody] UpdateAccountDto updateAccountDto
         )

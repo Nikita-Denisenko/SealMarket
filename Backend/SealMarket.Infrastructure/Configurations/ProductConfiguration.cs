@@ -10,6 +10,9 @@ namespace SealMarket.Infrastructure.Configurations
         {
             builder.HasKey(p => p.Id);
 
+            builder.Property(p => p.Id)
+                 .ValueGeneratedOnAdd();
+
             builder
                 .HasOne(p => p.Brand)
                 .WithMany(b => b.Products)

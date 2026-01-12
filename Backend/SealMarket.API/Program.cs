@@ -86,10 +86,6 @@ builder.Services.AddScoped<ITransactionService, TransactionService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
 
-Console.WriteLine("=== DEBUG JWT CONFIG ===");
-Console.WriteLine($"JWT Key from config: {builder.Configuration["Jwt:Key"]}");
-Console.WriteLine($"JWT Key length: {builder.Configuration["Jwt:Key"]?.Length ?? 0}");
-Console.WriteLine("========================");
 builder.Services.AddScoped<IJwtTokenGenerator>(provider =>
     new JwtTokenGenerator(
         builder.Configuration["Jwt:Key"],

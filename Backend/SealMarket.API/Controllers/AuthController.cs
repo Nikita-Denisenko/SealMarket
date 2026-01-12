@@ -20,7 +20,7 @@ namespace SealMarket.API.Controllers
         }
 
         [HttpPost("register")]
-        public async Task<IActionResult> RegisterAsync([FromBody] RegisterDto registerDto)
+        public async Task<IActionResult> Register([FromBody] RegisterDto registerDto)
         {
             _logger.LogInformation("Registration attempt. Email: {Email}", registerDto.Email);
 
@@ -35,7 +35,7 @@ namespace SealMarket.API.Controllers
                     "User registered successfully. AccountId: {AccountId}, Email: {Email}",
                     createdAccount.AccountId, createdAccount.Email);
 
-                return CreatedAtAction(nameof(RegisterAsync), createdAccount);
+                return CreatedAtAction(nameof(Register), createdAccount);
             }
             catch (InvalidOperationException ex) 
             {
@@ -50,7 +50,7 @@ namespace SealMarket.API.Controllers
         }
 
         [HttpPost("login")]
-        public async Task<IActionResult> LoginAsync([FromBody] LoginDto loginDto)
+        public async Task<IActionResult> Login([FromBody] LoginDto loginDto)
         {
             _logger.LogInformation("Login attempt. Login: {Credentials}", loginDto.Login);
 

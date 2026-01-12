@@ -39,7 +39,7 @@ namespace SealMarket.API.Controllers
         }
 
         [HttpGet("{id:int}")]
-        public async Task<IActionResult> GetCategory(int id)
+        public async Task<IActionResult> GetCategory([FromRoute] int id)
         {
             try
             {
@@ -78,7 +78,7 @@ namespace SealMarket.API.Controllers
 
         [HttpDelete("{id:int}")]
         [Authorize(Roles = Admin)]
-        public async Task<IActionResult> DeleteCategory(int id)
+        public async Task<IActionResult> DeleteCategory([FromRoute] int id)
         {
             try
             {
@@ -100,7 +100,7 @@ namespace SealMarket.API.Controllers
 
         [HttpPut("{id:int}")]
         [Authorize(Roles = Admin)]
-        public async Task<IActionResult> UpdateCategory(int id, [FromBody] UpdateCategoryDto updateCategoryDto)
+        public async Task<IActionResult> UpdateCategory([FromRoute] int id, [FromBody] UpdateCategoryDto updateCategoryDto)
         {
             try
             {

@@ -31,7 +31,7 @@ namespace SealMarket.API.Controllers
 
         [HttpGet("{id:int}")]
         [Authorize(Roles = $"{Admin},{Customer}")]
-        public async Task<IActionResult> GetTransactionAsync([FromRoute] int id)
+        public async Task<IActionResult> GetTransaction([FromRoute] int id)
         {
             try
             {
@@ -66,7 +66,7 @@ namespace SealMarket.API.Controllers
 
         [HttpGet("my-transactions")]
         [Authorize(Roles = $"{Admin},{Customer}")]
-        public async Task<IActionResult> GetTransactionsAsync
+        public async Task<IActionResult> GetTransactions
         (
             [FromQuery] TransactionsFilterDto filterDto
         )
@@ -92,7 +92,7 @@ namespace SealMarket.API.Controllers
 
         [HttpPost]
         [Authorize(Roles = Admin)]
-        public async Task<IActionResult> CreateTransactionAsync
+        public async Task<IActionResult> CreateTransaction
         (
             [FromBody] CreateTransactionDto createTransactionDto
         )
@@ -101,7 +101,7 @@ namespace SealMarket.API.Controllers
             {
                 var createdTransaction = await _service.CreateTransactionAsync(createTransactionDto);
                 _logger.LogInformation("Transaction created successfully with ID {TransactionId}.", createdTransaction.Id);
-                return CreatedAtAction(nameof(GetTransactionAsync), new { id = createdTransaction.Id }, createdTransaction);
+                return CreatedAtAction(nameof(GetTransaction), new { id = createdTransaction.Id }, createdTransaction);
             }
             catch (Exception ex)
             {

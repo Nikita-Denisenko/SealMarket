@@ -22,4 +22,4 @@
         City = city;
         AvatarUrl = avatarUrl;
     }
-}
+} 

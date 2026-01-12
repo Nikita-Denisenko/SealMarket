@@ -32,7 +32,7 @@ namespace SealMarket.API.Controllers
 
         [HttpGet("my-cart")]
         [Authorize(Roles = Customer)]
-        public async Task<IActionResult> GetMyCartAsync()
+        public async Task<IActionResult> GetMyCart()
         {
             if (_currentAccount.AccountId is null) 
             {
@@ -61,7 +61,7 @@ namespace SealMarket.API.Controllers
 
         [HttpGet("{id}")]
         [Authorize(Roles = Admin)]
-        public async Task<IActionResult> GetCartForAdminAsync([FromRoute] int id)
+        public async Task<IActionResult> GetCartForAdmin([FromRoute] int id)
         {
             try
             {
@@ -83,7 +83,7 @@ namespace SealMarket.API.Controllers
 
         [HttpGet]
         [Authorize(Roles = Admin)]
-        public async Task<IActionResult> GetCartsForAdminAsync
+        public async Task<IActionResult> GetCartsForAdmin
         (
             [FromQuery] CartsFilterDto cartsFilterDto
         )
@@ -103,7 +103,7 @@ namespace SealMarket.API.Controllers
 
         [HttpPost("my-cart/add-item")]
         [Authorize(Roles = Customer)]
-        public async Task<IActionResult> AddItemToMyCartAsync
+        public async Task<IActionResult> AddItemToMyCart
         (
             [FromBody] CreateCartItemDto createCartItemDto
         )
@@ -118,7 +118,7 @@ namespace SealMarket.API.Controllers
             {
                 var createdCartItem = await _service.AddItemToMyCartAsync(_currentAccount.AccountId.Value, createCartItemDto);
                 _logger.LogInformation("Item added to cart successfully for account ID {AccountId}", _currentAccount.AccountId.Value);
-                return CreatedAtAction(nameof(GetMyCartAsync), new { createdCartItem.Id }, createdCartItem);
+                return CreatedAtAction(nameof(GetMyCart), new { createdCartItem.Id }, createdCartItem);
             }
             catch (KeyNotFoundException ex)
             {
@@ -134,7 +134,7 @@ namespace SealMarket.API.Controllers
 
         [HttpDelete("my-cart/remove-item/{itemId:int}")]
         [Authorize(Roles = Customer)]
-        public async Task<IActionResult> RemoveItemFromMyCartAsync
+        public async Task<IActionResult> RemoveItemFromMyCart
         (
             [FromRoute] int itemId,
             [FromQuery] bool removeAll = true

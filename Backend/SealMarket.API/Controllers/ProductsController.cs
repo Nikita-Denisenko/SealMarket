@@ -25,7 +25,7 @@ namespace SealMarket.API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetProductsAsync
+        public async Task<IActionResult> GetProducts
         (
             [FromQuery] ProductsFilterDto productsFilterDto
         )
@@ -44,7 +44,7 @@ namespace SealMarket.API.Controllers
         }
 
         [HttpGet("{id:int}")]
-        public async Task<IActionResult> GetProductInfoAsync([FromRoute] int id)
+        public async Task<IActionResult> GetProductInfo([FromRoute] int id)
         {
             try
             {
@@ -66,7 +66,7 @@ namespace SealMarket.API.Controllers
 
         [HttpPost]
         [Authorize(Roles = Admin)]
-        public async Task<IActionResult> CreateProductAsync
+        public async Task<IActionResult> CreateProduct
         (
             [FromBody] CreateProductDto createProductDto
         )
@@ -79,8 +79,8 @@ namespace SealMarket.API.Controllers
 
                 return CreatedAtAction
                 (
-                    nameof(GetProductInfoAsync),
-                    new { createdProduct.Id },
+                    nameof(GetProductInfo),
+                    new { id = createdProduct.Id },
                     createdProduct
                 );
             }
@@ -93,7 +93,7 @@ namespace SealMarket.API.Controllers
 
         [HttpPut("{id:int}")]
         [Authorize(Roles = Admin)]
-        public async Task<IActionResult> UpdateProductAsync
+        public async Task<IActionResult> UpdateProduct
         (
             [FromRoute] int id,
             [FromBody] UpdateProductDto updateProductDto
@@ -119,7 +119,7 @@ namespace SealMarket.API.Controllers
 
         [HttpDelete("{id:int}")]
         [Authorize(Roles = Admin)]
-        public async Task<IActionResult> DeleteProductAsync([FromRoute] int id)
+        public async Task<IActionResult> DeleteProduct([FromRoute] int id)
         {
             try
             {

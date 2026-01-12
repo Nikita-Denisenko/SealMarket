@@ -9,6 +9,9 @@ namespace SealMarket.Infrastructure.Configurations
         {
             builder.HasKey(u => u.Id);
 
+            builder.Property(u => u.Id)
+                 .ValueGeneratedOnAdd();
+
             builder
                .HasOne(u => u.Account)
                .WithOne(a => a.User)

@@ -28,7 +28,7 @@ namespace SealMarket.API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetUsersAsync([FromQuery] UsersFilterDto filterDto)
+        public async Task<IActionResult> GetUsers([FromQuery] UsersFilterDto filterDto)
         {
             try
             {
@@ -45,7 +45,7 @@ namespace SealMarket.API.Controllers
 
         [Authorize(Roles = Customer)]
         [HttpGet("my-profile")]
-        public async Task<IActionResult> GetMyProfileAsync()
+        public async Task<IActionResult> GetMyProfile()
         {
             if (_currentAccount.UserId is null)
             {
@@ -74,7 +74,7 @@ namespace SealMarket.API.Controllers
         }
 
         [HttpGet("{id:int}")]
-        public async Task<IActionResult> GetPublicUserProfileAsync([FromRoute] int id)
+        public async Task<IActionResult> GetPublicUserProfile([FromRoute] int id)
         {
             try
             {
@@ -96,7 +96,7 @@ namespace SealMarket.API.Controllers
 
         [HttpPut("my-profile")]
         [Authorize(Roles = Customer)]
-        public async Task<IActionResult> UpdateMyProfileAsync
+        public async Task<IActionResult> UpdateMyProfile
         (
             [FromBody] UpdateUserDto updateUserDto
         )
@@ -129,7 +129,7 @@ namespace SealMarket.API.Controllers
 
         [HttpDelete("{id:int}")]
         [Authorize(Roles = Admin)]
-        public async Task<IActionResult> DeleteUserAccountForAdminAsync(int id) 
+        public async Task<IActionResult> DeleteUserAccountForAdmin(int id) 
         {
             try
             {
@@ -151,7 +151,7 @@ namespace SealMarket.API.Controllers
 
         [HttpDelete("my-account")]
         [Authorize(Roles = Customer)]
-        public async Task<IActionResult> DeleteMyAccountAsync()
+        public async Task<IActionResult> DeleteMyAccount()
         {
             if (_currentAccount.UserId is null)
             {

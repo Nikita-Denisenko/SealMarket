@@ -1,7 +1,7 @@
 [
   {
     "ContainingType": "SealMarket.API.Controllers.AccountsController",
-    "Method": "GetAccountsAsync",
+    "Method": "GetAccounts",
     "RelativePath": "api/Accounts",
     "HttpMethod": "GET",
     "IsController": true,
@@ -47,7 +47,7 @@
   },
   {
     "ContainingType": "SealMarket.API.Controllers.AccountsController",
-    "Method": "GetAccountForAdminAsync",
+    "Method": "GetAccountForAdmin",
     "RelativePath": "api/Accounts/{id}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -63,7 +63,7 @@
   },
   {
     "ContainingType": "SealMarket.API.Controllers.AccountsController",
-    "Method": "GetMyAccountAsync",
+    "Method": "GetMyAccount",
     "RelativePath": "api/Accounts/my-account",
     "HttpMethod": "GET",
     "IsController": true,
@@ -73,7 +73,7 @@
   },
   {
     "ContainingType": "SealMarket.API.Controllers.AccountsController",
-    "Method": "UpdateMyAccountAsync",
+    "Method": "UpdateMyAccount",
     "RelativePath": "api/Accounts/my-account",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -89,7 +89,7 @@
   },
   {
     "ContainingType": "SealMarket.API.Controllers.AuthController",
-    "Method": "LoginAsync",
+    "Method": "Login",
     "RelativePath": "api/Auth/login",
     "HttpMethod": "POST",
     "IsController": true,
@@ -105,7 +105,7 @@
   },
   {
     "ContainingType": "SealMarket.API.Controllers.AuthController",
-    "Method": "RegisterAsync",
+    "Method": "Register",
     "RelativePath": "api/Auth/register",
     "HttpMethod": "POST",
     "IsController": true,
@@ -121,7 +121,7 @@
   },
   {
     "ContainingType": "SealMarket.API.Controllers.BrandsController",
-    "Method": "GetBrandsAsync",
+    "Method": "GetBrands",
     "RelativePath": "api/Brands",
     "HttpMethod": "GET",
     "IsController": true,
@@ -167,7 +167,7 @@
   },
   {
     "ContainingType": "SealMarket.API.Controllers.BrandsController",
-    "Method": "CreateBrandAsync",
+    "Method": "CreateBrand",
     "RelativePath": "api/Brands",
     "HttpMethod": "POST",
     "IsController": true,
@@ -183,7 +183,7 @@
   },
   {
     "ContainingType": "SealMarket.API.Controllers.BrandsController",
-    "Method": "GetBrandInfoAsync",
+    "Method": "GetBrandInfo",
     "RelativePath": "api/Brands/{id}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -199,7 +199,7 @@
   },
   {
     "ContainingType": "SealMarket.API.Controllers.BrandsController",
-    "Method": "DeleteBrandAsync",
+    "Method": "DeleteBrand",
     "RelativePath": "api/Brands/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
@@ -215,7 +215,7 @@
   },
   {
     "ContainingType": "SealMarket.API.Controllers.BrandsController",
-    "Method": "UpdateBrandAsync",
+    "Method": "UpdateBrand",
     "RelativePath": "api/Brands/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -236,7 +236,7 @@
   },
   {
     "ContainingType": "SealMarket.API.Controllers.CartsController",
-    "Method": "GetCartsForAdminAsync",
+    "Method": "GetCartsForAdmin",
     "RelativePath": "api/Carts",
     "HttpMethod": "GET",
     "IsController": true,
@@ -282,7 +282,7 @@
   },
   {
     "ContainingType": "SealMarket.API.Controllers.CartsController",
-    "Method": "GetCartForAdminAsync",
+    "Method": "GetCartForAdmin",
     "RelativePath": "api/Carts/{id}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -298,7 +298,7 @@
   },
   {
     "ContainingType": "SealMarket.API.Controllers.CartsController",
-    "Method": "GetMyCartAsync",
+    "Method": "GetMyCart",
     "RelativePath": "api/Carts/my-cart",
     "HttpMethod": "GET",
     "IsController": true,
@@ -308,7 +308,7 @@
   },
   {
     "ContainingType": "SealMarket.API.Controllers.CartsController",
-    "Method": "AddItemToMyCartAsync",
+    "Method": "AddItemToMyCart",
     "RelativePath": "api/Carts/my-cart/add-item",
     "HttpMethod": "POST",
     "IsController": true,
@@ -324,7 +324,7 @@
   },
   {
     "ContainingType": "SealMarket.API.Controllers.CartsController",
-    "Method": "RemoveItemFromMyCartAsync",
+    "Method": "RemoveItemFromMyCart",
     "RelativePath": "api/Carts/my-cart/remove-item/{itemId}",
     "HttpMethod": "DELETE",
     "IsController": true,
@@ -450,7 +450,7 @@
   },
   {
     "ContainingType": "SealMarket.API.Controllers.NotificationsController",
-    "Method": "GetNotificationsAsync",
+    "Method": "GetNotifications",
     "RelativePath": "api/Notifications",
     "HttpMethod": "GET",
     "IsController": true,
@@ -501,7 +501,7 @@
   },
   {
     "ContainingType": "SealMarket.API.Controllers.NotificationsController",
-    "Method": "CreateNotificationAsync",
+    "Method": "CreateNotification",
     "RelativePath": "api/Notifications",
     "HttpMethod": "POST",
     "IsController": true,
@@ -517,7 +517,7 @@
   },
   {
     "ContainingType": "SealMarket.API.Controllers.NotificationsController",
-    "Method": "GetNotificationAsync",
+    "Method": "GetNotification",
     "RelativePath": "api/Notifications/{id}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -533,7 +533,7 @@
   },
   {
     "ContainingType": "SealMarket.API.Controllers.NotificationsController",
-    "Method": "DeleteNotificationAsync",
+    "Method": "DeleteNotification",
     "RelativePath": "api/Notifications/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
@@ -549,7 +549,7 @@
   },
   {
     "ContainingType": "SealMarket.API.Controllers.NotificationsController",
-    "Method": "GetMyNotificationsAsync",
+    "Method": "GetMyNotifications",
     "RelativePath": "api/Notifications/my-notifications",
     "HttpMethod": "GET",
     "IsController": true,
@@ -600,7 +600,7 @@
   },
   {
     "ContainingType": "SealMarket.API.Controllers.ProductsController",
-    "Method": "GetProductsAsync",
+    "Method": "GetProducts",
     "RelativePath": "api/Products",
     "HttpMethod": "GET",
     "IsController": true,
@@ -651,7 +651,7 @@
   },
   {
     "ContainingType": "SealMarket.API.Controllers.ProductsController",
-    "Method": "CreateProductAsync",
+    "Method": "CreateProduct",
     "RelativePath": "api/Products",
     "HttpMethod": "POST",
     "IsController": true,
@@ -667,7 +667,7 @@
   },
   {
     "ContainingType": "SealMarket.API.Controllers.ProductsController",
-    "Method": "GetProductInfoAsync",
+    "Method": "GetProductInfo",
     "RelativePath": "api/Products/{id}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -683,7 +683,7 @@
   },
   {
     "ContainingType": "SealMarket.API.Controllers.ProductsController",
-    "Method": "UpdateProductAsync",
+    "Method": "UpdateProduct",
     "RelativePath": "api/Products/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -704,7 +704,7 @@
   },
   {
     "ContainingType": "SealMarket.API.Controllers.ProductsController",
-    "Method": "DeleteProductAsync",
+    "Method": "DeleteProduct",
     "RelativePath": "api/Products/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
@@ -720,7 +720,7 @@
   },
   {
     "ContainingType": "SealMarket.API.Controllers.TransactionsController",
-    "Method": "CreateTransactionAsync",
+    "Method": "CreateTransaction",
     "RelativePath": "api/Transactions",
     "HttpMethod": "POST",
     "IsController": true,
@@ -736,7 +736,7 @@
   },
   {
     "ContainingType": "SealMarket.API.Controllers.TransactionsController",
-    "Method": "GetTransactionAsync",
+    "Method": "GetTransaction",
     "RelativePath": "api/Transactions/{id}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -752,7 +752,7 @@
   },
   {
     "ContainingType": "SealMarket.API.Controllers.TransactionsController",
-    "Method": "GetTransactionsAsync",
+    "Method": "GetTransactions",
     "RelativePath": "api/Transactions/my-transactions",
     "HttpMethod": "GET",
     "IsController": true,
@@ -793,7 +793,7 @@
   },
   {
     "ContainingType": "SealMarket.API.Controllers.UsersController",
-    "Method": "GetUsersAsync",
+    "Method": "GetUsers",
     "RelativePath": "api/Users",
     "HttpMethod": "GET",
     "IsController": true,
@@ -839,7 +839,7 @@
   },
   {
     "ContainingType": "SealMarket.API.Controllers.UsersController",
-    "Method": "GetPublicUserProfileAsync",
+    "Method": "GetPublicUserProfile",
     "RelativePath": "api/Users/{id}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -855,7 +855,7 @@
   },
   {
     "ContainingType": "SealMarket.API.Controllers.UsersController",
-    "Method": "DeleteUserAccountForAdminAsync",
+    "Method": "DeleteUserAccountForAdmin",
     "RelativePath": "api/Users/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
@@ -871,7 +871,7 @@
   },
   {
     "ContainingType": "SealMarket.API.Controllers.UsersController",
-    "Method": "DeleteMyAccountAsync",
+    "Method": "DeleteMyAccount",
     "RelativePath": "api/Users/my-account",
     "HttpMethod": "DELETE",
     "IsController": true,
@@ -881,7 +881,7 @@
   },
   {
     "ContainingType": "SealMarket.API.Controllers.UsersController",
-    "Method": "GetMyProfileAsync",
+    "Method": "GetMyProfile",
     "RelativePath": "api/Users/my-profile",
     "HttpMethod": "GET",
     "IsController": true,
@@ -891,7 +891,7 @@
   },
   {
     "ContainingType": "SealMarket.API.Controllers.UsersController",
-    "Method": "UpdateMyProfileAsync",
+    "Method": "UpdateMyProfile",
     "RelativePath": "api/Users/my-profile",
     "HttpMethod": "PUT",
     "IsController": true,

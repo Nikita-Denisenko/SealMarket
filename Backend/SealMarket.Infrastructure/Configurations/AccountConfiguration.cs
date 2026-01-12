@@ -8,6 +8,9 @@ namespace SealMarket.Infrastructure.Configurations
         public void Configure(EntityTypeBuilder<Account> builder)
         {
             builder.HasKey(a => a.Id);
+   
+            builder.Property(a => a.Id)
+                  .ValueGeneratedOnAdd();
 
             builder
                 .HasOne(a => a.Cart)

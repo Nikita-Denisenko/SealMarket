@@ -31,7 +31,7 @@ namespace SealMarket.API.Controllers
 
         [HttpGet("my-notifications")]
         [Authorize(Roles = Customer)]
-        public async Task<IActionResult> GetMyNotificationsAsync([FromQuery] NotificationsFilterDto notificationsFilterDto)
+        public async Task<IActionResult> GetMyNotifications([FromQuery] NotificationsFilterDto notificationsFilterDto)
         {
             if (_currentAccount.AccountId is null)
             {
@@ -56,7 +56,7 @@ namespace SealMarket.API.Controllers
 
         [HttpGet]
         [Authorize(Roles = Admin)]
-        public async Task<IActionResult> GetNotificationsAsync([FromQuery] NotificationsFilterDto notificationsFilterDto)
+        public async Task<IActionResult> GetNotifications([FromQuery] NotificationsFilterDto notificationsFilterDto)
         {
             try
             {
@@ -73,7 +73,7 @@ namespace SealMarket.API.Controllers
 
         [HttpGet("{id:int}")]
         [Authorize(Roles = $"{Admin},{Customer}")]
-        public async Task<IActionResult> GetNotificationAsync([FromRoute] int id)
+        public async Task<IActionResult> GetNotification([FromRoute] int id)
         {
             try
             {
@@ -109,13 +109,13 @@ namespace SealMarket.API.Controllers
 
         [HttpPost]
         [Authorize(Roles = Admin)]
-        public async Task<IActionResult> CreateNotificationAsync([FromBody] CreateNotificationDto createNotificationDto)
+        public async Task<IActionResult> CreateNotification([FromBody] CreateNotificationDto createNotificationDto)
         {
             try
             {
                 var createdNotification = await _service.CreateNotificationAsync(createNotificationDto);
                 _logger.LogInformation("Notification with ID {NotificationId} created successfully", createdNotification.Id);
-                return CreatedAtAction(nameof(GetNotificationAsync), new { id = createdNotification.Id }, createdNotification);
+                return CreatedAtAction(nameof(GetNotification), new { id = createdNotification.Id }, createdNotification);
             }
             catch (Exception ex)
             {
@@ -126,7 +126,7 @@ namespace SealMarket.API.Controllers
 
         [HttpDelete("{id:int}")]
         [Authorize(Roles = Admin)]
-        public async Task<IActionResult> DeleteNotificationAsync([FromRoute] int id)
+        public async Task<IActionResult> DeleteNotification([FromRoute] int id)
         {
             try
             {

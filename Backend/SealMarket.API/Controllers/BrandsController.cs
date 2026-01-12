@@ -24,7 +24,7 @@ namespace SealMarket.API.Controllers
         }
 
         [HttpGet("{id:int}")]
-        public async Task<IActionResult> GetBrandInfoAsync([FromRoute] int id)
+        public async Task<IActionResult> GetBrandInfo([FromRoute] int id)
         {
             try
             {
@@ -45,7 +45,7 @@ namespace SealMarket.API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetBrandsAsync
+        public async Task<IActionResult> GetBrands
         (
             [FromQuery] BrandsFilterDto brandsFilterDto
         )
@@ -65,7 +65,7 @@ namespace SealMarket.API.Controllers
 
         [HttpPost]
         [Authorize(Roles = Admin)]
-        public async Task<IActionResult> CreateBrandAsync
+        public async Task<IActionResult> CreateBrand
         (
             [FromBody] CreateBrandDto createBrandDto
         )
@@ -77,8 +77,8 @@ namespace SealMarket.API.Controllers
 
                 return CreatedAtAction
                 (
-                    nameof(GetBrandInfoAsync),
-                    new {createdBrand.Id},
+                    nameof(GetBrandInfo),
+                    new {id = createdBrand.Id},
                     createdBrand
                 );
             }
@@ -91,7 +91,7 @@ namespace SealMarket.API.Controllers
 
         [HttpDelete("{id:int}")]
         [Authorize(Roles = Admin)]
-        public async Task<IActionResult> DeleteBrandAsync([FromRoute] int id)
+        public async Task<IActionResult> DeleteBrand([FromRoute] int id)
         {
             try
             {
@@ -113,7 +113,7 @@ namespace SealMarket.API.Controllers
 
         [HttpPut("{id:int}")]
         [Authorize(Roles = Admin)]
-        public async Task<IActionResult> UpdateBrandAsync
+        public async Task<IActionResult> UpdateBrand
         (
             [FromRoute] int id,
             [FromBody] UpdateBrandDto updateBrandDto

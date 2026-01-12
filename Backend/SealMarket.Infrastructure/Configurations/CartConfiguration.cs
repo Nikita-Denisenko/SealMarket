@@ -8,6 +8,9 @@ namespace SealMarket.Infrastructure.Configurations
         public void Configure(EntityTypeBuilder<Cart> builder)
         {
             builder.HasKey(c => c.Id);
+            
+            builder.Property(c => c.Id)
+                  .ValueGeneratedOnAdd();
 
             builder
                 .HasMany(c => c.CartItems)
